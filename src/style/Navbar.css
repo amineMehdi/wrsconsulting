@@ -1,0 +1,131 @@
+:root {
+    --primary-color: #67b7e1;
+    --logo-color: #1a5590;
+    --grey-color: #838383;
+    --margin-position: 40vh;
+}
+
+/* contact navbar */
+.contact-navbar-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid transparent;
+    border-bottom-color: #e5e5e5;
+}
+
+.contact-navbar {
+    margin-left: var(--margin-position);
+}
+
+.contact-navbar>p,
+.contact-navbar>p>a {
+    color: var(--grey-color);
+}
+
+.social-navbar {
+    margin-right: var(--margin-position);
+    display: flex;
+    gap: 20px;
+}
+
+/* /contact navbar */
+
+/* navbar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    margin-left: var(--margin-position);
+}
+
+ul {
+    position: relative;
+}
+
+.navbar-selected {
+    border-bottom: 3px solid var(--primary-color);
+    animation: fadeIn 1s;
+}
+
+/* options selection */
+.option-selected {
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 32px;
+    animation: fadeIn 1s;
+}
+
+.options-container {
+    width: 40%;
+    margin-right: var(--margin-position);
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+li {
+    list-style: none;
+    position: relative;
+}
+
+li>a,
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+li>a:hover {
+    color: var(--primary-color);
+}
+
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    right: -96px;
+    padding-top: 40px;
+}
+
+.nav-dropdown-content::before {
+    content: "";
+    border-top: 3px solid var(--primary-color);
+    animation: fadeIn 1s;
+    position: absolute;
+    width: 89%;
+    top: 32px;
+}
+
+.nav-dropdown-content>li {
+    line-height: 36px;
+}
+
+.nav-dropdown:hover .nav-dropdown-content {
+    display: block;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        border-color: #fff;
+    }
+    100% {
+        border-color: var(--primary-color);
+    }
+}
+
+@media only screen and (max-width: 800px){
+
+}
