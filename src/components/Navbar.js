@@ -11,7 +11,9 @@ function Navbar(props) {
   useEffect(() => {
     const nav = document.getElementsByClassName("navbar-container")[0];
     // nav.classList.toggle("navbar-selected");
-    borderBottom ? nav.classList.add("navbar-selected"): nav.classList.remove("navbar-selected");
+    borderBottom
+      ? nav.classList.add("navbar-selected")
+      : nav.classList.remove("navbar-selected");
   }, [borderBottom]);
   // all event listeners on component mount.
   useEffect(() => {
@@ -26,7 +28,6 @@ function Navbar(props) {
       ".options-container > ul > li > a"
     );
     const dropdownMenuOptions = document.querySelector(".nav-dropdown-content");
-    // console.log(dropdownMenuOptions);
     [...navbarOptions, dropdownMenuOptions].forEach((option) => {
       option.addEventListener("mouseenter", () => {
         toggleBorderOption(option);
@@ -39,11 +40,9 @@ function Navbar(props) {
     });
   }, []);
   const toggleBorderOption = (element) => {
-    // console.log(element.parentElement.classList);
     const selected = element.parentElement.classList.length
       ? "dropdown-selected"
       : "option-selected";
-    // const selected = "option-selected";
     element.classList.toggle(selected);
   };
   return (
@@ -71,7 +70,7 @@ function Navbar(props) {
           </a>
         </div>
         <div className="options-container">
-          <ul>
+          <ul className="options-list">
             <li>
               <a href="#">Acceuil</a>
             </li>
@@ -105,6 +104,11 @@ function Navbar(props) {
               <a href="#">Contact</a>
             </li>
           </ul>
+          <div className="options-menu">
+            <div className="options-menu-line"></div>
+            <div className="options-menu-line"></div>
+            <div className="options-menu-line"></div>
+          </div>
         </div>
       </nav>
     </div>

@@ -9,14 +9,15 @@
 .contact-navbar-wrapper {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     border-bottom: 1px solid transparent;
     border-bottom-color: #e5e5e5;
+    flex-wrap: wrap;
 }
 
-.contact-navbar {
+/* .contact-navbar {
     margin-left: var(--margin-position);
-}
+} */
 
 .contact-navbar>p,
 .contact-navbar>p>a {
@@ -24,7 +25,7 @@
 }
 
 .social-navbar {
-    margin-right: var(--margin-position);
+    /* margin-right: var(--margin-position); */
     display: flex;
     gap: 20px;
 }
@@ -35,15 +36,7 @@
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-.logo-container {
-    margin-left: var(--margin-position);
-}
-
-ul {
-    position: relative;
+    justify-content: space-around;
 }
 
 .navbar-selected {
@@ -58,27 +51,25 @@ ul {
     animation: fadeIn 1s;
 }
 
-.options-container {
-    width: 40%;
-    margin-right: var(--margin-position);
-}
-
-ul {
+.options-list {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
-li {
-    list-style: none;
-    position: relative;
+.options-list > li {
+    margin-right: 32px;
+    white-space: nowrap;
 }
-
-li>a,
-a {
-    text-decoration: none;
+.options-list > li:last-child{
+    margin-right: 0px;
+}
+li>a {
     color: black;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 li>a:hover {
@@ -115,7 +106,15 @@ li>a:hover {
 .nav-dropdown:hover .nav-dropdown-content {
     display: block;
 }
-
+.options-menu{
+    display: none;
+}
+.options-menu-line{
+    width: 20px;
+    height: 3px;
+    background-color: black;
+    margin-bottom: 2px;
+}
 
 @keyframes fadeIn {
     0% {
@@ -126,6 +125,15 @@ li>a:hover {
     }
 }
 
-@media only screen and (max-width: 800px){
-
+@media all and (max-width: 900px){
+    nav{    
+        justify-content: space-between;
+        padding: 0px 30px;
+    }
+    .options-list{
+        display: none;
+    }
+    .options-menu{
+        display: block;
+    }
 }
