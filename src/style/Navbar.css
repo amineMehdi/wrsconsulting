@@ -5,15 +5,18 @@
     --border-color: #e5e5e5;
     --margin-position: 40vh;
 }
-.navbar-container{
-    border-bottom: 3px solid var(--primary-color);
+
+.navbar-container {
+    border-bottom: 3px solid transparent;
     transition: 0.5s ease;
 }
+
 /* contact navbar */
 .contact-navbar-wrapper {
     /* position: relative; */
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid transparent;
     border-bottom-color: var(--border-color);
     flex-wrap: wrap;
@@ -43,14 +46,14 @@ nav {
     align-items: center;
     justify-content: space-between;
     margin: 0 10vw;
+    position: relative;
 }
 
 
 /* options selection */
 .option-selected {
+    padding-bottom: 31.5px;
     border-bottom: 3px solid var(--primary-color);
-    padding-bottom: 30px;
-    /* : fadeIn 1s; */
     transition: 0.5s ease;
 }
 
@@ -112,7 +115,7 @@ li>a:hover {
     line-height: 36px;
     width: 100%;
     border-top: 3px solid transparent;
-    transition: 00.5s ease;
+    transition: 0.5s ease;
 }
 
 .nav-dropdown-content>li:not(:first-child):hover {
@@ -125,15 +128,44 @@ li>a:hover {
 
 .options-menu {
     display: none;
+    position: relative;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
 }
 
-.options-menu-line {
-    width: 20px;
-    height: 3px;
+.options-menu span {
     background-color: black;
-    margin-bottom: 2px;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+
 }
 
+.options-menu span:nth-of-type(1) {
+    top: 0;
+}
+
+.options-menu span:nth-of-type(2) {
+    top: 11px;
+}
+
+.options-menu span:nth-of-type(3) {
+    bottom: 0;
+}
+
+.options-menu.menu-active span:nth-of-type(1) {
+    transform: translateY(11px) rotate(-45deg);
+}
+
+.options-menu.menu-active span:nth-of-type(2) {
+    display: none;
+}
+
+.options-menu.menu-active span:nth-of-type(3) {
+    transform: translateY(-11px) rotate(45deg);
+}
 
 @media all and (max-width: 900px) {
     .contact-navbar-wrapper {
@@ -157,11 +189,49 @@ li>a:hover {
         margin: 0;
     }
 
+
     .options-list {
         display: none;
     }
 
+    .options-list>li {
+        margin-bottom: 15px;
+    }
+
+    .options-slide-active {
+        display: block;
+        flex-direction: column;
+        position: absolute;
+        animation: slideToggle 1s;
+        top: 87px;
+        height: auto;
+        width: 100vw;
+        left: 0;
+        background: white;
+        z-index: 1;
+    }
+
     .options-menu {
         display: block;
+        position: absolute;
+        top: 50%;
+        right: 30px;
+    }
+
+    .options-menu span {
+        transition: all 0.4s;
+        z-index: 1;
+    }
+    .nav-dropdown-content{
+        /* padding-left: 50px; */
+    }
+}
+
+@keyframes slideToggle {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

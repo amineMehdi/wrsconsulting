@@ -3,19 +3,22 @@ import "../style/SlideShow.css";
 
 function SlideShow(props) {
   const slideLength = props.children.length;
-  //   console.log(slideLength);
   const [current, setCurrent] = useState(1);
   useEffect(() => {
-    // const slideShow = document.querySelector(".slide-container");
     const slides = document.querySelectorAll(".slide");
-    // console.log(slides);
     for (let slide of slides) {
       slide.style.display = "none";
     }
-    if (current >= slideLength) setCurrent(1);
-    else if (current < 0) setCurrent(slideLength);
+    if (current > slideLength) {
+      setCurrent(1);
+      return;
+    }
+    else if (current < 1) {
+      setCurrent(slideLength);
+      return;
+    }
     console.log(current);
-    slides[current-1].style.display = "bloc";
+    slides[current - 1].style.display = "block";
   }, [current]);
   return (
     <div className="slideshow-container">
