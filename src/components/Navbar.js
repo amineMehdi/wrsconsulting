@@ -40,8 +40,10 @@ function Navbar(props) {
       setBorderBottom(false);
     });
 
-    const navbarOptions = nav.querySelectorAll(".options-list > li > a");
-    const dropdownMenuOptions = document.querySelector(".nav-dropdown-content");
+    const navbarOptions = nav.querySelectorAll(".items-list> li>a");
+    const dropdownMenuOptions = document.querySelector(
+      ".item-dropdown-content"
+    );
     [...navbarOptions, dropdownMenuOptions].forEach((option) => {
       option.addEventListener("mouseenter", () => {
         toggleBorder(option, false);
@@ -51,10 +53,12 @@ function Navbar(props) {
       });
     });
 
-    const optionsMenutoggle = document.querySelector(".options-menu");
-    optionsMenutoggle.addEventListener("click", ()=>{
-      optionsMenutoggle.classList.toggle('menu-active');
-      document.querySelector('.options-list').classList.toggle('options-slide-active');
+    const optionsMenutoggle = document.querySelector(".items-menu");
+    optionsMenutoggle.addEventListener("click", () => {
+      optionsMenutoggle.classList.toggle("menu-active");
+      document
+        .querySelector(".items-list")
+        .classList.toggle("items-slide-active");
     });
   }, []);
   const toggleBorder = (element, toggle) => {
@@ -64,13 +68,13 @@ function Navbar(props) {
   const toggleBorderOption = (element) => {
     const selected = element.parentElement.classList.length
       ? "dropdown-selected"
-      : "option-selected";
+      : "item-selected";
     element.classList.toggle(selected);
   };
   return (
     <div className="navbar-container">
-      <div className="contact-navbar-wrapper">
-        <div className="contact-navbar">
+      <div className="navbar-contact-container">
+        <div className="navbar-contact">
           <p>
             Contactez nous +336 34 27 40 69 |{" "}
             <a href="mailto:contact@wrsconsulting.fr">
@@ -78,7 +82,7 @@ function Navbar(props) {
             </a>
           </p>
         </div>
-        <div className="social-navbar">
+        <div className="navbar-social">
           <a href="#" title="facebook">
             <img src={facebookSocial} alt="facebook" />
           </a>
@@ -99,41 +103,43 @@ function Navbar(props) {
             <img src={logo} alt="logo" />
           </a>
         </div>
-        <ul className="options-list">
+        <ul className="items-list">
           <li>
-            <a href="#">Acceuil</a>
+            <a href="#">ACCEUIL </a>
           </li>
           <li>
-            <a href="#">A propos</a>
+            <a href="#">A PROPOS</a>
           </li>
-          <li className="nav-dropdown">
-            <a href="#">Expertise WRS</a>
-            <ul className="nav-dropdown-content">
+          <li className="item-dropdown">
+            <a href="#">EXPERTISE WRS</a>
+            <ul className="item-dropdown-content">
               <li>
-                <a href="#">Infrastructures & Réseaux</a>
+                <a href="#">INFRASTRUCTURES & RÉSEAUX</a>
               </li>
               <li>
-                <a href="#">Développement logiciel</a>
+                <a href="#">DÉVELOPPEMENT LOGICIEL</a>
               </li>
               <li>
-                <a href="#">Gestion de projet</a>
+                <a href="#">GESTION DE PROJET</a>
               </li>
               <li>
-                <a href="#">Consulting en stratégie IT</a>
+                <a href="#">CONSULTING EN STRATÉGIE IT</a>
               </li>
             </ul>
+            <span className="item-dropdown-arrow">
+            </span>
           </li>
           <li>
-            <a href="#">Realisations</a>
+            <a href="#">REALISATIONS</a>
           </li>
           <li>
-            <a href="#">Nos Partenaires</a>
+            <a href="#">NOS PARTENAIRES</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="#">CONTACT</a>
           </li>
         </ul>
-        <div className="options-menu">
+        <div className="items-menu">
           <span></span>
           <span></span>
           <span></span>
