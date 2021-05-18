@@ -40,11 +40,11 @@ function Navbar(props) {
       setBorderBottom(false);
     });
 
-    const navbarOptions = nav.querySelectorAll(".items-list> li>a");
-    const dropdownMenuOptions = document.querySelector(
+    const navbarItems = nav.querySelectorAll(".items-list> li>a");
+    const itemDropdownContent = document.querySelector(
       ".item-dropdown-content"
     );
-    [...navbarOptions, dropdownMenuOptions].forEach((option) => {
+    [...navbarItems, itemDropdownContent].forEach((option) => {
       option.addEventListener("mouseenter", () => {
         toggleBorder(option, false);
       });
@@ -53,23 +53,38 @@ function Navbar(props) {
       });
     });
 
-    const optionsMenutoggle = document.querySelector(".items-menu");
-    optionsMenutoggle.addEventListener("click", () => {
-      optionsMenutoggle.classList.toggle("menu-active");
+    const itemsMenutoggle = document.querySelector(".items-menu");
+    itemsMenutoggle.addEventListener("click", () => {
+      itemsMenutoggle.classList.toggle("menu-active");
       document
         .querySelector(".items-list")
         .classList.toggle("items-slide-active");
     });
+
+    const itemDropdownArrow = document.querySelector(".item-dropdown-arrow");
+    itemDropdownArrow.addEventListener("click", () => {
+      // document.querySelector(".items-list").style.visibility = "hidden";
+      document.querySelector(".item-dropdown-back-arrow").style = "visibility: visible; display: block";
+      itemDropdownContent.style="visibility: visible; display:block";
+    });
+
+    const itemDropdownBackArrow = document.querySelector(".item-dropdown-back-arrow");
+    itemDropdownBackArrow.addEventListener("click", ()=>{
+      document.querySelector(".items-list").style.visibility="visible";
+      itemDropdownBackArrow.style.display="none";
+      itemDropdownContent.style.display="none";
+
+    });
+    
   }, []);
+
   const toggleBorder = (element, toggle) => {
     if (window.screen.width >= 900) toggleBorderOption(element);
     setBorderBottom(toggle);
   };
   const toggleBorderOption = (element) => {
-    const selected = element.parentElement.classList.length
-      ? "dropdown-selected"
-      : "item-selected";
-    element.classList.toggle(selected);
+    if (!element.parentElement.classList.length)
+      element.classList.toggle("item-selected");
   };
   return (
     <div className="navbar-container">
@@ -126,8 +141,8 @@ function Navbar(props) {
                 <a href="#">CONSULTING EN STRATÉGIE IT</a>
               </li>
             </ul>
-            <span className="item-dropdown-arrow">
-            </span>
+            <span className="item-dropdown-arrow">&#10095;</span>
+            <span className="item-dropdown-back-arrow">&#10096;</span>
           </li>
           <li>
             <a href="#">REALISATIONS</a>
