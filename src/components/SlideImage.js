@@ -6,9 +6,9 @@ function SlideImage(props){
     return(
         <div className="slide" style={{backgroundImage: `url(${props.src})`}}>
             {/* <img className = "slide-img" src={props.src}/> */}
-            <h2 className="slide-section">
+            <div className="slide-section">
                 {props.section}
-            </h2>
+            </div>
             <p className="slide-details">{props.details}</p>
         </div>
     );

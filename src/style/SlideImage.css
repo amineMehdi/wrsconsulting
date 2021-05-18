@@ -1,9 +1,15 @@
+:root {
+    --primary-color: #67b7e1;
+    --logo-color: #1a5590;
+    --grey-color: #838383;
+    --border-color: #e5e5e5;
+}
+
 .slide {
     display: none;
     position: relative;
     width: 100vw;
     height: 60vh;
-
     object-fit: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -12,16 +18,33 @@
     text-align: center;
 }
 
-.slide-section {
-    position: absolute;
-    background-color: aqua;
-    left: 40%;
-    top: 40%;
-}
 
-.slide-details {
-    position: absolute;
-    background-color: aqua;
-    left: 35%;
-    top: 60%;
+
+
+/* Desktop */
+@media screen and (min-width: 900px) {}
+
+/* Mobile */
+@media screen and (max-width: 900px) {
+    .slide-section {
+        font-size: 31px;
+        margin: 0;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        width: 90%;
+        /* height: 25%; */
+        padding: 10px;
+    }
+
+    .slide-details {
+        margin: 0;
+        position: absolute;
+        background-color: white;
+        /* left: 50%; */
+        top: 50%;
+
+    }
 }
