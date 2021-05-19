@@ -7,10 +7,6 @@ import img1 from "../images/img-1.jpg";
 import img2 from "../images/img-2.jpg";
 import img3 from "../images/img-3.jpg";
 class Home extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div>
@@ -27,7 +23,7 @@ class Home extends React.Component {
             details="Maîtrisez vos développements et garantissez la meilleure expérience utilisateur à vos clients."
           />
           <SlideImage
-            src = {img3}
+            src={img3}
             section="Gestion de projet"
             details="Bordez vos budgets, prévenez vos risques, en garantissant vos coûts, vos délais, et votre qualité logicielle."
           />

@@ -1,17 +1,16 @@
-import React from "react";
-import "../style/SlideImage.css";
+import React, { useEffect } from "react";
 
-function SlideImage(props){
-    // console.log(props.src);
-    return(
-        <div className="slide" style={{backgroundImage: `url(${props.src})`}}>
-            {/* <img className = "slide-img" src={props.src}/> */}
-            <div className="slide-section">
-                {props.section}
-            </div>
-            <p className="slide-details">{props.details}</p>
-        </div>
-    );
+function SlideImage(props) {
+  return (
+    <div className="slide">
+      <div
+        className="slide-img"
+        style={{ backgroundImage: `url(${props.src})` }}
+      ></div>
+      <div className="slide-section">{props.section}</div>
+      <p className="slide-details">{props.details}</p>
+    </div>
+  );
 }
 
 export default SlideImage;

@@ -29,9 +29,17 @@ function Navbar(props) {
     if (borderBottom) nav.style.borderBottomColor = "#67b7e1";
     else nav.style.borderBottomColor = "transparent";
   }, [borderBottom]);
-
+  
   // all event listeners on component mount.
   useEffect(() => {
+    const toggleBorder = (element, toggle) => {
+      if (window.screen.width >= 900) toggleBorderOption(element);
+      setBorderBottom(toggle);
+    };
+    const toggleBorderOption = (element) => {
+      if (!element.parentElement.classList.length)
+        element.classList.toggle("item-selected");
+    };
     const nav = document.getElementsByClassName("navbar-container")[0];
     nav.addEventListener("mouseenter", () => {
       setBorderBottom(true);
@@ -64,28 +72,21 @@ function Navbar(props) {
     const itemDropdownArrow = document.querySelector(".item-dropdown-arrow");
     itemDropdownArrow.addEventListener("click", () => {
       // document.querySelector(".items-list").style.visibility = "hidden";
-      document.querySelector(".item-dropdown-back-arrow").style = "visibility: visible; display: block";
-      itemDropdownContent.style="visibility: visible; display:block";
+      document.querySelector(".item-dropdown-back-arrow").style =
+        "visibility: visible; display: block";
+      itemDropdownContent.style = "visibility: visible; display:block";
     });
 
-    const itemDropdownBackArrow = document.querySelector(".item-dropdown-back-arrow");
-    itemDropdownBackArrow.addEventListener("click", ()=>{
-      document.querySelector(".items-list").style.visibility="visible";
-      itemDropdownBackArrow.style.display="none";
-      itemDropdownContent.style.display="none";
-
+    const itemDropdownBackArrow = document.querySelector(
+      ".item-dropdown-back-arrow"
+    );
+    itemDropdownBackArrow.addEventListener("click", () => {
+      document.querySelector(".items-list").style.visibility = "visible";
+      itemDropdownBackArrow.style.display = "none";
+      itemDropdownContent.style.display = "none";
     });
-    
   }, []);
 
-  const toggleBorder = (element, toggle) => {
-    if (window.screen.width >= 900) toggleBorderOption(element);
-    setBorderBottom(toggle);
-  };
-  const toggleBorderOption = (element) => {
-    if (!element.parentElement.classList.length)
-      element.classList.toggle("item-selected");
-  };
   return (
     <div className="navbar-container">
       <div className="navbar-contact-container">
