@@ -1,19 +1,54 @@
 import React, { useEffect, useState } from "react";
 import "../style/SlideShow.css";
+import anime from "animejs/lib/anime.es";
 
+let timer;
 function SlideShow(props) {
+  // const colorDots = ["3A4050", "323240", "44444E"];
+  const slideUpAnimation = (element, toY) =>
+    anime({
+      targets: "." + element,
+      top: ["60%", toY.toString()],
+      duration: 2000,
+      easing: "easeOutQuad",
+    });
+  const learnMoreAnimation = () =>
+    anime({
+      targets: ".learn-more",
+      opacity: ["0%", "100%"],
+      delay: 500,
+      duration: 2000,
+      easing: "easeOutExpo",
+    });
+  const slideImgBlurAnimation = () =>
+    anime({
+      targets: ".slide-img",
+      filter: "blur(4px)",
+      delay: 1000,
+      duration: 2200,
+      easing: "easeOutExpo",
+    });
   useEffect(() => {
-    console.log(window.screen.width);
-    if (window.screen.width <= 900) {
-      setMobileSize(true);
+    if (window.screen.width <= 1000) {
+      document.querySelector(".slide-controllers").style.display = "none";
     }
+    slideUpAnimation("slide-section", 25).play();
+    slideUpAnimation("slide-details", 50).play();
+    learnMoreAnimation().play();
+    slideImgBlurAnimation().play();
   }, []);
+
   const [current, setCurrent] = useState(1);
   useEffect(() => {
+    slideUpAnimation("slide-section", 25).play();
+    slideUpAnimation("slide-details", 52).play();
+    learnMoreAnimation().play();
+    slideImgBlurAnimation().play();
     const slides = document.querySelectorAll(".slide");
     for (let slide of slides) {
       slide.style.display = "none";
     }
+
     if (current > props.children.length) {
       setCurrent(1);
       return;
@@ -22,46 +57,43 @@ function SlideShow(props) {
       return;
     }
     slides[current - 1].style.display = "block";
+    updateDots(current - 1);
   }, [current]);
-  const [mobileSize, setMobileSize] = useState(false);
-  useEffect(() => {
-    if (mobileSize){
-      document.querySelector(".slide-controllers").style.display="none";
-    }
-  }, [mobileSize]);
 
   const getDots = () => {
     const dots = [];
-    for(let i = 0; i < props.children.length; i++){
-      const dotName = "dot-"+i;
+    for (let i = 0; i < props.children.length; i++) {
+      const dotName = "dot-" + i;
       dots.push(
-      <span key={i.toString()} className={dotName} onClick={()=>{
-        setCurrent(i);
-        const thisDot = document.querySelector("." + dotName);
-        thisDot.classList.contains("active-dot") ? thisDot.classList.remove("active-dot") : thisDot.classList.add("active-dot"); 
-        }}>
-      </span>);
+        <span
+          key={i.toString()}
+          className={dotName}
+          onClick={() => {
+            setCurrent(i + 1);
+            updateDots(i + 1);
+          }}
+        ></span>
+      );
     }
     return dots;
   };
 
+  const updateDots = (currentDot) => {
+    const allDots = document.querySelectorAll("span[class^='dot-']");
+    allDots.forEach((dot, index) => {
+      current - 1 != index
+        ? dot.classList.remove("active-dot")
+        : dot.classList.add("active-dot");
+    });
+  };
   return (
     <div className="slideshow-container">
       {props.children}
       <div className="slide-controllers">
-        <span className="prev" onClick={() => setCurrent(current - 1)}>
-        </span>
-        <span className="next" onClick={() => setCurrent(current + 1)}>
-        </span>
+        <span className="prev" onClick={() => setCurrent(current - 1)}></span>
+        <span className="next" onClick={() => setCurrent(current + 1)}></span>
       </div>
-      <div className="learn-more">
-        <button>
-          En Savoir Plus
-        </button>
-      </div>
-      <div className="dots-container">
-        {getDots()}
-      </div>
+      <div className="dots-container">{getDots()}</div>
     </div>
   );
 }

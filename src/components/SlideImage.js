@@ -9,6 +9,9 @@ function SlideImage(props) {
       ></div>
       <div className="slide-section">{props.section}</div>
       <p className="slide-details">{props.details}</p>
+      <div className="learn-more">
+        <button>En savoir plus</button>
+      </div>
     </div>
   );
 }

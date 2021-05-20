@@ -68,7 +68,7 @@ li a:hover {
     display: none;
 }
 /* Desktop Version */
-@media screen and (min-width:900px) {
+@media screen and (min-width:1010px) {
     .navbar-contact-container {
         margin: 0 10vw;
     }
@@ -159,7 +159,7 @@ li a:hover {
 }
 
 /* Mobile version */
-@media screen and (max-width:900px) {
+@media screen and (max-width:1010px) {
     .navbar-contact-container {
         margin: 0;
         flex-direction: column;

@@ -1,10 +1,12 @@
 :root {
     --primary-color: #67b7e1;
     --logo-color: #1a5590;
-    --grey-color: #838383;
     --border-color: #e5e5e5;
     --shadow-color: rgba(221, 217, 217, 0.377);
-    --section-radius: 5px;
+    --section-radius: 10px;
+    --text-section-color-big: #1b1f17;
+    --text-section-color: #252a20;
+    --dots-color: #41485a;
 }
 
 .slideshow-container {
@@ -30,6 +32,11 @@
     padding: 10px 20px;
     border-radius: var(--section-radius);
     text-align: center;
+    background-color: var(--primary-color);
+    mix-blend-mode: luminosity;
+    color: var(--text-section-color-big);
+    -webkit-box-shadow: 0px 0px 17px 0px #000000; 
+box-shadow: 0px 0px 17px 0px #000000;
 }
 
 .slide-details {
@@ -37,12 +44,14 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 10px;
     border-radius: var(--section-radius);
     text-align: center;
     line-height: 1.5;
-
+    background-color: var(--primary-color);
+    mix-blend-mode: luminosity;
+    color: var(--text-section-color-big);
+    -webkit-box-shadow: 0px 0px 17px 0px #000000; 
+box-shadow: 0px 0px 17px 0px #000000;
 }
 
 .prev,
@@ -60,16 +69,17 @@
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    background: transparent;
 }
 
-.prev:hover{
+.prev:hover {
     background: linear-gradient(to right, var(--shadow-color), transparent);
 }
+
 .next:hover {
     background: linear-gradient(to left, var(--shadow-color), transparent);
 }
-.next{
+
+.next {
     right: 0;
 }
 
@@ -79,6 +89,7 @@
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
+    mix-blend-mode: luminosity;
 }
 
 .learn-more>button {
@@ -87,16 +98,14 @@
     padding: 10px;
     border-radius: 15px;
     border: 2px solid transparent;
-    background-color: black;
-    color: white;
+    font-weight: bold;
     font-size: 18px;
     width: 200px;
-    box-shadow: 0px 0px 11px 0px #000000;
-
+    color: var(--text-section-color);
 }
 
 .learn-more>button:hover {
-    border-color: red;
+    background-color: var(--primary-color);
 }
 
 .dots-container {
@@ -108,24 +117,20 @@
 
 span[class^="dot-"] {
     cursor: pointer;
-    background-color: red;
     border-radius: 50%;
     display: inline-block;
+    border: 3px solid var(--dots-color);
 }
-
-.active-dot {
-    background-color: green;
-    display: none;
+.active-dot{
+    background-color: var(--dots-color);
 }
-
 /* Desktop */
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1010px) {
     .slide-img {
-        height: 75vh;
+        height: 65vh;
+        /* filter: blur(5px); */
     }
-
     .slide-section {
-        background-color: #1a5590;
         font-size: 40px;
         top: 40%;
     }
@@ -133,41 +138,48 @@ span[class^="dot-"] {
     .slide-details {
         font-size: 25px;
         top: 56%;
+        line-height: 2;
+        padding: 0px 10px;
     }
-    span[class^="dot-"]{
+
+    span[class^="dot-"] {
         width: 21px;
         height: 21px;
         margin-right: 10px;
     }
+
+
 }
 
 /* Mobile */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1010px) {
     .slide-img {
         height: 60vh;
+        filter: blur(2px);
     }
 
     .slide-section {
         font-size: 31px;
-        width: 90%;
-        background-color: white;
-        top: 25%;
+        width: 85%;
+        /* top: 25%; */
     }
 
     .slide-details {
+        padding: 10px;
         font-size: 18px;
         width: 90%;
-        top: 52%;
+        /* top: 52%; */
     }
 
-    span[class^="dot-"]{
+    span[class^="dot-"] {
         width: 15px;
         height: 15px;
         margin: 0 5px;
     }
 }
 
-@media screen and (max-width: 900px) and (orientation: landscape), (max-height:650px) {
+@media screen and (max-width: 1010px) and (orientation: landscape),
+(max-height:650px) {
     .slide-details {
         display: none;
     }
