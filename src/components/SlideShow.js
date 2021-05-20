@@ -23,8 +23,7 @@ function SlideShow(props) {
   const slideImgBlurAnimation = () =>
     anime({
       targets: ".slide-img",
-      filter: "blur(4px)",
-      delay: 1000,
+      filter: "blur(3px)",
       duration: 2200,
       easing: "easeOutExpo",
     });
