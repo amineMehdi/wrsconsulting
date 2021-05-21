@@ -3,6 +3,7 @@ import "../style/Home.css";
 import Navbar from "./Navbar";
 import SlideShow from "./SlideShow";
 import SlideImage from "./SlideImage";
+import Tile from "./TilesContainer";
 import img1 from "../images/img-1.jpg";
 import img2 from "../images/img-2.jpg";
 import img3 from "../images/img-3.jpg";
@@ -39,6 +40,7 @@ class Home extends React.Component {
             link="consulting-en-strategie-it"
           />
         </SlideShow>
+        <Tile/>
       </div>
     );
   }

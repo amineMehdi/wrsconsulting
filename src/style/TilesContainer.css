@@ -1,0 +1,142 @@
+:root {
+    --tile-background-color: #e6e6e6;
+    --tile-color: #1a668c;
+}
+.tiles-section{
+    margin-top: 35px;
+}
+.tiles-section-header {
+    position: relative;
+    text-align: center;
+}
+
+.tiles-section-header::before,
+.tiles-section-header::after {
+    position: absolute;
+    content: "";
+    width: 39vw;
+    border: 2px solid var(--border-color);
+    top: 50%;
+}
+
+.tiles-section-header::before {
+    left: 0;
+    
+}
+.tiles-section-header::after{
+    right: 0;
+}
+.tiles-container {
+    display: flex;
+    position: relative;
+    /* margin: 0 auto; */
+}
+
+
+.tile {
+    text-align: center;
+    padding: 10px;
+    height: auto;
+    width: 25vw;
+    position: relative;
+    background-color: var(--tile-background-color);
+}
+
+
+.tile-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    padding: 5px;
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    background-color: var(--tile-color);
+
+}
+
+/* Desktop */
+@media screen and (min-width: 1010px) {
+    .tiles-section {
+        margin-bottom: 5vh;
+    }
+
+    .tiles-container {
+        margin: 0 auto;
+        margin-top: 5%;
+        width: 85vw;
+    }
+
+    .tile {
+        width: 25vw;
+        transition: all 0.5s ease-out;
+    }
+
+    .tile:not(:last-child) {
+        margin-right: 15px;
+    }
+
+    .tile:hover {
+
+        -webkit-box-shadow: 0px 0px 11px 0px #000000;
+        box-shadow: 0px 0px 11px 0px #000000;
+        transform: scale(1.03);
+    }
+
+    .tile-logo {
+        top: -15%;
+    }
+
+    .tile-header {
+        padding-top: 20%;
+        margin-bottom: 5%;
+        font-size: 28px;
+    }
+
+    .tile-details {
+        font-size: 18px;
+        /* display: none; */
+    }
+
+    .tile-arrows {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 1010px) {
+    .tiles-container {
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20%;
+        position: relative;
+    }
+
+    .tile {
+        margin: 0 auto;
+        width: 85%;
+        height: auto;
+        margin-bottom: 75px;
+
+    }
+
+    .tile-logo {
+        width: 65px;
+        height: 65px;
+        top: -35px;
+    }
+
+    .tile-header {
+        padding-top: 15%;
+        font-size: 45px;
+    }
+
+    .tile-details {
+        font-size: 20px;
+    }
+}
