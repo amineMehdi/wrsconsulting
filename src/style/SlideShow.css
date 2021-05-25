@@ -140,7 +140,7 @@ span[class^="dot-"] {
         font-size: 25px;
         top: 56%;
         line-height: 2;
-        padding: 0px 10px;
+        padding: 10px 20px;
     }
 
     span[class^="dot-"] {

@@ -2,34 +2,33 @@
     --tile-background-color: #e6e6e6;
     --tile-color: #1a668c;
 }
-.tiles-section{
+
+.tiles-section {
     margin-top: 35px;
 }
+
 .tiles-section-header {
     position: relative;
-    text-align: center;
+    font-size: 35px;
+    margin: 0 auto;
 }
 
-.tiles-section-header::before,
 .tiles-section-header::after {
     position: absolute;
     content: "";
-    width: 39vw;
-    border: 2px solid var(--border-color);
-    top: 50%;
+    width: 60px;
+    border: 2px solid var(--tile-color);
+    bottom: 0;
+    left: 0;
 }
 
-.tiles-section-header::before {
-    left: 0;
-    
+.tiles-section-header p {
+    padding-bottom: 10px;
 }
-.tiles-section-header::after{
-    right: 0;
-}
+
 .tiles-container {
     display: flex;
     position: relative;
-    /* margin: 0 auto; */
 }
 
 
@@ -65,6 +64,10 @@
         margin-bottom: 5vh;
     }
 
+    .tiles-section-header {
+        width: 85vw;
+    }
+
     .tiles-container {
         margin: 0 auto;
         margin-top: 5%;
@@ -81,7 +84,6 @@
     }
 
     .tile:hover {
-
         -webkit-box-shadow: 0px 0px 11px 0px #000000;
         box-shadow: 0px 0px 11px 0px #000000;
         transform: scale(1.03);
@@ -99,9 +101,12 @@
 
     .tile-details {
         font-size: 18px;
-        /* display: none; */
+        display: none;
     }
-
+    /* .tile:hover .tile-details{
+        display: block;
+    } */
+    
     .tile-arrows {
         display: none;
     }
@@ -109,6 +114,9 @@
 
 /* Mobile */
 @media screen and (max-width: 1010px) {
+    .tiles-section-header {
+        width: 93vw;
+    }
     .tiles-container {
         width: 100vw;
         flex-direction: column;
@@ -119,7 +127,7 @@
 
     .tile {
         margin: 0 auto;
-        width: 85%;
+        width: 90%;
         height: auto;
         margin-bottom: 75px;
 
