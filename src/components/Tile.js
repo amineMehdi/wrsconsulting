@@ -14,9 +14,12 @@ function Tile(props){
                     {props.details}
                 </p>
             </div>
-            <div className="tile-arrows">
-                <span className="tile-arrow-up"></span>
-                <span className="tile-arrow-down"></span>
+            <div className="tile-arrow">
+            </div>
+            <div className="tile-learn-more">
+                <button>
+                    En savoir plus
+                </button>
             </div>
         </div>
     );

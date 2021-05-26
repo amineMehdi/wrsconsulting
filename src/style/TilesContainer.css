@@ -5,6 +5,7 @@
 
 .tiles-section {
     margin-top: 35px;
+
 }
 
 .tiles-section-header {
@@ -28,7 +29,7 @@
 
 .tiles-container {
     display: flex;
-    position: relative;
+    position: absolute;
 }
 
 
@@ -58,10 +59,21 @@
 
 }
 
+.tile-details {
+    display: none;
+}
+
+.tile-learn-more {
+    padding-bottom: 15px;
+    display: none;
+}
+
+
 /* Desktop */
 @media screen and (min-width: 1010px) {
     .tiles-section {
-        margin-bottom: 5vh;
+        position: relative;
+        height: 55vh;
     }
 
     .tiles-section-header {
@@ -69,9 +81,10 @@
     }
 
     .tiles-container {
-        margin: 0 auto;
-        margin-top: 5%;
         width: 85vw;
+        top: 28%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .tile {
@@ -101,12 +114,9 @@
 
     .tile-details {
         font-size: 18px;
-        display: none;
+
     }
-    /* .tile:hover .tile-details{
-        display: block;
-    } */
-    
+
     .tile-arrows {
         display: none;
     }
@@ -116,7 +126,13 @@
 @media screen and (max-width: 1010px) {
     .tiles-section-header {
         width: 93vw;
+        font-size: 50px;
     }
+
+    .tiles-section-header::after {
+        width: 85px;
+    }
+
     .tiles-container {
         width: 100vw;
         flex-direction: column;
@@ -128,7 +144,7 @@
     .tile {
         margin: 0 auto;
         width: 90%;
-        height: auto;
+        height: 28vh;
         margin-bottom: 75px;
 
     }
@@ -141,10 +157,34 @@
 
     .tile-header {
         padding-top: 15%;
-        font-size: 45px;
+        font-size: 43px;
     }
 
     .tile-details {
         font-size: 20px;
+    }
+    .tile-arrow{
+        border: solid black;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        left: 50%;
+        bottom: 7%;
+    }
+    .arrow-down {
+        transform:  translateX(-50%) rotate(45deg);
+    }
+    .arrow-up{
+        transform: translateX(-50%) rotate(-135deg);
+        bottom: 1%;
+    }
+    .tile-learn-more{
+        position: absolute;
+        bottom: 45px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
