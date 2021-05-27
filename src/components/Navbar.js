@@ -5,31 +5,16 @@ import googleSocial from "../images/google_social.svg";
 import facebookSocial from "../images/facebook_social.svg";
 import linkedinSocial from "../images/linkedin_social.svg";
 import twitterSocial from "../images/twitter_social.svg";
-// import FacebookIcon from "./icons/facebookIcon";
-// import GoogleIcon from "./icons/googleIcon";
-// import LinkedInIcon from "./icons/linkedInIcon";
-// import TwitterIcon from "./icons/twitterIcon";
-// const socialColors = {
-//   twitterStroke: "#55acee",
-//   facebookStroke: "#3b5999",
-//   linkedInStroke: "#0077B5",
-//   googleStroke: "#dd4b39",
-// };
-// let socialColorsHover = {
-//   twitter: "#000000",
-//   facebook: "#000000",
-//   google: "#000000",
-//   linkedIn: "#000000"
-// }
+import anime from "animejs";
+
 function Navbar(props) {
   const [borderBottom, setBorderBottom] = useState(false);
 
   useEffect(() => {
-    const nav = document.getElementsByClassName("navbar-container")[0];
+    const nav = document.querySelector(".navbar-container");
     if (borderBottom) nav.style.borderBottomColor = "#67b7e1";
     else nav.style.borderBottomColor = "transparent";
   }, [borderBottom]);
-  
   // all event listeners on component mount.
   useEffect(() => {
     const toggleBorder = (element, toggle) => {
@@ -40,7 +25,7 @@ function Navbar(props) {
       if (!element.parentElement.classList.length)
         element.classList.toggle("item-selected");
     };
-    const nav = document.getElementsByClassName("navbar-container")[0];
+    const nav = document.querySelector(".navbar-container");
     nav.addEventListener("mouseenter", () => {
       setBorderBottom(true);
     });
@@ -85,6 +70,30 @@ function Navbar(props) {
       itemDropdownBackArrow.style.display = "none";
       itemDropdownContent.style.display = "none";
     });
+
+    window.addEventListener("scroll", ()=>{
+      // console.log(window.scrollY);
+      if(window.scrollY > 90){
+        anime({
+          targets: ".navbar-container",
+          translateY: window.screen.width < 1010 ? "-95px" : "-50px",
+          duration: 100,
+          easing: "linear"
+        })
+        // document.querySelector(".navbar-contact-container").style.display="none";
+        // document.querySelector(".navbar-container").style="position: fixed; top: 0; width: 100%";
+        // console.log(document.querySelector(".navbar-container"));
+      }
+      else if(window.scrollY < 60){
+        anime({
+          targets: ".navbar-container",
+          translateY: "0px",
+          duration: 100,
+          easing: "linear"
+        })
+        document.querySelector(".navbar-contact-container").style.display="flex";
+      }
+    });
   }, []);
 
   return (
@@ -115,7 +124,7 @@ function Navbar(props) {
       </div>
       <nav className="navbar">
         <div className="logo-container">
-          <a href="#">
+          <a href="/">
             <img src={logo} alt="logo" />
           </a>
         </div>

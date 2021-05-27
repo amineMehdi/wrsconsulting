@@ -6,8 +6,13 @@
 }
 
 .navbar-container {
+    position: fixed;
+    width: 100vw;
+    top: 0;
     border-bottom: 3px solid transparent;
     transition: 0.5s ease;
+    z-index: 3;
+    background-color: white;
 }
 
 .navbar-contact-container {
@@ -64,9 +69,12 @@ li a:hover {
 .items-menu {
     display: none;
 }
-.item-dropdown-arrow, .item-dropdown-back-arrow{
+
+.item-dropdown-arrow,
+.item-dropdown-back-arrow {
     display: none;
 }
+
 /* Desktop Version */
 @media screen and (min-width:1010px) {
     .navbar-contact-container {
@@ -262,6 +270,7 @@ li a:hover {
         top: 15px;
         z-index: 2;
     }
+
     .items-menu {
         display: block;
         position: absolute;

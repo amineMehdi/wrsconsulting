@@ -23,10 +23,11 @@ function SlideShow(props) {
   const slideImgBlurAnimation = () =>
     anime({
       targets: ".slide-img",
-      filter: "blur(3px)",
+      filter: "blur(5px)",
       duration: 2200,
       easing: "easeOutExpo",
     });
+
   useEffect(() => {
     if (window.screen.width <= 1000) {
       document.querySelector(".slide-controllers").style.display = "none";
@@ -35,6 +36,10 @@ function SlideShow(props) {
     slideUpAnimation("slide-details", 50).play();
     learnMoreAnimation().play();
     slideImgBlurAnimation().play();
+    // timer = setInterval(() => {
+    //   console.log("sliding");
+    //   setCurrent(current+1);
+    // }, 1500);
   }, []);
 
   const [current, setCurrent] = useState(1);
@@ -43,6 +48,7 @@ function SlideShow(props) {
     slideUpAnimation("slide-details", 52).play();
     learnMoreAnimation().play();
     slideImgBlurAnimation().play();
+
     const slides = document.querySelectorAll(".slide");
     for (let slide of slides) {
       slide.style.display = "none";
@@ -56,8 +62,19 @@ function SlideShow(props) {
       return;
     }
     slides[current - 1].style.display = "block";
-    updateDots(current - 1);
+    updateDots();
   }, [current]);
+
+
+  // const [autoSlide, setAutoSlide] = useState(true);
+  // useEffect(() => {
+  //   if (autoSlide) {
+  //     setInterval(() => {
+  //       console.log("scrolling");
+  //       setCurrent(current + 1);
+  //     }, 5500);
+  //   }
+  // }, [autoSlide]);
 
   const getDots = () => {
     const dots = [];
@@ -69,7 +86,7 @@ function SlideShow(props) {
           className={dotName}
           onClick={() => {
             setCurrent(i + 1);
-            updateDots(i + 1);
+            updateDots();
           }}
         ></span>
       );
@@ -77,10 +94,10 @@ function SlideShow(props) {
     return dots;
   };
 
-  const updateDots = (currentDot) => {
+  const updateDots = () => {
     const allDots = document.querySelectorAll("span[class^='dot-']");
     allDots.forEach((dot, index) => {
-      current - 1 != index
+      current - 1 !== index
         ? dot.classList.remove("active-dot")
         : dot.classList.add("active-dot");
     });

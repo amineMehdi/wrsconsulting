@@ -7,20 +7,15 @@ import reseauIcon from "../images/reseaux_infrastructure_icon.svg";
 import strategyIcon from "../images/strategie_it_icon.svg";
 import anime from "animejs/lib/anime.es";
 
-const allTiles = document.querySelectorAll(".tile");
 const animationTimer = 1500;
 function TilesContainer(props) {
-  // const [mobileSize, setMobileSize] = useState(false);
+  // Desktop version
   useEffect(() => {
-    // console.log(window.screen.width);
-    // if (window.screen.width < 1010) setMobileSize(true);
-    // else setMobileSize(false);
-    // Desktop version
+    const allTiles = document.querySelectorAll(".tile");
+
     if (window.screen.width > 1010) {
-      console.log("desktop");
       allTiles.forEach((tile) => {
         tile.addEventListener("mouseenter", () => {
-          tile.classList.add("tile-active");
           anime({
             targets: tile,
             width: "100%",
@@ -50,7 +45,6 @@ function TilesContainer(props) {
         });
 
         tile.addEventListener("mouseleave", () => {
-          tile.classList.remove("tile-active");
           anime({
             targets: tile.querySelector(".tile-logo"),
             top: "-15%",
@@ -86,74 +80,7 @@ function TilesContainer(props) {
         });
       });
     }
-    // Mobile version
-    // else {
-    //   allTiles.forEach((tile) => {
-    //     let tileArrow = tile.querySelector(".tile-arrow");
-    //     tileArrow.addEventListener("click", () => {
-    //       anime({
-    //         targets: tile,
-    //         height: "40vh",
-    //         duration: animationTimer,
-    //       });
-    //       tile.querySelector(".tile-details").style = "display: block";
-    //       tile.querySelector(".tile-learn-more").style = "display: block";
-    //       anime({
-    //         targets: tile.querySelector(".tile-learn-more"),
-    //         opacity: ["0", "1"],
-    //         delay: 500,
-    //         duration: animationTimer,
-    //       });
-    //       tileArrowDown.classList.add("tile-arrow-up");
-    //       tileArrowDown.classList.remove("tile-arrow-down");
-    //       console.log("arrow");
-    //     });
-    //     if(tile)
-    //     let tileArrowUp = tile.querySelector(".tile-arrow-up");
-    //     tileArrowUp.addEventListener("click", () => {
-    //       tile.querySelector(".tile-details").style= "display: none";
-    //       tile.querySelector(".tile-learn-more").style= "display: none";
-
-    //       tileArrowUp.classList.add("tile-arrow-down");
-    //       tileArrowUp.classList.remove("tile-arrow-up");
-
-    //     });
-    //   });
-    // }
   }, []);
-  const [arrowDown, setArrowDown] = useState(true);
-  useEffect(() => {
-    if (window.screen.width <= 1010) {
-      allTiles.forEach((tile) => {
-        const tileArrow = tile.querySelector(".tile-arrow");
-        console.log(arrowDown);
-        if (arrowDown) {
-          console.log("ml");
-          tileArrow.addEventListener("click", () => {
-            anime({
-              targets: tile,
-              height: "40vh",
-              duration: animationTimer,
-            });
-            tile.querySelector(".tile-details").style = "display: block";
-            tile.querySelector(".tile-learn-more").style = "display: block";
-            anime({
-              targets: tile.querySelector(".tile-learn-more"),
-              opacity: ["0", "1"],
-              delay: 500,
-              duration: animationTimer,
-            });
-            tileArrow.classList.add("arrow-up");
-            tileArrow.classList.remove("arrow-down");
-            console.log("arrow-down");
-            // setArrowDown(false);
-          });
-        } else {
-          tileArrow.addEventListener();
-        }
-      });
-    }
-  }, [arrowDown]);
   return (
     <div className="tiles-section">
       <div className="tiles-section-header">
@@ -186,3 +113,44 @@ function TilesContainer(props) {
 }
 
 export default TilesContainer;
+
+// const [isMobile, setMobile] = useState(false);
+// useEffect(() => {
+//   if (window.screen.width < 1010) setMobile(true);
+//   if (isMobile) {
+//     const allTiles = document.querySelectorAll(".tile");
+//     allTiles.forEach((tile) => {
+//       const tileArrow = tile.querySelector(".tile-arrow");
+//       if (tileArrow.classList.contains("arrow-down")) {
+//         tileArrow.addEventListener("click", () => {
+//           anime({
+//             targets: tile,
+//             height: "40vh",
+//             duration: animationTimer,
+//           });
+//           tile.querySelector(".tile-details").style = "display: block";
+//           tile.querySelector(".tile-learn-more").style = "display: block";
+//           anime({
+//             targets: tile.querySelector(".tile-learn-more"),
+//             opacity: ["0", "1"],
+//             delay: 500,
+//             duration: animationTimer,
+//           });
+//           tileArrow.classList.add("arrow-up");
+//           tileArrow.classList.remove("arrow-down");
+//           console.log("arrow");
+//         });
+//       }
+//       if (tileArrow.classList.contains("arrow-up")) {
+//         console.log("arrow-up");
+//         tileArrow.addEventListener("click", () => {
+//           tile.querySelector(".tile-details").style = "display: none";
+//           tile.querySelector(".tile-learn-more").style = "display: none";
+
+//           tileArrow.classList.add("arrow-down");
+//           tileArrow.classList.remove("arrow-up");
+//         });
+//       }
+//     });
+//   }
+// }, [isMobile]);
