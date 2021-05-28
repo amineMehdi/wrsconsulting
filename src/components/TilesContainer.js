@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Tile from "./Tile";
 import "../style/TilesContainer.css";
-import developpementIcon from "../images/developpement_logiciel_icon.svg";
-import editionIcon from "../images/edition_logiciel_icon.svg";
-import reseauIcon from "../images/reseaux_infrastructure_icon.svg";
-import strategyIcon from "../images/strategie_it_icon.svg";
+
 import anime from "animejs/lib/anime.es";
 
-const animationTimer = 1500;
+const animationTimer = 1000;
 function TilesContainer(props) {
   // Desktop version
   useEffect(() => {
@@ -30,6 +26,12 @@ function TilesContainer(props) {
             borderRadius: "10px",
             duration: animationTimer,
           });
+          anime({
+            targets: tile.querySelector(".tile-header"),
+            fontSize: "50px",
+            duration: 500,
+            easing: "linear",
+          });
           tile.querySelector(".tile-details").style.display = "block";
           tile.querySelector(".tile-learn-more").style.display = "block";
           allTiles.forEach((otherTile) => {
@@ -50,12 +52,15 @@ function TilesContainer(props) {
             top: "-15%",
             duration: animationTimer,
             borderRadius: "50%",
+            easing: "linear",
           });
           anime({
             targets: tile,
             width: "25vw",
             duration: animationTimer,
+            easing: "linear",
           });
+          tile.querySelector(".tile-header").style.fontSize = "28px";
           tile.querySelector(".tile-details").style.display = "none";
           tile.querySelector(".tile-learn-more").style.display = "none";
           allTiles.forEach((otherTile) => {
@@ -86,28 +91,7 @@ function TilesContainer(props) {
       <div className="tiles-section-header">
         <p>Nos Expertises</p>
       </div>
-      <div className="tiles-container">
-        <Tile
-          logo={reseauIcon}
-          header="Reseaux & Infrastructure"
-          details="Maîtrisez l’évolution de votre Datacenter, vos Clouds et vos applications Saas."
-        />
-        <Tile
-          logo={developpementIcon}
-          header="Développement logiciel"
-          details="Maîtrisez vos développements et garantissez la meilleure expérience utilisateur à vos clients."
-        />
-        <Tile
-          logo={editionIcon}
-          header="Gestion de projet"
-          details="Bordez vos budgets, prévenez vos risques, en garantissant vos coûts, vos délais, et votre qualité logicielle."
-        />
-        <Tile
-          logo={strategyIcon}
-          header="Consulting en stratégie IT"
-          details="Ayez toujours un coup d’avance en garantissant l’efficacité de votre veille stratégique."
-        />
-      </div>
+      <div className="tiles-container">{props.children}</div>
     </div>
   );
 }

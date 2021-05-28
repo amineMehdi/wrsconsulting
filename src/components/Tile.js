@@ -21,9 +21,7 @@ function Tile(props) {
       });
       element.classList.add("arrow-up");
       element.classList.remove("arrow-down");
-      console.log("arrow");
     } else {
-      console.log("up");
       tile.querySelector(".tile-details").style = "display: none";
       tile.querySelector(".tile-learn-more").style = "display: none";
       anime({
@@ -49,7 +47,9 @@ function Tile(props) {
         onClick={(event) => handleArrow(event.target)}
       ></div>
       <div className="tile-learn-more">
-        <button>En savoir plus</button>
+        <button onClick={() => (window.location.href = `/${props.link}`)}>
+          En savoir plus
+        </button>
       </div>
     </div>
   );

@@ -4,7 +4,6 @@ import anime from "animejs/lib/anime.es";
 
 let timer;
 function SlideShow(props) {
-  // const colorDots = ["3A4050", "323240", "44444E"];
   const slideUpAnimation = (element, toY) =>
     anime({
       targets: "." + element,
@@ -23,7 +22,7 @@ function SlideShow(props) {
   const slideImgBlurAnimation = () =>
     anime({
       targets: ".slide-img",
-      filter: "blur(5px)",
+      filter: "blur(3px)",
       duration: 2200,
       easing: "easeOutExpo",
     });
@@ -36,10 +35,6 @@ function SlideShow(props) {
     slideUpAnimation("slide-details", 50).play();
     learnMoreAnimation().play();
     slideImgBlurAnimation().play();
-    // timer = setInterval(() => {
-    //   console.log("sliding");
-    //   setCurrent(current+1);
-    // }, 1500);
   }, []);
 
   const [current, setCurrent] = useState(1);
@@ -65,16 +60,6 @@ function SlideShow(props) {
     updateDots();
   }, [current]);
 
-
-  // const [autoSlide, setAutoSlide] = useState(true);
-  // useEffect(() => {
-  //   if (autoSlide) {
-  //     setInterval(() => {
-  //       console.log("scrolling");
-  //       setCurrent(current + 1);
-  //     }, 5500);
-  //   }
-  // }, [autoSlide]);
 
   const getDots = () => {
     const dots = [];

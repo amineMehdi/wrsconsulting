@@ -69,12 +69,32 @@
     display: none;
 }
 
+.tile-learn-more>button {
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    width: 200px;
+    border: 2px solid transparent;
+    /* color: var(--text-section-color); */
+
+    /* background-color: transparent;
+    color: white;
+    border: 2px solid white; */
+}
+
+.tile-learn-more>button:hover {
+    background-color: var(--tile-color);
+    color: white;
+}
 
 /* Desktop */
 @media screen and (min-width: 1010px) {
     .tiles-section {
         position: relative;
-        height: 55vh;
+        height: 65vh;
     }
 
     .tiles-section-header {
@@ -164,7 +184,8 @@
     .tile-details {
         font-size: 20px;
     }
-    .tile-arrow{
+
+    .tile-arrow {
         border: solid black;
         border-width: 0 3px 3px 0;
         display: inline-block;
@@ -175,14 +196,17 @@
         left: 50%;
         bottom: 7%;
     }
+
     .arrow-down {
-        transform:  translateX(-50%) rotate(45deg);
+        transform: translateX(-50%) rotate(45deg);
     }
-    .arrow-up{
+
+    .arrow-up {
         transform: translateX(-50%) rotate(-135deg);
         bottom: 1%;
     }
-    .tile-learn-more{
+
+    .tile-learn-more {
         position: absolute;
         bottom: 45px;
         left: 50%;

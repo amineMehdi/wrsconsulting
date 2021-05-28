@@ -1,0 +1,41 @@
+.footer-container {
+    display: grid;
+    grid-template-columns: 25vw 25vw 25vw 24vw;
+    grid-template-rows: 35vh 10vh;
+    gap: 0px 0px;
+    grid-template-areas:
+        "Logo-Area Nos-Services Entreprise Nous-Contacter"
+        "Footer-Social Footer-Social Footer-Social Footer-Social";
+    /* background-color: #0a1535; */
+    background-color: rgb(168, 167, 167);
+    color: black;
+    border-top: 5px solid #f39619;
+}
+.footer-container * {
+    padding: 15px;
+}
+.footer-social {
+    grid-area: Footer-Social;
+}
+
+.footer-logo {
+    grid-area: Logo-Area;
+}
+
+.footer-services {
+    grid-area: Nos-Services;
+}
+
+.footer-entreprise {
+    grid-area: Entreprise;
+}
+
+.footer-contacter {
+    grid-area: Nous-Contacter;
+}
+
+
+/* .footer-container * {
+    border: 1px solid red;
+    position: relative;
+} */

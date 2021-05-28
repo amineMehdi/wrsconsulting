@@ -23,6 +23,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    filter: brightness(0.7);
 }
 
 .slide-section {
@@ -34,9 +35,11 @@
     border-radius: var(--section-radius);
     text-align: center;
     /* mix-blend-mode: luminosity; */
-    background-color: #a1a2af;
-    color: var(--text-section-color-big);
-    box-shadow: 0px 0px 17px 0px rgb(114, 114, 114);
+    /* background-color: #a1a2af; */
+    background-color: #7C8C89;
+    /* color: var(--text-section-color-big); */
+    color: white;
+    /* box-shadow: 0px 0px 17px 0px rgb(114, 114, 114); */
 }
 
 .slide-details {
@@ -48,9 +51,12 @@
     text-align: center;
     line-height: 1.5;
     /* mix-blend-mode: luminosity; */
-    background-color: #a9aef5;
-    color: var(--text-section-color-big);
-    box-shadow: 0px 0px 17px 0px rgb(114, 114, 114);
+    /* background-color: #a9aef5; */
+    background-color: #7C8C89;
+    opacity: 0.95;
+    /* color: var(--text-section-color-big); */
+    color: white;
+    /* box-shadow: 0px 0px 17px 0px rgb(114, 114, 114); */
 }
 
 .prev,
@@ -88,14 +94,14 @@
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
-    mix-blend-mode: luminosity;
+    /* mix-blend-mode: luminosity; */
 }
 
 .learn-more>button {
     cursor: pointer;
     width: 100%;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 20px;
     border: 2px solid transparent;
     font-weight: bold;
     font-size: 18px;
@@ -104,7 +110,8 @@
 }
 
 .learn-more>button:hover {
-    background-color: var(--primary-color);
+    background-color: var(--logo-color);
+    color: #F3F8EA;
 }
 
 .dots-container {
@@ -118,18 +125,19 @@ span[class^="dot-"] {
     cursor: pointer;
     border-radius: 50%;
     display: inline-block;
-    border: 3px solid var(--dots-color);
+    border: 3px solid #a1a2af;
 }
 
 .active-dot {
-    background-color: var(--dots-color);
+    background-color: #a1a2af;
 }
 
 /* Desktop */
 @media screen and (min-width: 1010px) {
-    .slideshow-container{
+    .slideshow-container {
         margin-top: 14vh;
     }
+
     .slide-img {
         height: 65vh;
     }
@@ -157,9 +165,10 @@ span[class^="dot-"] {
 
 /* Mobile */
 @media screen and (max-width: 1010px) {
-    .slideshow-container{
+    .slideshow-container {
         margin-top: 23vh;
     }
+
     .slide-img {
         height: 60vh;
         filter: blur(2px);
