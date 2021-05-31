@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/wrsconsulting/static/css/main.8df161bb.chunk.css",
+    "main.js": "/wrsconsulting/static/js/main.fe4fb848.chunk.js",
+    "main.js.map": "/wrsconsulting/static/js/main.fe4fb848.chunk.js.map",
+    "runtime-main.js": "/wrsconsulting/static/js/runtime-main.b40941d8.js",
+    "runtime-main.js.map": "/wrsconsulting/static/js/runtime-main.b40941d8.js.map",
+    "static/js/2.be2490b8.chunk.js": "/wrsconsulting/static/js/2.be2490b8.chunk.js",
+    "static/js/2.be2490b8.chunk.js.map": "/wrsconsulting/static/js/2.be2490b8.chunk.js.map",
+    "index.html": "/wrsconsulting/index.html",
+    "static/css/main.8df161bb.chunk.css.map": "/wrsconsulting/static/css/main.8df161bb.chunk.css.map",
+    "static/js/2.be2490b8.chunk.js.LICENSE.txt": "/wrsconsulting/static/js/2.be2490b8.chunk.js.LICENSE.txt",
+    "static/media/developpement_logiciel_icon.ba80f6c0.svg": "/wrsconsulting/static/media/developpement_logiciel_icon.ba80f6c0.svg",
+    "static/media/edition_logiciel_icon.b21df7f2.svg": "/wrsconsulting/static/media/edition_logiciel_icon.b21df7f2.svg",
+    "static/media/facebook_social.32e7def9.svg": "/wrsconsulting/static/media/facebook_social.32e7def9.svg",
+    "static/media/google_social.e0c128ec.svg": "/wrsconsulting/static/media/google_social.e0c128ec.svg",
+    "static/media/img-1.7490343c.jpg": "/wrsconsulting/static/media/img-1.7490343c.jpg",
+    "static/media/img-2.0d6db3b7.jpg": "/wrsconsulting/static/media/img-2.0d6db3b7.jpg",
+    "static/media/img-3.055330cf.jpg": "/wrsconsulting/static/media/img-3.055330cf.jpg",
+    "static/media/img-4.c292d4ba.jpg": "/wrsconsulting/static/media/img-4.c292d4ba.jpg",
+    "static/media/linkedin_social.ff4f7386.svg": "/wrsconsulting/static/media/linkedin_social.ff4f7386.svg",
+    "static/media/reseaux_infrastructure_icon.c1f9d5e5.svg": "/wrsconsulting/static/media/reseaux_infrastructure_icon.c1f9d5e5.svg",
+    "static/media/strategie_it_icon.d48b5807.svg": "/wrsconsulting/static/media/strategie_it_icon.d48b5807.svg",
+    "static/media/twitter_social.3d3c2ea9.svg": "/wrsconsulting/static/media/twitter_social.3d3c2ea9.svg",
+    "static/media/wrs-80x80.41ac646a.png": "/wrsconsulting/static/media/wrs-80x80.41ac646a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b40941d8.js",
+    "static/js/2.be2490b8.chunk.js",
+    "static/css/main.8df161bb.chunk.css",
+    "static/js/main.fe4fb848.chunk.js"
+  ]
+}
