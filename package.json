@@ -1,4 +1,5 @@
 {
+  "homepage": "http://amineMehdi.github.io/wrsconsulting",
   "name": "wrsconsutling",
   "version": "0.1.0",
   "private": true,
@@ -41,5 +42,4 @@
   "devDependencies": {
     "gh-pages": "^3.2.0"
   },
-  "homepage": "http://amineMehdi.github.io/wrsconsulting"
 }
