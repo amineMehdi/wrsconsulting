@@ -12,10 +12,10 @@ import img2 from "../images/img-2.jpg";
 import img3 from "../images/img-3.jpg";
 import img4 from "../images/img-4.jpg";
 
-import developpementIcon from "../images/developpement_logiciel_icon.svg";
-import editionIcon from "../images/edition_logiciel_icon.svg";
-import reseauIcon from "../images/reseaux_infrastructure_icon.svg";
-import strategyIcon from "../images/strategie_it_icon.svg";
+import developpementIcon from "../images/expertise-icons/developpement_logiciel_icon.svg";
+import editionIcon from "../images/expertise-icons/edition_logiciel_icon.svg";
+import reseauIcon from "../images/expertise-icons/reseaux_infrastructure_icon.svg";
+import strategyIcon from "../images/expertise-icons/strategie_it_icon.svg";
 import FooterContainer from "./FooterContainer";
 
 class Home extends React.Component {

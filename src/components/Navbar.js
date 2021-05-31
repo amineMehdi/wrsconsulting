@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "../style/Navbar.css";
 import logo from "../images/wrs-80x80.png";
-import googleSocial from "../images/google_social.svg";
-import facebookSocial from "../images/facebook_social.svg";
-import linkedinSocial from "../images/linkedin_social.svg";
-import twitterSocial from "../images/twitter_social.svg";
+import googleSocial from "../images/social-icons/google_social.svg";
+import facebookSocial from "../images/social-icons/facebook_social.svg";
+import linkedinSocial from "../images/social-icons/linkedin_social.svg";
+import twitterSocial from "../images/social-icons/twitter_social.svg";
 import anime from "animejs";
 
 function Navbar(props) {
