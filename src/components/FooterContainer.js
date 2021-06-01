@@ -8,13 +8,13 @@ import twitterSocial from "../images/social-icons/twitter_social.svg";
 
 function FooterContainer() {
   return (
-    <div>
-      <footer className="footer-container">
+    <div className="footer-container">
+      <footer>
         <div className="footer-logo">
           <img src={logo} />
         </div>
         <div className="footer-services">
-          <h3>Services</h3>
+          <h2>Services</h2>
           <ul className="footer-services-list">
             <li>
               <a href="/infrastructure-reseaux">Infrastructures & Réseaux</a>
@@ -33,7 +33,7 @@ function FooterContainer() {
           </ul>
         </div>
         <div className="footer-entreprise">
-          <h3>Entreprise</h3>
+          <h2>Entreprise</h2>
           <ul className="footer-entreprise-list">
             <li>
               <a href="/realisations">Realisations</a>
@@ -47,7 +47,7 @@ function FooterContainer() {
           </ul>
         </div>
         <div className="footer-contact">
-          <h3>Contact</h3>
+          <h2>Contact</h2>
           <ul>
             <li>
               <span></span>
@@ -59,12 +59,18 @@ function FooterContainer() {
             </li>
             <li>
               <span></span>
-              <div><a href="mailto:contact@wrsconsulting.fr">contact@wrsconsulting.fr</a></div>
+              <div>
+                <a href="mailto:contact@wrsconsulting.fr">
+                  contact@wrsconsulting.fr
+                </a>
+              </div>
             </li>
           </ul>
         </div>
         <div className="footer-social">
-          <p>© WRSConsulting 2021. All rights reserved.</p>
+          <div className="footer-copyright">
+            <p>© WRSConsulting 2021. All rights reserved.</p>
+          </div>
           <div className="footer-social-icons">
             <a href="#" title="Facebook">
               <img src={facebookSocial} alt="facebook" />

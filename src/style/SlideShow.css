@@ -192,8 +192,11 @@ span[class^="dot-"] {
     }
 }
 
-@media screen and (max-width: 1010px) and (orientation: landscape),
-(max-height:650px) {
+@media screen and (max-height:650px){
+    .slideshow-container {
+        margin-top: 42vh;
+    }
+
     .slide-details {
         display: none;
     }

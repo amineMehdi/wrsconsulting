@@ -28,7 +28,7 @@ function SlideShow(props) {
     });
 
   useEffect(() => {
-    if (window.screen.width <= 1000) {
+    if (window.innerWidth <= 1000) {
       document.querySelector(".slide-controllers").style.display = "none";
     }
     slideUpAnimation("slide-section", 25).play();

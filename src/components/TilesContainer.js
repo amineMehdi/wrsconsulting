@@ -8,8 +8,8 @@ function TilesContainer(props) {
   // Desktop version
   useEffect(() => {
     const allTiles = document.querySelectorAll(".tile");
-
-    if (window.screen.width > 1010) {
+    if (window.innerWidth > 1010) {
+      console.log();
       allTiles.forEach((tile) => {
         tile.addEventListener("mouseenter", () => {
           anime({
@@ -60,7 +60,12 @@ function TilesContainer(props) {
             duration: animationTimer,
             easing: "linear",
           });
-          tile.querySelector(".tile-header").style.fontSize = "28px";
+          anime({
+            targets: tile.querySelector(".tile-header"),
+            fontSize: "28px",
+            duration: 500,
+            easing: "linear",
+          });
           tile.querySelector(".tile-details").style.display = "none";
           tile.querySelector(".tile-learn-more").style.display = "none";
           allTiles.forEach((otherTile) => {
@@ -97,44 +102,3 @@ function TilesContainer(props) {
 }
 
 export default TilesContainer;
-
-// const [isMobile, setMobile] = useState(false);
-// useEffect(() => {
-//   if (window.screen.width < 1010) setMobile(true);
-//   if (isMobile) {
-//     const allTiles = document.querySelectorAll(".tile");
-//     allTiles.forEach((tile) => {
-//       const tileArrow = tile.querySelector(".tile-arrow");
-//       if (tileArrow.classList.contains("arrow-down")) {
-//         tileArrow.addEventListener("click", () => {
-//           anime({
-//             targets: tile,
-//             height: "40vh",
-//             duration: animationTimer,
-//           });
-//           tile.querySelector(".tile-details").style = "display: block";
-//           tile.querySelector(".tile-learn-more").style = "display: block";
-//           anime({
-//             targets: tile.querySelector(".tile-learn-more"),
-//             opacity: ["0", "1"],
-//             delay: 500,
-//             duration: animationTimer,
-//           });
-//           tileArrow.classList.add("arrow-up");
-//           tileArrow.classList.remove("arrow-down");
-//           console.log("arrow");
-//         });
-//       }
-//       if (tileArrow.classList.contains("arrow-up")) {
-//         console.log("arrow-up");
-//         tileArrow.addEventListener("click", () => {
-//           tile.querySelector(".tile-details").style = "display: none";
-//           tile.querySelector(".tile-learn-more").style = "display: none";
-
-//           tileArrow.classList.add("arrow-down");
-//           tileArrow.classList.remove("arrow-up");
-//         });
-//       }
-//     });
-//   }
-// }, [isMobile]);

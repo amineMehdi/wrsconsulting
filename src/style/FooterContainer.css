@@ -1,6 +1,12 @@
 .footer-container {
     background-color: rgb(168, 167, 167);
     border-top: 5px solid #f39619;
+    position: relative;
+}
+
+footer h2 {
+    color: #06313D;
+    /* display: none; */
 }
 
 .footer-social {
@@ -10,34 +16,40 @@
     flex-wrap: wrap;
     background-color: rgb(102, 102, 102);
 }
-
-.footer-social-icons > a {
+.footer-copyright{
+    color: white;
+    font-weight: bold;
+}
+.footer-social-icons>a {
     margin-right: 20px;
 }
-.footer-social-icons > a:last-child{
+
+.footer-social-icons>a:last-child {
     margin-right: 0;
 }
+
 /* Desktop */
 @media screen and (min-width: 1010px) {
-    .footer-container {
+    footer {
         display: grid;
-        grid-template-columns: repeat();
+        grid-template-columns: repeat(auto-fit, 1fr);
         grid-template-rows: 35vh 10vh;
         grid-template-areas:
             "Logo-Area Nos-Services Entreprise Nous-Contacter"
             "Footer-Social Footer-Social Footer-Social Footer-Social";
-        /* background-color: #0a1535; */
-        margin: 0 auto;
         padding-top: 1vh;
+        width: 80vw;
+        margin: 0 auto;
     }
 
-    .footer-social {
-        grid-area: Footer-Social;
-        padding: 0 8vw;
+    footer a:hover {
+        color: #06313D;
     }
+
 
     .footer-container li {
-        padding: 15px;
+        padding: 12px;
+        font-size: 18px;
     }
 
     .footer-logo {
@@ -56,11 +68,20 @@
         grid-area: Nous-Contacter;
     }
 
-    footer a:hover {
-        color: white;
+    .footer-social {
+        grid-area: Footer-Social;
+        position: absolute;
+        width: 99vw;
+        height: 8vh;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
     }
-    .footer-contact>li:first-child>span::before {
-        content: "m";
+    .footer-social-icons{
+        padding-right: 10vw;
+    }
+    .footer-copyright{
+        padding-left: 10vw;
     }
 
 }
@@ -68,19 +89,28 @@
 
 /* Mobile */
 @media screen and (max-width: 1010px) {
-    .footer-container{
+    .footer-container {
         position: relative;
     }
-    /* .footer-logo{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    } */
-    .footer-contact, .footer-entreprise, .footer-services, .footer-logo {
+
+    .footer-contact,
+    .footer-entreprise,
+    .footer-services,
+    .footer-logo {
         text-align: center;
         margin-bottom: 4vh;
     }
+
     .footer-social {
-        justify-content: center;
+        flex-direction: column;
+        padding-top: 10px;
     }
+    .footer-social-icons, .footer-copyright {
+        margin-bottom: 10px;
+    }
+    .footer-container li {
+        padding-bottom: 10px;
+        font-size: 18px;
+    }
+
 }

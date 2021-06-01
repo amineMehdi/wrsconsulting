@@ -18,7 +18,7 @@ function Navbar(props) {
   // all event listeners on component mount.
   useEffect(() => {
     const toggleBorder = (element, toggle) => {
-      if (window.screen.width >= 900) toggleBorderOption(element);
+      if (window.innerWidth >= 900) toggleBorderOption(element);
       setBorderBottom(toggle);
     };
     const toggleBorderOption = (element) => {
@@ -56,7 +56,6 @@ function Navbar(props) {
 
     const itemDropdownArrow = document.querySelector(".item-dropdown-arrow");
     itemDropdownArrow.addEventListener("click", () => {
-      // document.querySelector(".items-list").style.visibility = "hidden";
       document.querySelector(".item-dropdown-back-arrow").style =
         "visibility: visible; display: block";
       itemDropdownContent.style = "visibility: visible; display:block";
@@ -72,17 +71,13 @@ function Navbar(props) {
     });
 
     window.addEventListener("scroll", ()=>{
-      // console.log(window.scrollY);
       if(window.scrollY > 90){
         anime({
           targets: ".navbar-container",
-          translateY: window.screen.width < 1010 ? "-95px" : "-50px",
+          translateY: window.innerWidth < 1010 ? "-95px" : "-50px",
           duration: 100,
           easing: "linear"
         })
-        // document.querySelector(".navbar-contact-container").style.display="none";
-        // document.querySelector(".navbar-container").style="position: fixed; top: 0; width: 100%";
-        // console.log(document.querySelector(".navbar-container"));
       }
       else if(window.scrollY < 60){
         anime({
