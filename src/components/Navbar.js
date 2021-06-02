@@ -125,10 +125,10 @@ function Navbar(props) {
         </div>
         <ul className="items-list">
           <li>
-            <a href="#">ACCEUIL </a>
+            <a href="/">ACCEUIL </a>
           </li>
           <li>
-            <a href="#">A PROPOS</a>
+            <a href="/a-propos">A PROPOS</a>
           </li>
           <li className="item-dropdown">
             <a href="#">EXPERTISE WRS</a>

@@ -1,22 +1,19 @@
-.home-container{
-    position: relative;
-}
 @media screen and (min-width: 1010px) {
 
-    .home-container {
+    .about-container {
         margin-top: 14vh;
     }
 }
 
 @media screen and (max-width: 1010px) {
-    .home-container {
+    .about-container {
         margin-top: 23vh;
     }
 }
 
 
 @media screen and (max-height:650px) {
-    .home-container {
+    .about-container {
         margin-top: 42vh;
     }
 }

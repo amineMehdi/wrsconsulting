@@ -1,28 +1,27 @@
 import React from "react";
-import "../style/Home.css";
-import Navbar from "./Navbar";
-import SlideShow from "./SlideShow";
-import SlideImage from "./SlideImage";
-import Tile from "./Tile";
-import TilesContainer from "./TilesContainer";
-import ContactContainer from "./ContactContainer";
+import "./style/Home.css";
+// import Navbar from "./components/Navbar";
+import SlideShow from "./components/SlideShow";
+import SlideImage from "./components/SlideImage";
+import Tile from "./components/Tile";
+import TilesContainer from "./components/TilesContainer";
+import ContactContainer from "./components/ContactContainer";
 
-import img1 from "../images/img-1.jpg";
-import img2 from "../images/img-2.jpg";
-import img3 from "../images/img-3.jpg";
-import img4 from "../images/img-4.jpg";
+import img1 from "./images/img-1.jpg";
+import img2 from "./images/img-2.jpg";
+import img3 from "./images/img-3.jpg";
+import img4 from "./images/img-4.jpg";
 
-import developpementIcon from "../images/expertise-icons/developpement_logiciel_icon.svg";
-import editionIcon from "../images/expertise-icons/edition_logiciel_icon.svg";
-import reseauIcon from "../images/expertise-icons/reseaux_infrastructure_icon.svg";
-import strategyIcon from "../images/expertise-icons/strategie_it_icon.svg";
-import FooterContainer from "./FooterContainer";
+import developpementIcon from "./images/expertise-icons/developpement_logiciel_icon.svg";
+import editionIcon from "./images/expertise-icons/edition_logiciel_icon.svg";
+import reseauIcon from "./images/expertise-icons/reseaux_infrastructure_icon.svg";
+import strategyIcon from "./images/expertise-icons/strategie_it_icon.svg";
+import FooterContainer from "./components/FooterContainer";
 
 class Home extends React.Component {
   render() {
     return (
-      <div>
-        <Navbar />
+      <div className="home-container">
         <SlideShow>
           <SlideImage
             src={img1}
