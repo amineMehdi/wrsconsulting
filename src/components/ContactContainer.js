@@ -1,6 +1,6 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React from "react";
 import "../style/ContactContainer.css";
-import anime from "animejs/lib/anime.es";
+// import anime from "animejs/lib/anime.es";
 
 function ContactContainer() {
   return (

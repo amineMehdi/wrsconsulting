@@ -134,7 +134,7 @@ function Navbar(props) {
             <a href="#">EXPERTISE WRS</a>
             <ul className="item-dropdown-content">
               <li>
-                <a href="#">INFRASTRUCTURES & RÉSEAUX</a>
+                <a href="/infrastructure-reseaux">INFRASTRUCTURES & RÉSEAUX</a>
               </li>
               <li>
                 <a href="#">DÉVELOPPEMENT LOGICIEL</a>

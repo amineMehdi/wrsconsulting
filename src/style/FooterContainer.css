@@ -71,7 +71,7 @@ footer h2 {
     .footer-social {
         grid-area: Footer-Social;
         position: absolute;
-        width: 99vw;
+        width: 100vw;
         height: 8vh;
         left: 0;
         bottom: 0;

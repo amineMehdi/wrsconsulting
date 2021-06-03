@@ -11,7 +11,7 @@ function FooterContainer() {
     <div className="footer-container">
       <footer>
         <div className="footer-logo">
-          <img src={logo} />
+          <img src={logo} alt="logo"/>
         </div>
         <div className="footer-services">
           <h2>Services</h2>
@@ -72,16 +72,16 @@ function FooterContainer() {
             <p>© WRSConsulting 2021. All rights reserved.</p>
           </div>
           <div className="footer-social-icons">
-            <a href="#" title="Facebook">
+            <a href="/" title="Facebook">
               <img src={facebookSocial} alt="facebook" />
             </a>
-            <a href="#" title="Google">
+            <a href="/" title="Google">
               <img src={googleSocial} alt="google" />
             </a>
-            <a href="#" title="Twitter">
+            <a href="/" title="Twitter">
               <img src={twitterSocial} alt="twitter" />
             </a>
-            <a href="#" title="Linkedin">
+            <a href="/" title="Linkedin">
               <img src={linkedinSocial} alt="linkedin" />
             </a>
           </div>

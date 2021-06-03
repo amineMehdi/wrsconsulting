@@ -5,7 +5,7 @@ function About() {
   return (
     <div className="about-container">
       <div className="about-section">
-        <h2>Qui Sommes Nous ?</h2>
+        <h1>Qui Sommes Nous ?</h1>
         <p>
           WRSConsulting est une société qui a été crée en 2010 pour répondre
           aux besoins en service informatique de clients de divers secteurs
@@ -18,11 +18,9 @@ function About() {
           n’avons de cesse de collaborer à la refonte et à l’optimisation des
           processus métier de nos clients.
         </p>
-        {/* <FooterContainer/> */}
       </div>
-      <div className="about-expertise">
-          
-      </div>
+        <FooterContainer/>
+
     </div>
   );
 }

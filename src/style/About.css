@@ -1,7 +1,16 @@
-@media screen and (min-width: 1010px) {
+.about-section {
+    width: 80vw;
+    margin: 0 auto;
+    line-height: 2;
+    height: auto;
+}
 
+@media screen and (min-width: 1010px) {
     .about-container {
-        margin-top: 14vh;
+        margin-top: 16vh;
+    }
+    .about-section{
+        height: 37.5vh;
     }
 }
 
@@ -9,6 +18,7 @@
     .about-container {
         margin-top: 23vh;
     }
+
 }
 
 

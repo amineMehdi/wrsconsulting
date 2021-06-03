@@ -1,0 +1,41 @@
+.infrastructure-container {
+    width: 80vw;
+    margin: 0 auto;
+    line-height: 2;
+}
+.infrastructure-intro{
+    display: flex;
+    align-items:flex-start;
+
+}
+.infrastructure-intro img{
+    width: 20vw;
+    height: 40vh;
+    position: relative;
+    object-fit: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-right: 20px;
+}
+@media screen and (min-width: 1010px) {
+    .infrastructure-container {
+        margin-top: 16vh;
+    }
+
+}
+
+@media screen and (max-width: 1010px) {
+    .infrastructure-container {
+        margin-top: 23vh;
+    }
+
+}
+
+
+@media screen and (max-height:650px) {
+    .infrastructure-container {
+        margin-top: 42vh;
+    }
+}
