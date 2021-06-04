@@ -25,7 +25,7 @@
     background-color: var(--tile-color);
 }
 
-.tiles-section-header p {
+.tiles-section-header header {
     padding-bottom: 10px;
 }
 

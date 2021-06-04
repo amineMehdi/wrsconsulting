@@ -1,26 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import FooterContainer from "./components/FooterContainer";
 import "./style/About.css";
 function About() {
   return (
     <div className="about-container">
-      <div className="about-section">
-        <h1>Qui Sommes Nous ?</h1>
+      <div className="about-header">
+        <header>Qui Sommes Nous ?</header>
+      </div>
+      <div className="about-details">
         <p>
-          WRSConsulting est une société qui a été crée en 2010 pour répondre
-          aux besoins en service informatique de clients de divers secteurs
+          <strong>WRSConsulting</strong> est une société qui a été crée en 2010 pour répondre aux
+          besoins en service informatique de clients de divers secteurs
           d’activité (ex : banques/assurances, Groupes pharmaceutiques).
         </p>
         <p>
-          WRSConsulting est basée à Paris et collabore avec des clients aussi
+          <strong>WRSConsulting</strong> est basée à Paris et collabore avec des clients aussi
           bien nationaux qu’internationaux, sur des problématiques d’ingénierie
           de systèmes complexes et hautement stratégiques. Depuis 2010, nous
           n’avons de cesse de collaborer à la refonte et à l’optimisation des
           processus métier de nos clients.
         </p>
       </div>
-        <FooterContainer/>
-
+      <FooterContainer />
     </div>
   );
 }

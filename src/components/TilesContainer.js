@@ -94,7 +94,7 @@ function TilesContainer(props) {
   return (
     <div className="tiles-section">
       <div className="tiles-section-header">
-        <p>Nos Expertises</p>
+        <header>Nos Expertises</header>
       </div>
       <div className="tiles-container">{props.children}</div>
     </div>

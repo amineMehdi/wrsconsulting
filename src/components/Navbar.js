@@ -15,6 +15,8 @@ function Navbar(props) {
     if (borderBottom) nav.style.borderBottomColor = "#67b7e1";
     else nav.style.borderBottomColor = "transparent";
   }, [borderBottom]);
+
+
   // all event listeners on component mount.
   useEffect(() => {
     const toggleBorder = (element, toggle) => {

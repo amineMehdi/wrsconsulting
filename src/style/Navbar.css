@@ -13,6 +13,7 @@
     transition: 0.5s ease;
     z-index: 3;
     background-color: white;
+    max-height: 180px;
 }
 
 .navbar-contact-container {
