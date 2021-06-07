@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import FooterContainer from "./components/FooterContainer";
 import "./style/About.css";
 function About() {
   return (
@@ -21,7 +20,6 @@ function About() {
           processus métier de nos clients.
         </p>
       </div>
-      <FooterContainer />
     </div>
   );
 }

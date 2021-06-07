@@ -1,5 +1,4 @@
 import React from "react";
-import FooterContainer from "./components/FooterContainer";
 import "./style/GestionProjet.css";
 import GestionImg from "./images/gestion-1.jpg";
 function GestionProjet() {
@@ -38,7 +37,6 @@ function GestionProjet() {
           </div>
         </div>
       </div>
-      <FooterContainer/>
     </div>
   );
 }

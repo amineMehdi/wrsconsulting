@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./style/Infrastructure.css";
-import FooterContainer from "./components/FooterContainer";
 import infrastructureImg from "./images/infrastructure-1.jpg";
 function Infrastructure() {
   return (
@@ -101,7 +100,6 @@ function Infrastructure() {
           </div>
         </div>
       </div>
-      <FooterContainer />
     </div>
   );
 }

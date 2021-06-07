@@ -145,7 +145,7 @@ function Navbar(props) {
                 <a href="/gestion-de-projet">GESTION DE PROJET</a>
               </li>
               <li>
-                <a href="#">CONSULTING EN STRATÉGIE IT</a>
+                <a href="/consulting-en-strategie-it">CONSULTING EN STRATÉGIE IT</a>
               </li>
             </ul>
             <span className="item-dropdown-arrow">&#10095;</span>

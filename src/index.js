@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Navbar from "./components/Navbar";
-
-import Home from "./Home";
-import About from "./About";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./style/index.css";
+
+import Navbar from "./components/Navbar";
+import Home from "./Home";
+import About from "./About";
+import FooterContainer from "./components/FooterContainer";
 import Infrastructure from "./Infrastructure";
 import Developpement from "./Developpement";
 import GestionLogiciel from "./GestionProjet";
@@ -23,6 +24,7 @@ class Index extends React.Component {
           <Route path="/developpement-logiciel" component={Developpement} />
           <Route path="/gestion-de-projet" component={GestionLogiciel}/>
         </Switch>
+        <FooterContainer/>
       </Router>
     );
   }

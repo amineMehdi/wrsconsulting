@@ -1,6 +1,5 @@
 import React from "react";
 import "./style/Developpement.css";
-import FooterContainer from "./components/FooterContainer";
 import developpementImg from "./images/developpement-1.jpg";
 function Developpement() {
   return (
@@ -42,7 +41,6 @@ function Developpement() {
           </div>
         </div>
       </div>
-      <FooterContainer />
     </div>
   );
 }

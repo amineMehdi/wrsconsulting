@@ -16,7 +16,6 @@ import developpementIcon from "./images/expertise-icons/developpement_logiciel_i
 import editionIcon from "./images/expertise-icons/edition_logiciel_icon.svg";
 import reseauIcon from "./images/expertise-icons/reseaux_infrastructure_icon.svg";
 import strategyIcon from "./images/expertise-icons/strategie_it_icon.svg";
-import FooterContainer from "./components/FooterContainer";
 
 class Home extends React.Component {
   render() {
@@ -75,7 +74,6 @@ class Home extends React.Component {
           />
         </TilesContainer>
         <ContactContainer />
-        <FooterContainer />
       </div>
     );
   }
