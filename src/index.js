@@ -8,6 +8,9 @@ import About from "./About";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./style/index.css";
 import Infrastructure from "./Infrastructure";
+import Developpement from "./Developpement";
+import GestionLogiciel from "./GestionProjet";
+
 class Index extends React.Component {
   render() {
     return (
@@ -17,6 +20,8 @@ class Index extends React.Component {
           <Route path="/" exact component={Home} />
           <Route path="/a-propos" component={About} />
           <Route path="/infrastructure-reseaux" component={Infrastructure} />
+          <Route path="/developpement-logiciel" component={Developpement} />
+          <Route path="/gestion-de-projet" component={GestionLogiciel}/>
         </Switch>
       </Router>
     );

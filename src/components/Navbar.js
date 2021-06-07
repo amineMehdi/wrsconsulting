@@ -139,10 +139,10 @@ function Navbar(props) {
                 <a href="/infrastructure-reseaux">INFRASTRUCTURES & RÉSEAUX</a>
               </li>
               <li>
-                <a href="#">DÉVELOPPEMENT LOGICIEL</a>
+                <a href="/developpement-logiciel">DÉVELOPPEMENT LOGICIEL</a>
               </li>
               <li>
-                <a href="#">GESTION DE PROJET</a>
+                <a href="/gestion-de-projet">GESTION DE PROJET</a>
               </li>
               <li>
                 <a href="#">CONSULTING EN STRATÉGIE IT</a>
