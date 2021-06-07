@@ -121,31 +121,31 @@ function Navbar(props) {
       </div>
       <nav className="navbar">
         <div className="logo-container">
-          <a href="/">
+          <a href="./">
             <img src={logo} alt="logo" />
           </a>
         </div>
         <ul className="items-list">
           <li>
-            <a href="/">ACCEUIL </a>
+            <a href="./">ACCEUIL </a>
           </li>
           <li>
-            <a href="/a-propos">A PROPOS</a>
+            <a href="./a-propos">A PROPOS</a>
           </li>
           <li className="item-dropdown">
             <a href="#">EXPERTISE WRS</a>
             <ul className="item-dropdown-content">
               <li>
-                <a href="/infrastructure-reseaux">INFRASTRUCTURES & RÉSEAUX</a>
+                <a href="./infrastructure-reseaux">INFRASTRUCTURES & RÉSEAUX</a>
               </li>
               <li>
-                <a href="/developpement-logiciel">DÉVELOPPEMENT LOGICIEL</a>
+                <a href="./developpement-logiciel">DÉVELOPPEMENT LOGICIEL</a>
               </li>
               <li>
-                <a href="/gestion-de-projet">GESTION DE PROJET</a>
+                <a href="./gestion-de-projet">GESTION DE PROJET</a>
               </li>
               <li>
-                <a href="/consulting-en-strategie-it">CONSULTING EN STRATÉGIE IT</a>
+                <a href="./consulting-en-strategie-it">CONSULTING EN STRATÉGIE IT</a>
               </li>
             </ul>
             <span className="item-dropdown-arrow">&#10095;</span>

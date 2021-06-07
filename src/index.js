@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import "./style/index.css";
 
 import Navbar from "./components/Navbar";
@@ -14,6 +14,9 @@ import Developpement from "./Developpement";
 import GestionLogiciel from "./GestionProjet";
 import ConsultingIT from "./ConsultingIT";
 
+
+
+
 class Index extends React.Component {
   render() {
     return (
@@ -24,10 +27,10 @@ class Index extends React.Component {
           <Route path="/a-propos" component={About} />
           <Route path="/infrastructure-reseaux" component={Infrastructure} />
           <Route path="/developpement-logiciel" component={Developpement} />
-          <Route path="/gestion-de-projet" component={GestionLogiciel}/>
-          <Route path="/consulting-en-strategie-it" component={ConsultingIT}/>
+          <Route path="/gestion-de-projet" component={GestionLogiciel} />
+          <Route path="/consulting-en-strategie-it" component={ConsultingIT} />
         </Switch>
-        <FooterContainer/>
+        <FooterContainer />
       </Router>
     );
   }
