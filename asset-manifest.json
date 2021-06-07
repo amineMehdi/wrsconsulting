@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/wrsconsulting/static/css/main.cc6c5ced.chunk.css",
-    "main.js": "/wrsconsulting/static/js/main.3b6ff3b2.chunk.js",
-    "main.js.map": "/wrsconsulting/static/js/main.3b6ff3b2.chunk.js.map",
+    "main.js": "/wrsconsulting/static/js/main.ff78aaf6.chunk.js",
+    "main.js.map": "/wrsconsulting/static/js/main.ff78aaf6.chunk.js.map",
     "runtime-main.js": "/wrsconsulting/static/js/runtime-main.b40941d8.js",
     "runtime-main.js.map": "/wrsconsulting/static/js/runtime-main.b40941d8.js.map",
-    "static/js/2.31085e97.chunk.js": "/wrsconsulting/static/js/2.31085e97.chunk.js",
-    "static/js/2.31085e97.chunk.js.map": "/wrsconsulting/static/js/2.31085e97.chunk.js.map",
+    "static/js/2.c5a1e09e.chunk.js": "/wrsconsulting/static/js/2.c5a1e09e.chunk.js",
+    "static/js/2.c5a1e09e.chunk.js.map": "/wrsconsulting/static/js/2.c5a1e09e.chunk.js.map",
     "index.html": "/wrsconsulting/index.html",
     "static/css/main.cc6c5ced.chunk.css.map": "/wrsconsulting/static/css/main.cc6c5ced.chunk.css.map",
-    "static/js/2.31085e97.chunk.js.LICENSE.txt": "/wrsconsulting/static/js/2.31085e97.chunk.js.LICENSE.txt",
+    "static/js/2.c5a1e09e.chunk.js.LICENSE.txt": "/wrsconsulting/static/js/2.c5a1e09e.chunk.js.LICENSE.txt",
     "static/media/consulting-1.5dc148a3.jpg": "/wrsconsulting/static/media/consulting-1.5dc148a3.jpg",
     "static/media/developpement-1.e24bf3cb.jpg": "/wrsconsulting/static/media/developpement-1.e24bf3cb.jpg",
     "static/media/developpement_logiciel_icon.ba80f6c0.svg": "/wrsconsulting/static/media/developpement_logiciel_icon.ba80f6c0.svg",
@@ -30,8 +30,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b40941d8.js",
-    "static/js/2.31085e97.chunk.js",
+    "static/js/2.c5a1e09e.chunk.js",
     "static/css/main.cc6c5ced.chunk.css",
-    "static/js/main.3b6ff3b2.chunk.js"
+    "static/js/main.ff78aaf6.chunk.js"
   ]
 }
