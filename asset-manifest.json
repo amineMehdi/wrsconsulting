@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/wrsconsulting/static/css/main.cc6c5ced.chunk.css",
-    "main.js": "/wrsconsulting/static/js/main.1696b25b.chunk.js",
-    "main.js.map": "/wrsconsulting/static/js/main.1696b25b.chunk.js.map",
+    "main.js": "/wrsconsulting/static/js/main.3b6ff3b2.chunk.js",
+    "main.js.map": "/wrsconsulting/static/js/main.3b6ff3b2.chunk.js.map",
     "runtime-main.js": "/wrsconsulting/static/js/runtime-main.b40941d8.js",
     "runtime-main.js.map": "/wrsconsulting/static/js/runtime-main.b40941d8.js.map",
     "static/js/2.31085e97.chunk.js": "/wrsconsulting/static/js/2.31085e97.chunk.js",
@@ -32,6 +32,6 @@
     "static/js/runtime-main.b40941d8.js",
     "static/js/2.31085e97.chunk.js",
     "static/css/main.cc6c5ced.chunk.css",
-    "static/js/main.1696b25b.chunk.js"
+    "static/js/main.3b6ff3b2.chunk.js"
   ]
 }
