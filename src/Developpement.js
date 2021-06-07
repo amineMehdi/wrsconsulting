@@ -3,7 +3,7 @@ import "./style/Developpement.css";
 import developpementImg from "./images/developpement-1.jpg";
 function Developpement() {
   return (
-    <div>
+
       <div className="developpement-container">
         <div className="developpement-header">
           <header>
@@ -41,7 +41,6 @@ function Developpement() {
           </div>
         </div>
       </div>
-    </div>
   );
 }
 

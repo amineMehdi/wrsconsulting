@@ -3,7 +3,6 @@ import "./style/Infrastructure.css";
 import infrastructureImg from "./images/infrastructure-1.jpg";
 function Infrastructure() {
   return (
-    <div>
       <div className="infrastructure-container">
         <div className="infrastructure-header">
           <header>
@@ -100,7 +99,7 @@ function Infrastructure() {
           </div>
         </div>
       </div>
-    </div>
+
   );
 }
 

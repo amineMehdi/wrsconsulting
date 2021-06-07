@@ -1,0 +1,159 @@
+.consulting-container {
+    width: 80vw;
+    margin: 0 auto;
+    margin-top: 180px;
+}
+
+.consulting-header {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    font-size: 43px;
+}
+
+.consulting-header header span {
+    color: var(--tile-color);
+}
+
+.consulting-intro {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.consulting-intro-img {
+    position: relative;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.consulting-list-header {
+    font-size: 43px;
+    margin-bottom: 50px;
+    position: relative;
+    line-height: 2;
+}
+
+.consulting-list-header>header::after {
+    position: absolute;
+    content: "";
+    border: 2px solid var(--tile-color);
+    background-color: var(--tile-color);
+    left: 0;
+    bottom: 0;
+    width: 55px;
+}
+
+/* Desktop */
+@media screen and (min-width: 1010px) {
+
+    .consulting-header {
+        border-bottom: 2px solid var(--border-color);
+        transition: border 0.5s ease;
+    }
+
+    .consulting-header:hover {
+        cursor: default;
+        border-bottom-color: var(--tile-color);
+    }
+
+    .consulting-header header {
+        padding-bottom: 25px;
+    }
+
+    .consulting-intro {
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    .consulting-intro-img {
+        margin-right: 40px;
+        min-width: 25vw;
+        min-height: 250px;
+    }
+
+    .consulting-intro-details {
+        width: 55%;
+        /* line-height: 2; */
+        font-size: 18px;
+    }
+    .consulting-list-container ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 45px;
+    }
+
+    .consulting-list-container li {
+        width: 40%;
+        line-height: 3;
+        position: relative;
+        margin-right: 20px;
+        font-size: 18px;
+    }
+
+    .consulting-list-container li {
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .consulting-list-container li:hover {
+        border-bottom-color: var(--tile-color);
+        transform: scale(1.03);
+        cursor: pointer;
+        font-weight: bold;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 1010px) {
+    .consulting-header {
+        line-height: 2;
+    }
+
+    .consulting-intro {
+        margin-bottom: 5vh;
+    }
+
+    .consulting-intro-img {
+        width: 100vw;
+        min-height: 25vh;
+        margin-bottom: 20px;
+    }
+
+    .consulting-intro-details {
+        line-height: 2;
+        font-size: 18px;
+    }
+
+    .consulting-list-container ul {
+        margin-bottom: 45px;
+        text-align: center;
+    }
+    .consulting-list-container li{
+        line-height: 2.5;
+        border: 1px solid var(--tile-color);
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+}
+
+@media screen and (max-height:650px) {
+    .consulting-intro-img {
+        height: 45vh;
+    }
+
+    .consulting-list-container ul {
+        margin-bottom: 45px;
+        text-align: center;
+    }
+
+    .consulting-list-container li {
+        line-height: 2.5;
+        border: 1px solid var(--tile-color);
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+}

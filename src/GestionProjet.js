@@ -3,7 +3,6 @@ import "./style/GestionProjet.css";
 import GestionImg from "./images/gestion-1.jpg";
 function GestionProjet() {
   return (
-    <div>
       <div className="gestion-container">
         <div className="gestion-header">
           <header>
@@ -37,7 +36,6 @@ function GestionProjet() {
           </div>
         </div>
       </div>
-    </div>
   );
 }
 

@@ -5,12 +5,14 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./style/index.css";
 
 import Navbar from "./components/Navbar";
+import FooterContainer from "./components/FooterContainer";
+
 import Home from "./Home";
 import About from "./About";
-import FooterContainer from "./components/FooterContainer";
 import Infrastructure from "./Infrastructure";
 import Developpement from "./Developpement";
 import GestionLogiciel from "./GestionProjet";
+import ConsultingIT from "./ConsultingIT";
 
 class Index extends React.Component {
   render() {
@@ -23,6 +25,7 @@ class Index extends React.Component {
           <Route path="/infrastructure-reseaux" component={Infrastructure} />
           <Route path="/developpement-logiciel" component={Developpement} />
           <Route path="/gestion-de-projet" component={GestionLogiciel}/>
+          <Route path="/consulting-en-strategie-it" component={ConsultingIT}/>
         </Switch>
         <FooterContainer/>
       </Router>
