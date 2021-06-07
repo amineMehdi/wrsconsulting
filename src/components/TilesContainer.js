@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "../style/TilesContainer.css";
-
 import anime from "animejs/lib/anime.es";
 
 const animationTimer = 1000;

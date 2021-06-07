@@ -1,6 +1,7 @@
 import React from "react";
 import "../style/FooterContainer.css";
 import logo from "../images/wrs-80x80.png";
+import { Link } from "react-router-dom";
 import googleSocial from "../images/social-icons/google_social.svg";
 import facebookSocial from "../images/social-icons/facebook_social.svg";
 import linkedinSocial from "../images/social-icons/linkedin_social.svg";
@@ -11,24 +12,26 @@ function FooterContainer() {
     <div className="footer-container">
       <footer>
         <div className="footer-logo">
-          <img src={logo} alt="logo"/>
+          <img src={logo} alt="logo" />
         </div>
         <div className="footer-services">
           <h2>Services</h2>
           <ul className="footer-services-list">
             <li>
-              <a href="/infrastructure-reseaux">Infrastructures & Réseaux</a>
+              <Link to="/infrastructure-reseaux">
+                Infrastructures & Réseaux
+              </Link>
             </li>
             <li>
-              <a href="/developpement-logiciel">Développement logiciel</a>
+              <Link to="/developpement-logiciel">Développement logiciel</Link>
             </li>
             <li>
-              <a href="/gestion-de-projet">Gestion de projet</a>
+              <Link to="/gestion-de-projet">Gestion de projet</Link>
             </li>
             <li>
-              <a href="/consulting-en-strategie-it">
+              <Link to="/consulting-en-strategie-it">
                 Consulting en stratégie IT
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -36,13 +39,13 @@ function FooterContainer() {
           <h2>Entreprise</h2>
           <ul className="footer-entreprise-list">
             <li>
-              <a href="/realisations">Realisations</a>
+              <Link to="/realisations">Realisations</Link>
             </li>
             <li>
-              <a href="/partenaires">Nos Partenaires</a>
+              <Link to="/partenaires">Nos Partenaires</Link>
             </li>
             <li>
-              <a href="/a-propos">A propos</a>
+              <Link to="/a-propos">A propos</Link>
             </li>
           </ul>
         </div>

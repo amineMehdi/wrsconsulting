@@ -6,7 +6,7 @@ import facebookSocial from "../images/social-icons/facebook_social.svg";
 import linkedinSocial from "../images/social-icons/linkedin_social.svg";
 import twitterSocial from "../images/social-icons/twitter_social.svg";
 import anime from "animejs";
-
+import { Link } from "react-router-dom";
 function Navbar(props) {
   const [borderBottom, setBorderBottom] = useState(false);
 
@@ -15,7 +15,6 @@ function Navbar(props) {
     if (borderBottom) nav.style.borderBottomColor = "#67b7e1";
     else nav.style.borderBottomColor = "transparent";
   }, [borderBottom]);
-
 
   // all event listeners on component mount.
   useEffect(() => {
@@ -72,23 +71,23 @@ function Navbar(props) {
       itemDropdownContent.style.display = "none";
     });
 
-    window.addEventListener("scroll", ()=>{
-      if(window.scrollY > 90){
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 90) {
         anime({
           targets: ".navbar-container",
           translateY: window.innerWidth < 1010 ? "-95px" : "-50px",
           duration: 100,
-          easing: "linear"
-        })
-      }
-      else if(window.scrollY < 60){
+          easing: "linear",
+        });
+      } else if (window.scrollY < 60) {
         anime({
           targets: ".navbar-container",
           translateY: "0px",
           duration: 100,
-          easing: "linear"
-        })
-        document.querySelector(".navbar-contact-container").style.display="flex";
+          easing: "linear",
+        });
+        document.querySelector(".navbar-contact-container").style.display =
+          "flex";
       }
     });
   }, []);
@@ -127,38 +126,43 @@ function Navbar(props) {
         </div>
         <ul className="items-list">
           <li>
-            <a href="./">ACCEUIL </a>
+            <Link to="/">ACCEUIL</Link>
           </li>
+
           <li>
-            <a href="./a-propos">A PROPOS</a>
+            <Link to="/a-propos">A PROPOS</Link>
           </li>
           <li className="item-dropdown">
             <a href="#">EXPERTISE WRS</a>
             <ul className="item-dropdown-content">
               <li>
-                <a href="./infrastructure-reseaux">INFRASTRUCTURES & RÉSEAUX</a>
+                <Link to="/infrastructure-reseaux">
+                  INFRASTRUCTURES & RÉSEAUX
+                </Link>
               </li>
               <li>
-                <a href="./developpement-logiciel">DÉVELOPPEMENT LOGICIEL</a>
+                <Link to="/developpement-logiciel">DÉVELOPPEMENT LOGICIEL</Link>
               </li>
               <li>
-                <a href="./gestion-de-projet">GESTION DE PROJET</a>
+                <Link to="/gestion-de-projet">GESTION DE PROJET</Link>
               </li>
               <li>
-                <a href="./consulting-en-strategie-it">CONSULTING EN STRATÉGIE IT</a>
+                <Link to="/consulting-en-strategie-it">
+                  CONSULTING EN STRATÉGIE IT
+                </Link>
               </li>
             </ul>
             <span className="item-dropdown-arrow">&#10095;</span>
             <span className="item-dropdown-back-arrow">&#10096;</span>
           </li>
           <li>
-            <a href="#">REALISATIONS</a>
+            <Link to="/realisations">REALISATIONS</Link>
           </li>
           <li>
-            <a href="#">NOS PARTENAIRES</a>
+            <Link to="/nos-partenaires">NOS PARTENAIRES</Link>
           </li>
           <li>
-            <a href="#">CONTACT</a>
+            <Link to="/contact">CONTACT</Link>
           </li>
         </ul>
         <div className="items-menu">
