@@ -25,7 +25,6 @@
 .infrastructure-intro {
     display: flex;
     align-items: flex-start;
-    /* flex-wrap: wrap; */
     flex-direction: row;
     position: relative;
 }
@@ -33,7 +32,6 @@
 .infrastructure-intro-img {
     position: relative;
     object-fit: cover;
-    /* background-attachment: fixed; */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -58,6 +56,7 @@
     position: absolute;
     content: "";
     border: 2px solid var(--tile-color);
+    background-color: var(--tile-color);
     left: 0;
     bottom: 0;
 }
@@ -79,7 +78,6 @@
 
 .infrastructure-tile {
     width: 24vw;
-    /* border: 1px solid red; */
     margin-right: 20px;
     margin-bottom: 20px;
     padding: 10px;
@@ -88,14 +86,16 @@
 }
 
 .infrastructure-tile:hover {
-    /* color: var(--tile-color); */
     -webkit-box-shadow: 0px 0px 11px 0px #000000;
     box-shadow: 0px 0px 11px 0px #000000;
     transform: scale(1.03);
+    cursor: pointer;
 }
+
 .infrastructure-tile:hover header {
     color: var(--tile-color);
 }
+
 .infrastructure-tile header {
     font-size: 28px;
     font-weight: bold;
@@ -116,6 +116,31 @@
     .infrastructure-intro p {
         width: 75%;
     }
+
+    .infrastructure-list-container ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 45px;
+    }
+
+    .infrastructure-list-container li {
+        width: 40%;
+        line-height: 3;
+        position: relative;
+        margin-right: 20px;
+        font-size: 18px;
+    }
+
+    .infrastructure-list-container li {
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .infrastructure-list-container li:hover {
+        border-bottom-color: var(--tile-color);
+        transform: scale(1.03);
+        cursor: pointer;
+        font-weight: bold;
+    }
 }
 
 /* Mobile */
@@ -131,6 +156,17 @@
 
     .infrastructure-tile {
         width: 100vw;
+    }
+
+    .infrastructure-list-container ul {
+        margin-bottom: 45px;
+        text-align: center;
+    }
+    .infrastructure-list-container li{
+        line-height: 2.5;
+        border: 1px solid var(--tile-color);
+        margin-bottom: 20px;
+        padding: 10px;
     }
 }
 

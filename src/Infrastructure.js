@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "./style/Infrastructure.css";
 import FooterContainer from "./components/FooterContainer";
-import anime from "animejs/lib/anime.es";
 import infrastructureImg from "./images/infrastructure-1.jpg";
 function Infrastructure() {
   return (
@@ -81,7 +80,7 @@ function Infrastructure() {
               <ul>
                 <li>Protégez et restaurez facilement vos données.</li>
                 <li>
-                  edémarrez rapidement votre infrastructure en cas de crise
+                  Démarrez rapidement votre infrastructure en cas de crise
                   majeure.
                 </li>
                 <li>
