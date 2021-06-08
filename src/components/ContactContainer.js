@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/ContactContainer.css";
+import "../style/components/ContactContainer.css";
 // import anime from "animejs/lib/anime.es";
 
 function ContactContainer() {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../style/TilesContainer.css";
+import "../style/components/TilesContainer.css";
 import anime from "animejs/lib/anime.es";
 
 const animationTimer = 1000;
@@ -8,7 +8,6 @@ function TilesContainer(props) {
   useEffect(() => {
     const allTiles = document.querySelectorAll(".tile");
     if (window.innerWidth > 1010) {
-      console.log();
       allTiles.forEach((tile) => {
         tile.addEventListener("mouseenter", () => {
           anime({

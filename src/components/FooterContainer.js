@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/FooterContainer.css";
+import "../style/components/FooterContainer.css";
 import logo from "../images/wrs-80x80.png";
 import { Link } from "react-router-dom";
 import googleSocial from "../images/social-icons/google_social.svg";

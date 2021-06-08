@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../style/SlideShow.css";
+import "../style/components/SlideShow.css";
 import anime from "animejs/lib/anime.es";
 
 let timer;

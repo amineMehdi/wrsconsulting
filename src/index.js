@@ -13,7 +13,7 @@ import Infrastructure from "./Infrastructure";
 import Developpement from "./Developpement";
 import GestionLogiciel from "./GestionProjet";
 import ConsultingIT from "./ConsultingIT";
-
+import Realisations from "./Realisations";
 
 
 
@@ -29,6 +29,7 @@ class Index extends React.Component {
           <Route path="/developpement-logiciel" component={Developpement} />
           <Route path="/gestion-de-projet" component={GestionLogiciel} />
           <Route path="/consulting-en-strategie-it" component={ConsultingIT} />
+          <Route path="/realisations" component={Realisations}/>
         </Switch>
         <FooterContainer />
       </Router>

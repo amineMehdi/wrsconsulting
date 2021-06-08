@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../style/Navbar.css";
+import "../style/components/Navbar.css";
 import logo from "../images/wrs-80x80.png";
 import googleSocial from "../images/social-icons/google_social.svg";
 import facebookSocial from "../images/social-icons/facebook_social.svg";
