@@ -30,7 +30,7 @@ function Realisations() {
     src: CreditLogo,
     header: "Crédit Agricole",
     details: [
-      "Direction de programmes Infrastructures et Urbanisation de système d’informations",
+      "Direction de programmes Infrastructures et urbanisation de système d’informations",
     ],
   };
 
@@ -54,85 +54,33 @@ function Realisations() {
       "Gestion Infrastructures et Reseaux",
     ],
   };
+  const animateTile = (tile, animationStart) => {
+    anime({
+      targets: tile.querySelector(".realisations-tile-img"),
+      opacity: animationStart ? "0" : "1",
+      duration: 1500,
+    });
+    anime({
+      targets: tile.querySelector(".realisations-tile-header"),
+      opacity: animationStart ? "1" : "0",
+      duration: 2000,
+    });
 
+    anime({
+      targets: tile.querySelector(".realisations-tile-details"),
+      opacity: animationStart ? "1" : "0",
+      duration: 1500,
+    });
+  };
   useEffect(() => {
     const realisationTiles = document.querySelectorAll(".realisations-tile");
     if (window.innerWidth > 1010) {
       realisationTiles.forEach((tile) => {
         tile.addEventListener("mouseenter", () => {
-          console.log("mouseenter");
-          realisationTiles.forEach((otherTile) => {
-            if (!otherTile.isSameNode(tile)) {
-              // anime({
-              //   targets: otherTile,
-              //   opacity : ["1","0"],
-              //   duration: 1500,
-              // });
-              otherTile.style.display = "none";
-            }
-          });
-          // anime({
-          //   targets: tile.querySelector(".realisations-tile-img"),
-          //   top: "25%",
-          //   duration: 1000,
-          // });
-          // anime({
-          //   targets: tile,
-          //   width: "100%",
-          //   height: "60vh",
-          //   duration: 2000,
-          //   easing: "easeOutExpo",
-          // });
-          // tile
-          //   .querySelectorAll(
-          //     ".realisations-tile-header, .realisations-tile-details"
-          //   )
-          //   .forEach((el) => {
-          //     el.style.display = "block";
-          //   });
+          animateTile(tile, true);
         });
-
         tile.addEventListener("mouseleave", () => {
-          // console.log("mouseleave");
-          // anime({
-          //   targets: tile.querySelector(".realisations-tile-img"),
-          //   top: "50%",
-          //   duration: 1000,
-          //   easing: "linear",
-          // });
-
-          // anime({
-          //   targets: tile,
-          //   width: "24vw",
-          //   height: "22vh",
-          //   duration: 2000,
-          //   easing: "easeOutExpo",
-          // });
-
-          // tile
-          //   .querySelectorAll(
-          //     ".realisations-tile-header, .realisations-tile-details"
-          //   )
-          //   .forEach((el) => {
-          //     el.style.display = "none";
-          //   });
-
-          realisationTiles.forEach((otherTile) => {
-            if (!otherTile.isSameNode(tile)) {
-              // anime({
-              //   targets: otherTile,
-              //   opacity : ["0","1"],
-              //   duration: 1500,
-              // });
-              otherTile.style.display = "block";
-            }
-          });
-          // anime({
-          //   targets: tile.querySelector(".realisations-tile-img"),
-          //   opacity: ["0", "1"],
-          //   duration: 500,
-          //   easing: "linear"
-          // });
+          animateTile(tile, false);
         });
       });
     }
@@ -155,3 +103,81 @@ function Realisations() {
 }
 
 export default Realisations;
+
+// realisationTiles.forEach((tile) => {
+//   tile.addEventListener("mouseenter", () => {
+//     // console.log("mouseenter");
+//     realisationTiles.forEach((otherTile) => {
+//       if (!otherTile.isSameNode(tile)) {
+//         anime({
+//           targets: otherTile,
+//           opacity : ["1","0"],
+//           duration: 1500,
+//         });
+//         otherTile.style.display = "none";
+//       }
+//     });
+//     anime({
+//       targets: tile.querySelector(".realisations-tile-img"),
+//       top: "25%",
+//       duration: 1000,
+//     });
+//     anime({
+//       targets: tile,
+//       width: "100%",
+//       height: "60vh",
+//       duration: 2000,
+//       easing: "easeOutExpo",
+//     });
+//     tile
+//       .querySelectorAll(
+//         ".realisations-tile-header, .realisations-tile-details"
+//       )
+//       .forEach((el) => {
+//         el.style.display = "block";
+//       });
+//   });
+
+//   tile.addEventListener("mouseleave", () => {
+//     console.log("mouseleave");
+//     anime({
+//       targets: tile.querySelector(".realisations-tile-img"),
+//       top: "50%",
+//       duration: 1000,
+//       easing: "linear",
+//     });
+
+//     anime({
+//       targets: tile,
+//       width: "24vw",
+//       height: "22vh",
+//       duration: 2000,
+//       easing: "easeOutExpo",
+//     });
+
+//     tile
+//       .querySelectorAll(
+//         ".realisations-tile-header, .realisations-tile-details"
+//       )
+//       .forEach((el) => {
+//         el.style.display = "none";
+//       });
+
+//     realisationTiles.forEach((otherTile) => {
+//       if (!otherTile.isSameNode(tile)) {
+//         anime({
+//           targets: otherTile,
+//           opacity : ["0","1"],
+//           duration: 1500,
+//         });
+//         otherTile.style.display = "block";
+//       }
+//     });
+//     anime({
+//       targets: tile.querySelector(".realisations-tile-img"),
+//       opacity: ["0", "1"],
+//       duration: 500,
+//       easing: "linear"
+//     });
+//   });
+// });
