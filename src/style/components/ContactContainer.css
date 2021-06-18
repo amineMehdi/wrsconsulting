@@ -1,4 +1,4 @@
-.contact-container {
+.home-contact-container {
     position: relative;
     width: 99vw;
     height: 35vh;
@@ -22,24 +22,24 @@
     filter: brightness(0.75);
 } */
 
-.contact-header,
-.contact-btn {
+.home-contact-header,
+.home-contact-btn {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.contact-header {
+.home-contact-header {
     top: 12%;
     font-size: 35px;
     color: white;
 }
 
-.contact-btn {
+.home-contact-btn {
     top: 50%;
 }
 
-.contact-btn button {
+.home-contact-btn button {
     cursor: pointer;
     width: 100%;
     font-weight: bold;
@@ -50,7 +50,7 @@
     font-size: 18px;
 }
 
-.contact-btn button:hover {
+.home-contact-btn button:hover {
     color: white;
     background-color: var(--logo-color);
 }
@@ -61,13 +61,13 @@
 
 /* Mobile */
 @media screen and (max-width: 1010px) {
-    .contact-header {
+    .home-contact-header {
         width: 95vw;
         text-align: center;
         font-size: 32px;
     }
 
-    .contact-btn{
+    .home-contact-btn{
         top: 61%;
     }
 }

@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import "./style/index.css";
 
+
 import Navbar from "./components/Navbar";
 import FooterContainer from "./components/FooterContainer";
 
@@ -14,7 +15,7 @@ import Developpement from "./Developpement";
 import GestionLogiciel from "./GestionProjet";
 import ConsultingIT from "./ConsultingIT";
 import Realisations from "./Realisations";
-
+import Contact from "./Contact";
 
 
 class Index extends React.Component {
@@ -30,6 +31,7 @@ class Index extends React.Component {
           <Route path="/gestion-de-projet" component={GestionLogiciel} />
           <Route path="/consulting-en-strategie-it" component={ConsultingIT} />
           <Route path="/realisations" component={Realisations}/>
+          <Route path="/contact" component={Contact}/>
         </Switch>
         <FooterContainer />
       </Router>
