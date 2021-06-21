@@ -1,9 +1,115 @@
-.contact-container{
+.contact-container {
+    width: 80vw;
+    margin: 0 auto;
     margin-top: 180px;
 }
 
-/* Desktop */
-@media screen and (min-width: 1010px){
+.contact-header {
+    text-align: center;
+    background-color: var(--logo-color-light);
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.contact-header header {
+    font-size: 45px;
+    color: white;
+}
+
+.contact-header p {
+    font-size: 21px;
+    line-height: 2;
+    color: white;
 
 }
 
+.contact-form-informations-wrapper {
+    display: flex;
+}
+
+.contact-form {
+    width: 75%;
+    margin-right: 35px;
+}
+
+.contact-form header,
+.contact-informations header {
+    font-size: 25px;
+    position: relative;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+}
+
+.contact-form header::after,
+.contact-informations header::after {
+    position: absolute;
+    content: "";
+    width: 110px;
+    border: 2px solid var(--logo-color-light);
+    left: 0;
+    bottom: 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label,
+.form-group input,
+.form-group textarea {
+    margin-bottom: 1vh;
+}
+.form-group label{
+    font-size: 21px;
+}
+.form-group input, .form-group textarea {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--logo-color-light);
+    font-size: 18px;
+    color: var(--logo-color-light);
+    width: 95%;
+    height: 35px;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-radius: 5px;
+    box-shadow: 0px 0px 11px 0px #363636;
+}
+.form-group textarea{
+    padding-top: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    height: 6vh;
+}
+.contact-informations {
+    width: 25%;
+}
+.btn-submit{
+    text-align: center;
+    margin: 25px 0px;    
+}
+.btn-submit button {
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    border-radius: var(--btn-border-radius);
+    font-weight: bold;
+    font-size: 18px;
+    width: 200px;
+    border: none;
+    background-color: var(--logo-color-light);
+    transition: transform 0.3s ease-in;
+}
+.btn-submit button:hover{
+    color: white;
+    /* box-shadow: 0px 0px 11px 0px #363636; */
+    transform: scale(1.03);
+}
+.input-error{
+    font-size: 18px;
+    color: var(--logo-orange);
+}
+/* Desktop */
+@media screen and (min-width: 1010px) {}

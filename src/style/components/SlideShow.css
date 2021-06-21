@@ -1,14 +1,3 @@
-:root {
-    --primary-color: #67b7e1;
-    --logo-color: #1a5590;
-    --border-color: #e5e5e5;
-    --shadow-color: rgba(221, 217, 217, 0.377);
-    --section-radius: 10px;
-    --text-section-color-big: #1b1f17;
-    --text-section-color: #252a20;
-    --dots-color: #41485a;
-}
-
 .slideshow-container {
     position: relative;
     width: 100vw;
@@ -110,7 +99,7 @@
 }
 
 .learn-more>button:hover {
-    background-color: var(--logo-color);
+    background-color: var(--logo-blue);
     color: #F3F8EA;
 }
 

@@ -1,3 +1,18 @@
+:root{
+  --logo-orange: #eb8b17;
+  --logo-blue: #1a5590;
+  --logo-color-light: #1a668c;
+  --tile-background-color: #e6e6e6;
+  --btn-border-radius: 20px;
+  --primary-color: #67b7e1;
+  --border-color: #e5e5e5;
+  --shadow-color: rgba(221, 217, 217, 0.377);
+  --section-radius: 10px;
+  --text-section-color-big: #1b1f17;
+  --text-section-color: #252a20;
+  --dots-color: #41485a;
+  --grey-color: #838383;
+}
 body {
     margin: 0;
     padding: 0;

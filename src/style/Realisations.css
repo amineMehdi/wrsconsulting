@@ -46,7 +46,7 @@
     position: absolute;
     content: "";
     width: 72px;
-    border: 2px solid var(--tile-color);
+    border: 2px solid var(--logo-color-light);
     left: 0;
     bottom: 0;
 }
@@ -99,7 +99,7 @@
     }
 
     .realisations-tile-details li:hover {
-        border-bottom: 2px solid var(--tile-color);
+        border-bottom: 2px solid var(--logo-color-light);
         transform: scale(1.03);
         cursor: default;
     }
@@ -156,7 +156,7 @@
     }
 
     .realisations-tile-details li:not(:last-child) {
-        border-bottom: 2px solid var(--tile-color);
+        border-bottom: 2px solid var(--logo-color-light);
         padding-bottom: 10px;
 
     } */

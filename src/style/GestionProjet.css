@@ -12,7 +12,7 @@
 }
 
 .gestion-header header span {
-    color: var(--tile-color);
+    color: var(--logo-color-light);
 }
 
 .gestion-intro {
@@ -39,7 +39,7 @@
     }
     .gestion-header:hover{
         cursor: default;
-        border-bottom-color: var(--tile-color);
+        border-bottom-color: var(--logo-color-light);
     }
     .gestion-header header{
         padding-bottom: 25px;

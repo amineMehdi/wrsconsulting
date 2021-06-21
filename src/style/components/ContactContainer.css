@@ -52,7 +52,7 @@
 
 .home-contact-btn button:hover {
     color: white;
-    background-color: var(--logo-color);
+    background-color: var(--logo-blue);
 }
 
 /* Desktop */
