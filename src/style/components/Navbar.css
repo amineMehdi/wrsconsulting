@@ -51,7 +51,7 @@
     transition: ease-out 0.5s;
 }
 
-li a:hover {
+.items-list li > a:hover {
     color: var(--primary-color) !important;
 }
 
