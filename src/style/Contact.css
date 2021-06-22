@@ -25,13 +25,16 @@
 
 .contact-form-informations-wrapper {
     display: flex;
+    position: relative;
 }
-
-.contact-form {
-    width: 75%;
-    margin-right: 35px;
+.contact-form-informations-wrapper::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    border-bottom: 2px solid var(--border-color);
+    left: 0;
+    bottom: 0;
 }
-
 .contact-form header,
 .contact-informations header {
     font-size: 25px;
@@ -60,10 +63,13 @@
 .form-group textarea {
     margin-bottom: 1vh;
 }
-.form-group label{
+
+.form-group label {
     font-size: 21px;
 }
-.form-group input, .form-group textarea {
+
+.form-group input,
+.form-group textarea {
     padding: 10px 20px;
     border: none;
     outline: none;
@@ -74,22 +80,22 @@
     height: 35px;
 }
 
-.form-group input:focus, .form-group textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
     border-radius: 5px;
     box-shadow: 0px 0px 11px 0px #363636;
 }
-.form-group textarea{
+
+.form-group textarea {
     padding-top: 30px;
     font-family: 'Courier New', Courier, monospace;
     height: 6vh;
 }
-.contact-informations {
-    width: 25%;
-}
-.btn-submit{
+.btn-submit {
     text-align: center;
-    margin: 25px 0px;    
+    margin: 25px 0px;
 }
+
 .btn-submit button {
     cursor: pointer;
     width: 100%;
@@ -102,14 +108,53 @@
     background-color: var(--logo-color-light);
     transition: transform 0.3s ease-in;
 }
-.btn-submit button:hover{
+
+.btn-submit button:hover {
     color: white;
-    /* box-shadow: 0px 0px 11px 0px #363636; */
     transform: scale(1.03);
 }
-.input-error{
+
+.input-error {
     font-size: 18px;
     color: var(--logo-orange);
 }
+.job-header{
+    /* text-align: center; */
+    font-size: 45px;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+.job-header::after{
+    position: absolute;
+    content: "";
+    width: 170px;
+    border: 2px solid var(--logo-color-light);
+    left: 0;
+    bottom: 0;
+}
 /* Desktop */
-@media screen and (min-width: 1010px) {}
+@media screen and (min-width: 1010px) {
+    .contact-form {
+        width: 75%;
+        margin-right: 35px;
+    }
+
+    .contact-informations {
+        width: 25%;
+    }
+    .form-group-wrapper{
+        display: flex;
+    }
+    .form-group-wrapper > .form-group{
+        width: 48%;
+        margin-right: 25px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 1010px) {
+    .contact-form-informations-wrapper {
+        flex-direction: column;
+    }
+}

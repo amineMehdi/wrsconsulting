@@ -9,7 +9,10 @@ function Contact() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const dataSubmit = (formData) => {
+  const contactSubmit = (formData) => {
+    console.log(formData);
+  };
+  const jobSubmit = (formData) => {
     console.log(formData);
   };
   return (
@@ -25,7 +28,7 @@ function Contact() {
       <div className="contact-form-informations-wrapper">
         <div className="contact-form">
           <header>ENVOYER NOUS UN MESSAGE</header>
-          <form onSubmit={handleSubmit(dataSubmit)}>
+          <form onSubmit={handleSubmit(contactSubmit)}>
             <div className="form-group">
               <label>Votre Nom (obligatoire) : </label>
               <input
@@ -62,11 +65,11 @@ function Contact() {
                 placeholder="E-mail"
                 {...register("email", {
                   required: "Veuillez saisir votre adresse mail",
-                  pattern:{
-                    value: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                    message: "L'adresse mail que vous saisi est incorrect"
-                    
-                  }
+                  pattern: {
+                    value:
+                      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                    message: "L'adresse mail que vous saisi est incorrect",
+                  },
                 })}
               />
               {errors.email && (
@@ -126,6 +129,124 @@ function Contact() {
             </li>
           </ul>
         </div>
+      </div>
+      <div className="job-form-container">
+        <div className="job-header">
+          <header>Déposez Votre CV</header>
+        </div>
+        <form onSubmit={handleSubmit(jobSubmit)}>
+          <div className="form-group-wrapper">
+            <div className="form-group">
+              <label>Nom (obligatoire) : </label>
+              <input
+                type="text"
+                name="nom"
+                placeholder="Nom"
+                {...register("nom", { required: "Veuillez saisir votre nom" })}
+              />
+              {errors.nom && (
+                <p className="input-error">{errors.nom.message}</p>
+              )}
+            </div>
+
+            <div className="form-group">
+              <label>Prenom (obligatoire) : </label>
+              <input
+                type="text"
+                name="prenom"
+                placeholder="Prenom"
+                {...register("prenom", {
+                  required: "Veuillez saisir votre prenom",
+                })}
+              />
+              {errors.nom && (
+                <p className="input-error">{errors.prenom.message}</p>
+              )}
+            </div>
+          </div>
+
+          <div className="form-group">
+            <label>E-mail (obligatoire) : </label>
+            <input
+              type="text"
+              name="email"
+              placeholder="E-mail"
+              {...register("email", {
+                required: "Veuillez saisir votre email",
+              })}
+            />
+            {errors.nom && (
+              <p className="input-error">{errors.email.message}</p>
+            )}
+          </div>
+
+          <div className="form-group">
+            <label>Telephone (obligatoire) : </label>
+            <input
+              type="text"
+              name="telephone"
+              placeholder="Telephone"
+              {...register("telephone", {
+                required: "Veuillez saisir votre numero de telephone",
+              })}
+            />
+            {errors.nom && (
+              <p className="input-error">{errors.telephone.message}</p>
+            )}
+          </div>
+
+          <div className="form-group">
+            <label>Adresse : </label>
+            <input
+              type="text"
+              name="adresse"
+              placeholder="Adresse"
+              {...register("adresse")}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Code Postal : </label>
+            <input
+              type="number"
+              name="code"
+              placeholder="Code Postal"
+              {...register("codeP")}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Ville : </label>
+            <input
+              type="text"
+              name="ville"
+              placeholder="Ville"
+              {...register("ville")}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Pays : </label>
+            <input
+              type="text"
+              name="pays"
+              placeholder="Pays"
+              {...register("pays")}
+            />
+          </div>
+          <div className="form-group">
+            <label>Message : </label>
+            <textarea
+              type="text"
+              name="message"
+              placeholder="Message"
+              {...register("message")}
+            />
+          </div>
+          <div className="btn-submit">
+            <button>Envoyer</button>
+          </div>
+        </form>
       </div>
     </div>
   );
