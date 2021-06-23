@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style/Contact.css";
 import { useForm } from "react-hook-form";
 // import { Form, Button, InputGroup } from "react-bootstrap";
 
 function Contact() {
+  const [cvName, setCvName] = useState(null);
+  const [motivationName, setMotivationName] = useState(null);
   const {
     register,
     handleSubmit,
     formState: { errors },
+  } = useForm();
+
+  const {
+    register: registerJob,
+    handleSubmit: hanldeSubmitJob,
+    formState: { errors: errorsJob },
   } = useForm();
   const contactSubmit = (formData) => {
     console.log(formData);
@@ -134,117 +142,158 @@ function Contact() {
         <div className="job-header">
           <header>Déposez Votre CV</header>
         </div>
-        <form onSubmit={handleSubmit(jobSubmit)}>
-          <div className="form-group-wrapper">
-            <div className="form-group">
-              <label>Nom (obligatoire) : </label>
-              <input
-                type="text"
-                name="nom"
-                placeholder="Nom"
-                {...register("nom", { required: "Veuillez saisir votre nom" })}
-              />
-              {errors.nom && (
-                <p className="input-error">{errors.nom.message}</p>
-              )}
-            </div>
-
-            <div className="form-group">
-              <label>Prenom (obligatoire) : </label>
-              <input
-                type="text"
-                name="prenom"
-                placeholder="Prenom"
-                {...register("prenom", {
-                  required: "Veuillez saisir votre prenom",
-                })}
-              />
-              {errors.nom && (
-                <p className="input-error">{errors.prenom.message}</p>
-              )}
-            </div>
+        <form onSubmit={hanldeSubmitJob(jobSubmit)}>
+          <div className="form-group" id="nom">
+            <label>Nom (obligatoire) : </label>
+            <input
+              type="text"
+              name="nom"
+              placeholder="Nom"
+              {...registerJob("nom", {
+                required: "Veuillez saisir votre nom",
+              })}
+            />
+            {errorsJob.nom && (
+              <p className="input-error">{errorsJob.nom.message}</p>
+            )}
           </div>
 
-          <div className="form-group">
+          <div className="form-group" id="prenom">
+            <label>Prenom (obligatoire) : </label>
+            <input
+              type="text"
+              name="prenom"
+              placeholder="Prenom"
+              {...registerJob("prenom", {
+                required: "Veuillez saisir votre prenom",
+              })}
+            />
+            {errorsJob.nom && (
+              <p className="input-error">{errorsJob.prenom.message}</p>
+            )}
+          </div>
+
+          <div className="form-group" id="email">
             <label>E-mail (obligatoire) : </label>
             <input
               type="text"
               name="email"
               placeholder="E-mail"
-              {...register("email", {
+              {...registerJob("email", {
                 required: "Veuillez saisir votre email",
+                pattern: {
+                  value:
+                    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                  message: "L'adresse mail que vous saisi est incorrect",
+                },
               })}
             />
-            {errors.nom && (
-              <p className="input-error">{errors.email.message}</p>
+            {errorsJob.email && (
+              <p className="input-error">{errorsJob.email.message}</p>
             )}
           </div>
 
-          <div className="form-group">
+          <div className="form-group" id="telephone">
             <label>Telephone (obligatoire) : </label>
             <input
               type="text"
               name="telephone"
               placeholder="Telephone"
-              {...register("telephone", {
+              {...registerJob("telephone", {
                 required: "Veuillez saisir votre numero de telephone",
               })}
             />
-            {errors.nom && (
-              <p className="input-error">{errors.telephone.message}</p>
+            {errorsJob.nom && (
+              <p className="input-error">{errorsJob.telephone.message}</p>
             )}
           </div>
-
-          <div className="form-group">
+          <div className="form-group" id="adresse">
             <label>Adresse : </label>
             <input
               type="text"
               name="adresse"
               placeholder="Adresse"
-              {...register("adresse")}
+              {...registerJob("adresse")}
             />
           </div>
 
-          <div className="form-group">
+          <div className="form-group" id="postal">
             <label>Code Postal : </label>
             <input
               type="number"
               name="code"
               placeholder="Code Postal"
-              {...register("codeP")}
+              {...registerJob("codeP")}
             />
           </div>
 
-          <div className="form-group">
+          <div className="form-group" id="ville">
             <label>Ville : </label>
             <input
               type="text"
               name="ville"
               placeholder="Ville"
-              {...register("ville")}
+              {...registerJob("ville")}
             />
           </div>
 
-          <div className="form-group">
+          <div className="form-group" id="pays">
             <label>Pays : </label>
             <input
               type="text"
               name="pays"
               placeholder="Pays"
-              {...register("pays")}
+              {...registerJob("pays")}
             />
           </div>
-          <div className="form-group">
+          <div className="form-group" id="message">
             <label>Message : </label>
             <textarea
               type="text"
               name="message"
               placeholder="Message"
-              {...register("message")}
+              {...registerJob("message")}
             />
           </div>
+          <div className="form-group" id="cv">
+            <label>Votre CV (obligatoire) : </label>
+            <input
+              type="file"
+              name="cv"
+              id="fileCV"
+              placeholder="Parcourir"
+              accept=".pdf, .docx"
+              {...registerJob("cv", { required: "Veuillez deposer votre cv" })}
+              onChange={(e) => {
+                setCvName(e.target.files[0].name);
+                console.log(e);
+              }}
+            />
+            {errorsJob.cv && (
+              <p className="input-error">{errorsJob.cv.message}</p>
+            )}
+            {/* <label htmlFor="fileCV">Parcourir (max. 5MB)</label>
+            {<p>{cvName}</p>} */}
+          </div>
+
+          <div className="form-group" id="motivation">
+            <label>Lettre de Motivation : </label>
+            <input
+              type="file"
+              id="fileMotivation"
+              name="motivation"
+              accept=".pdf, .docx"
+              {...registerJob("motivation")}
+              onChange={(e) => {
+                setMotivationName(e.target.files[0].name);
+                console.log(e);
+              }}
+            />
+            {/* <label htmlFor="fileMotivation">Parcourir (max. 5MB)</label>
+            {motivationName && <p>{motivationName}</p>} */}
+          </div>
           <div className="btn-submit">
-            <button>Envoyer</button>
+            <button type="submit">Envoyer</button>
           </div>
         </form>
       </div>
