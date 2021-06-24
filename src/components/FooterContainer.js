@@ -7,6 +7,10 @@ import facebookSocial from "../images/social-icons/facebook_social.svg";
 import linkedinSocial from "../images/social-icons/linkedin_social.svg";
 import twitterSocial from "../images/social-icons/twitter_social.svg";
 
+import PhoneIcon from '@material-ui/icons/Phone';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import MailIcon from '@material-ui/icons/Mail';
+
 function FooterContainer() {
   return (
     <div className="footer-container">
@@ -53,15 +57,15 @@ function FooterContainer() {
           <h2>Contact</h2>
           <ul>
             <li>
-              <span></span>
+              <LocationOnIcon/>
               <div>4 bis rue cadet de vaux 95130 Franconville</div>
             </li>
             <li>
-              <span></span>
+              <PhoneIcon/>
               <div>+336 34 27 40 69</div>
             </li>
             <li>
-              <span></span>
+              <MailIcon/>
               <div>
                 <a href="mailto:contact@wrsconsulting.fr">
                   contact@wrsconsulting.fr

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./style/Contact.css";
 import { useForm } from "react-hook-form";
+import PhoneIcon from '@material-ui/icons/Phone';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import MailIcon from '@material-ui/icons/Mail';
 // import { Form, Button, InputGroup } from "react-bootstrap";
 
 function Contact() {
@@ -16,6 +19,7 @@ function Contact() {
     register: registerJob,
     handleSubmit: hanldeSubmitJob,
     formState: { errors: errorsJob },
+    setValue,
   } = useForm();
   const contactSubmit = (formData) => {
     console.log(formData);
@@ -119,16 +123,16 @@ function Contact() {
           <header>CONTACT INFORMATION</header>
           <ul>
             <li>
-              <div></div>
+              <LocationOnIcon color="primpary"/>
               <p>4 bis rue cadet de vaux 95130 Franconville</p>
             </li>
             <li>
-              <div></div>
+              <PhoneIcon/>
               <p>+336 34 27 40 69</p>
             </li>
 
             <li>
-              <div></div>
+              <MailIcon/>
               <p>
                 <a href="mailto:contact@wrsconsulting.fr">
                   contact@wrsconsulting.fr
@@ -261,10 +265,10 @@ function Contact() {
               type="file"
               name="cv"
               id="fileCV"
-              placeholder="Parcourir"
               accept=".pdf, .docx"
               {...registerJob("cv", { required: "Veuillez deposer votre cv" })}
               onChange={(e) => {
+                setValue("cv", e.target.files);
                 setCvName(e.target.files[0].name);
                 console.log(e);
               }}
@@ -272,8 +276,14 @@ function Contact() {
             {errorsJob.cv && (
               <p className="input-error">{errorsJob.cv.message}</p>
             )}
-            {/* <label htmlFor="fileCV">Parcourir (max. 5MB)</label>
-            {<p>{cvName}</p>} */}
+            <label
+              onClick={() => {
+                document.querySelector("#fileCV").click();
+              }}
+            >
+              Parcourir (max. 5MB)
+            </label>
+            {<p>{cvName}</p>}
           </div>
 
           <div className="form-group" id="motivation">
@@ -285,12 +295,19 @@ function Contact() {
               accept=".pdf, .docx"
               {...registerJob("motivation")}
               onChange={(e) => {
+                setValue("motivation", e.target.files);
                 setMotivationName(e.target.files[0].name);
                 console.log(e);
               }}
             />
-            {/* <label htmlFor="fileMotivation">Parcourir (max. 5MB)</label>
-            {motivationName && <p>{motivationName}</p>} */}
+            <label
+              onClick={() => {
+                document.querySelector("#fileMotivation").click();
+              }}
+            >
+              Parcourir (max. 5MB)
+            </label>
+            {motivationName && <p>{motivationName}</p>}
           </div>
           <div className="btn-submit">
             <button type="submit">Envoyer</button>

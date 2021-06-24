@@ -55,7 +55,13 @@
     left: 0;
     bottom: 0;
 }
-
+.contact-informations ul li{
+    display: flex;
+    align-items: center;    
+}
+.contact-informations ul li p {
+    margin-left: 15px;
+}
 .form-group {
     display: flex;
     flex-direction: column;
@@ -87,6 +93,7 @@
 .form-group textarea:focus {
     border-radius: 5px;
     box-shadow: 0px 0px 11px 0px #363636;
+    background-color: #e8f0fe;
 }
 
 .form-group textarea {
@@ -95,11 +102,8 @@
     height: 6vh;
 }
 
-.form-group input:focus {
-    background-color: #e8f0fe;
-}
 
-/* input[type=file] {
+input[type=file] {
     display: none;
 }
 
@@ -116,7 +120,7 @@ input[type=file]+label {
 
 input[type=file]+label:hover {
     color: white;
-} */
+}
 
 .btn-submit {
     text-align: center;
@@ -242,35 +246,12 @@ input[type=file]+label:hover {
     .btn-submit {
         grid-area: button;
     }
-
-    /* .form-group-wrapper {
-        display: inline-grid;
+    #prenom, #pays{
         width: 95%;
-        grid-template-columns: repeat(4, 25%);
-
     }
-
-    .form-group-wrapper .form-group:first-child {
-        margin-right: 25px;
-
+    #postal{
+        width: 85%;
     }
-
-    .form-group-wrapper #nom {
-        grid-column: 1/3;
-    }
-
-    .form-group-wrapper #prenom {
-        grid-column: 3/5;
-    }
-
-    .form-group-wrapper #adresse {
-        grid-column: 1/4;
-    }
-
-    .postal {
-        grid-column: 4/5;
-    } */
-
 }
 
 /* Mobile */
