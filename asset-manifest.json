@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/wrsconsulting/static/css/main.362410e3.chunk.css",
-    "main.js": "/wrsconsulting/static/js/main.1e0fc865.chunk.js",
-    "main.js.map": "/wrsconsulting/static/js/main.1e0fc865.chunk.js.map",
+    "main.css": "/wrsconsulting/static/css/main.92a079dd.chunk.css",
+    "main.js": "/wrsconsulting/static/js/main.4cc58f10.chunk.js",
+    "main.js.map": "/wrsconsulting/static/js/main.4cc58f10.chunk.js.map",
     "runtime-main.js": "/wrsconsulting/static/js/runtime-main.b40941d8.js",
     "runtime-main.js.map": "/wrsconsulting/static/js/runtime-main.b40941d8.js.map",
-    "static/js/2.93b1349b.chunk.js": "/wrsconsulting/static/js/2.93b1349b.chunk.js",
-    "static/js/2.93b1349b.chunk.js.map": "/wrsconsulting/static/js/2.93b1349b.chunk.js.map",
+    "static/js/2.3ef874b8.chunk.js": "/wrsconsulting/static/js/2.3ef874b8.chunk.js",
+    "static/js/2.3ef874b8.chunk.js.map": "/wrsconsulting/static/js/2.3ef874b8.chunk.js.map",
     "index.html": "/wrsconsulting/index.html",
-    "static/css/main.362410e3.chunk.css.map": "/wrsconsulting/static/css/main.362410e3.chunk.css.map",
-    "static/js/2.93b1349b.chunk.js.LICENSE.txt": "/wrsconsulting/static/js/2.93b1349b.chunk.js.LICENSE.txt",
+    "static/css/main.92a079dd.chunk.css.map": "/wrsconsulting/static/css/main.92a079dd.chunk.css.map",
+    "static/js/2.3ef874b8.chunk.js.LICENSE.txt": "/wrsconsulting/static/js/2.3ef874b8.chunk.js.LICENSE.txt",
     "static/media/AXA-1.b886d37f.png": "/wrsconsulting/static/media/AXA-1.b886d37f.png",
     "static/media/allianz-1.b38b6bbe.png": "/wrsconsulting/static/media/allianz-1.b38b6bbe.png",
     "static/media/ca-1.94de224b.png": "/wrsconsulting/static/media/ca-1.94de224b.png",
@@ -35,8 +35,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b40941d8.js",
-    "static/js/2.93b1349b.chunk.js",
-    "static/css/main.362410e3.chunk.css",
-    "static/js/main.1e0fc865.chunk.js"
+    "static/js/2.3ef874b8.chunk.js",
+    "static/css/main.92a079dd.chunk.css",
+    "static/js/main.4cc58f10.chunk.js"
   ]
 }
