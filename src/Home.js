@@ -1,7 +1,7 @@
 import React from "react";
 import "./style/Home.css";
 // import Navbar from "./components/Navbar";
-import SlideShow1 from "./components/SlideShow1";
+import SlideShow1 from "./components/SlideShow";
 import SlideImage from "./components/SlideImage";
 import Tile from "./components/Tile";
 import TilesContainer from "./components/TilesContainer";
