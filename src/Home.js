@@ -1,7 +1,7 @@
 import React from "react";
 import "./style/Home.css";
 // import Navbar from "./components/Navbar";
-import SlideShow1 from "./components/SlideShow";
+import SlideShow from "./components/SlideShow";
 import SlideImage from "./components/SlideImage";
 import Tile from "./components/Tile";
 import TilesContainer from "./components/TilesContainer";
@@ -21,32 +21,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home-container">
-        <SlideShow1>
-          {/* <SlideImage
-            src={img1}
-            section="Reseaux & Infrastructure"
-            details="Maîtrisez l’évolution de votre Datacenter, vos Clouds et vos applications Saas."
-            link="infrastructure-reseaux"
-          />
-          <SlideImage
-            src={img2}
-            section="Développement logiciel"
-            details="Maîtrisez vos développements et garantissez la meilleure expérience utilisateur à vos clients."
-            link="developpement-logiciel"
-          />
-          <SlideImage
-            src={img3}
-            section="Gestion de projet"
-            details="Bordez vos budgets, prévenez vos risques, en garantissant vos coûts, vos délais, et votre qualité logicielle."
-            link="gestion-de-projet"
-          />
-          <SlideImage
-            src={img4}
-            section="Consulting en stratégie IT"
-            details="Ayez toujours un coup d’avance en garantissant l’efficacité de votre veille stratégique."
-            link="consulting-en-strategie-it"
-          /> */}
-        </SlideShow1>
+        <SlideShow/>
         <TilesContainer>
           <Tile
             logo={reseauIcon}

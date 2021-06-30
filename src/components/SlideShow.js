@@ -37,7 +37,7 @@ const images = [
   },
 ];
 const delay = 2500;
-function SlideShow1() {
+function SlideShow() {
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef(null);
   useEffect(() => {
@@ -53,10 +53,37 @@ function SlideShow1() {
       resetTimeout();
     };
   }, [index]);
+  useEffect(() => {
+    const prevArrow = document.querySelector(".prev");
+    const nextArrow = document.querySelector(".next");
+    [prevArrow, nextArrow].forEach((arrow) => {
+      const arrowSpan = arrow.querySelector("span");
+      arrow.addEventListener("mouseenter", () => {
+        arrowSpan.style.display = "block";
+      });
+      arrow.addEventListener("mouseleave", () => {
+        arrowSpan.style.display = "none";
+      });
+    });
+  });
   const resetTimeout = () => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
+  };
+  const toggleArrows = (direction) => {
+    if (index + direction < 0) {
+      setIndex(images.length - 1);
+    } else if (index + direction >= images.length) {
+      setIndex(0);
+    } else {
+      setIndex(index + direction);
+    }
+    console.log(index);
+    // setIndex(index + direction === images.length - 1 ? 0 : index + direction);
+    // arrowElement.addEventListener("mouseenter",()=>{
+    //   arrowElement.querySelector("span").style.display ="block";
+    // });
   };
   return (
     <div className="slideshow">
@@ -96,114 +123,15 @@ function SlideShow1() {
           ></div>
         ))}
       </div>
+      <div className="slide-controllers">
+        <div className="prev" onClick={() => toggleArrows(-1)}>
+          <span>&lt;</span>
+        </div>
+        <div className="next" onClick={() => toggleArrows(1)}>
+          <span>&gt;</span>
+        </div>
+      </div>
     </div>
   );
 }
-export default SlideShow1;
-// const images = [img1, img2, img3, img4];
-// const delay = 2500;
-
-// function SlideShow1() {
-//   const [index, setIndex] = useState(0);
-//   const timeOutRef = useRef(null);
-
-//   const resetTimeout = () => {
-//     if (timeOutRef.current) {
-//       clearTimeout(timeOutRef.current);
-//     }
-//   };
-//   useEffect(() => {
-//     resetTimeout();
-//     timeOutRef.current = setTimeout(() => {
-//       setIndex((prevIndex) =>
-//         prevIndex === images.length - 1 ? 0 : prevIndex + 1
-//       );
-//     }, delay);
-//     return () => {
-//       resetTimeout();
-//     };
-//   }, [index]);
-//   return (
-//     <div className="slideshow-container">
-//       <div
-//         className="slideshowSlider"
-//         style={{ transform: `translate3d(${-index * 100}%), 0, 0)` }}
-//       >
-//         {images.map((image, idx) => (
-//           <div
-//             className="slide"
-//             key={idx}
-//             style={{ backgroundImage: `url(${image})` }}
-//           ></div>
-//         ))}
-//       </div>
-
-//       <div className="slideshowDots">
-//         {images.map((_, ind) => (
-//           <div
-//             key={ind}
-//             className={`slideshow${index == ind ? " active" : ""}`}
-//             onClick={() => setIndex(ind)}
-//           ></div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default SlideShow1;
-// const images = ["#0088FE", "#00C49F", "#FFBB28"];
-// const delay = 2500;
-
-// function Slideshow() {
-//   const [index, setIndex] = React.useState(0);
-//   const timeoutRef = React.useRef(null);
-
-//   function resetTimeout() {
-//     if (timeoutRef.current) {
-//       clearTimeout(timeoutRef.current);
-//     }
-//   }
-
-//   React.useEffect(() => {
-//     resetTimeout();
-//     timeoutRef.current = setTimeout(
-//       () =>
-//         setIndex((prevIndex) =>
-//           prevIndex === images.length - 1 ? 0 : prevIndex + 1
-//         ),
-//       delay
-//     );
-
-//     return () => {
-//       resetTimeout();
-//     };
-//   }, [index]);
-
-//   return (
-//     <div className="slideshow">
-//       <div
-//         className="slideshowSlider"
-//         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
-//       >
-//         {images.map((backgroundColor, index) => (
-//           <div className="slide" key={index} style={{ backgroundColor }}></div>
-//         ))}
-//       </div>
-
-//       <div className="slideshowDots">
-//         {images.map((_, idx) => (
-//           <div
-//             key={idx}
-//             className={`slideshowDot${index === idx ? " active" : ""}`}
-//             onClick={() => {
-//               setIndex(idx);
-//             }}
-//           ></div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// ReactDOM.render(<Slideshow />, document.getElementById("App"));
+export default SlideShow;
