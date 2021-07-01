@@ -16,6 +16,7 @@ import GestionLogiciel from "./GestionProjet";
 import ConsultingIT from "./ConsultingIT";
 import Realisations from "./Realisations";
 import Contact from "./Contact";
+import ArrowTop from "./components/ArrowTop";
 
 
 class Index extends React.Component {
@@ -34,6 +35,7 @@ class Index extends React.Component {
           <Route path="/contact" component={Contact}/>
         </Switch>
         <FooterContainer />
+        <ArrowTop/>
       </Router>
     );
   }

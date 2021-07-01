@@ -127,23 +127,8 @@ input[type=file]+label:hover {
     text-align: center;
     margin: 25px 0px;
 }
-
-.btn-submit button {
-    cursor: pointer;
-    width: 100%;
-    padding: 10px;
-    border-radius: var(--btn-border-radius);
-    font-weight: bold;
-    font-size: 18px;
-    width: 200px;
-    border: none;
-    background-color: var(--logo-color-light);
-    transition: transform 0.3s ease-in;
-}
-
-.btn-submit button:hover {
-    color: white;
-    transform: scale(1.03);
+.btn-submit button{
+    background-color: var(--logo-orange);
 }
 
 .input-error {

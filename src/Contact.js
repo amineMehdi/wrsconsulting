@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./style/Contact.css";
 import { useForm } from "react-hook-form";
-import PhoneIcon from '@material-ui/icons/Phone';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
-import MailIcon from '@material-ui/icons/Mail';
+import PhoneIcon from "@material-ui/icons/Phone";
+import LocationOnIcon from "@material-ui/icons/LocationOn";
+import MailIcon from "@material-ui/icons/Mail";
 // import { Form, Button, InputGroup } from "react-bootstrap";
 
 function Contact() {
@@ -114,8 +114,10 @@ function Contact() {
                 <p className="input-error">{errors.message.message}</p>
               )}
             </div>
-            <div className="btn-submit">
-              <button type="submit">Envoyer</button>
+            <div className="btn btn-submit">
+              <button type="submit">
+                <span>Envoyer</span>
+              </button>
             </div>
           </form>
         </div>
@@ -123,16 +125,16 @@ function Contact() {
           <header>CONTACT INFORMATION</header>
           <ul>
             <li>
-              <LocationOnIcon color="primpary"/>
+              <LocationOnIcon style={{color : `#1a668c`}} />
               <p>4 bis rue cadet de vaux 95130 Franconville</p>
             </li>
             <li>
-              <PhoneIcon/>
+              <PhoneIcon  style={{color : `#1a668c`}}/>
               <p>+336 34 27 40 69</p>
             </li>
 
             <li>
-              <MailIcon/>
+              <MailIcon style={{color : `#1a668c`}}/>
               <p>
                 <a href="mailto:contact@wrsconsulting.fr">
                   contact@wrsconsulting.fr
@@ -309,8 +311,10 @@ function Contact() {
             </label>
             {motivationName && <p>{motivationName}</p>}
           </div>
-          <div className="btn-submit">
-            <button type="submit">Envoyer</button>
+          <div className="btn btn-submit">
+            <button type="submit">
+              <span>Envoyer</span>
+            </button>
           </div>
         </form>
       </div>

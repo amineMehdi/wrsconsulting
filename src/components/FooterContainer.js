@@ -57,15 +57,15 @@ function FooterContainer() {
           <h2>Contact</h2>
           <ul>
             <li>
-              <LocationOnIcon/>
+              <LocationOnIcon style={{color : `#06313D`}}/>
               <div>4 bis rue cadet de vaux 95130 Franconville</div>
             </li>
             <li>
-              <PhoneIcon/>
+              <PhoneIcon style={{color : `#06313D`}}/>
               <div>+336 34 27 40 69</div>
             </li>
             <li>
-              <MailIcon/>
+              <MailIcon style={{color : `#06313D`}}/>
               <div>
                 <a href="mailto:contact@wrsconsulting.fr">
                   contact@wrsconsulting.fr
