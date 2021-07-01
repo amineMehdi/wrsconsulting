@@ -9,9 +9,11 @@ function ContactContainer() {
       <div className="home-contact-header">
         <header>Avez-vous une Question ? Contactez-nous</header>
       </div>
-      <div className="home-contact-btn">
+      <div className="btn home-contact-btn">
         <button>
-        <Link to="/contact">Contact</Link>
+          <Link to="/contact">
+            <span>Contact</span>
+          </Link>
         </button>
       </div>
     </div>

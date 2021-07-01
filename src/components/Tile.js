@@ -1,6 +1,6 @@
 import React from "react";
 import anime from "animejs/lib/anime.es";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const animationTimer = 1500;
 function Tile(props) {
@@ -47,9 +47,11 @@ function Tile(props) {
         className="tile-arrow arrow-down"
         onClick={(event) => handleArrow(event.target)}
       ></div>
-      <div className="tile-learn-more">
+      <div className="btn tile-learn-more">
         <button>
-          <Link to={`/${props.link}`}>En savoir plus</Link>
+          <Link to={`/${props.link}`}>
+            <span>En savoir plus</span>
+          </Link>
         </button>
       </div>
     </div>

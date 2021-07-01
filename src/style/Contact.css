@@ -52,6 +52,7 @@
     content: "";
     width: 110px;
     border: 2px solid var(--logo-color-light);
+    background-color: var(--logo-color-light);
     left: 0;
     bottom: 0;
 }
@@ -163,6 +164,7 @@ input[type=file]+label:hover {
     content: "";
     width: 170px;
     border: 2px solid var(--logo-color-light);
+    background-color: var(--logo-color-light);
     left: 0;
     bottom: 0;
 }

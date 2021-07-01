@@ -64,26 +64,6 @@
     display: none;
 }
 
-.tile-learn-more>button {
-    cursor: pointer;
-    width: 100%;
-    padding: 10px;
-    border-radius: var(--btn-border-radius);
-    font-weight: bold;
-    font-size: 18px;
-    width: 200px;
-    border: 2px solid transparent;
-    /* color: var(--text-section-color); */
-
-    /* background-color: transparent;
-    color: white;
-    border: 2px solid white; */
-}
-
-.tile-learn-more>button:hover {
-    background-color: var(--logo-color-light);
-    color: white;
-}
 
 /* Desktop */
 @media screen and (min-width: 1010px) {

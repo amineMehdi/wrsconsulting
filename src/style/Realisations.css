@@ -47,6 +47,7 @@
     content: "";
     width: 72px;
     border: 2px solid var(--logo-color-light);
+    background-color: var(--logo-color-light);
     left: 0;
     bottom: 0;
 }

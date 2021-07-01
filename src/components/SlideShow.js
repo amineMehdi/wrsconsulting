@@ -101,7 +101,7 @@ function SlideShow() {
             <div className="slide-details">
               <p>{image.details}</p>
             </div>
-            <div className="learn-more">
+            <div className="btn learn-more">
               <button>
                 <Link to={`/${image.link}`}>
                   <span>En savoir plus</span>
