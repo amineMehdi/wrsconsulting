@@ -16,8 +16,8 @@ import GestionLogiciel from "./GestionProjet";
 import ConsultingIT from "./ConsultingIT";
 import Realisations from "./Realisations";
 import Contact from "./Contact";
+import Career from "./Career";
 import ArrowTop from "./components/ArrowTop";
-
 
 class Index extends React.Component {
   render() {
@@ -33,6 +33,7 @@ class Index extends React.Component {
           <Route path="/consulting-en-strategie-it" component={ConsultingIT} />
           <Route path="/realisations" component={Realisations}/>
           <Route path="/contact" component={Contact}/>
+          <Route path="/carriere" component={Career}/>
         </Switch>
         <FooterContainer />
         <ArrowTop/>
