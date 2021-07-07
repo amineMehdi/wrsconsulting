@@ -5,8 +5,10 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import "./style/index.css";
 
 
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar_new";
 import FooterContainer from "./components/FooterContainer";
+import ScrollToTop from "./components/ScrollToTop";
 
 import Home from "./Home";
 import About from "./About";
@@ -23,6 +25,7 @@ class Index extends React.Component {
   render() {
     return (
       <Router basename={process.env.PUBLIC_URL}>
+        <ScrollToTop/>
         <Navbar />
         <Switch>
           <Route path="/" exact component={Home} />
@@ -42,4 +45,3 @@ class Index extends React.Component {
   }
 }
 ReactDOM.render(<Index />, document.getElementById("root"));
-// basename={process.env.PUBLIC_URL}

@@ -133,7 +133,7 @@ function Navbar(props) {
             <Link to="/a-propos">A PROPOS</Link>
           </li>
           <li className="item-dropdown">
-            <a href="#">EXPERTISE WRS</a>
+            <a href="acceuil">EXPERTISE WRS</a>
             <ul className="item-dropdown-content">
               <li>
                 <Link to="/infrastructure-reseaux">
@@ -161,8 +161,21 @@ function Navbar(props) {
           <li>
             <Link to="/nos-partenaires">NOS PARTENAIRES</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/contact">CONTACT</Link>
+          </li> */}
+          <li className="item-dropdown">
+            <a href="contact">CONTACT</a>
+            <ul className="item-dropdown-content">
+              <li>
+                <Link to="/contact">Contactez-nous</Link>
+              </li>
+              <li>
+                <Link to="/carriere">Postulez</Link>
+              </li>
+            </ul>
+            <span className="item-dropdown-arrow">&#10095;</span>
+            <span className="item-dropdown-back-arrow">&#10096;</span>
           </li>
         </ul>
         <div className="items-menu">

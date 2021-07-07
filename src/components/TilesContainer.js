@@ -90,7 +90,7 @@ function TilesContainer(props) {
     }
   }, []);
   return (
-    <div className="tiles-section">
+    <div className="tiles-section" id="expertise">
       <div className="tiles-section-header">
         <header>Nos Expertises</header>
       </div>
