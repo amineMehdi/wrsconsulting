@@ -31,9 +31,9 @@ code {
 }
 
 ul {
-  margin: 0 !important;
-  padding: 0 !important;
-  list-style: none !important;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 a {
