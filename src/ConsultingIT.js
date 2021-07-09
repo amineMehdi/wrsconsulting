@@ -2,11 +2,21 @@ import React from "react";
 import "./style/ConsultingIT.css";
 import consultingImg from "./images/consulting-1.jpg";
 function ConsultingIT() {
+  const offers = [
+    "Technologies web et mobile",
+    "Architectures et implémentations Big Data",
+    "Informatique décisionnelle",
+    "Dématérialisation et la gestion électronique des documents",
+    "Digitalisation Cloud et Saas",
+    "ERP",
+    "Portail, collaboratif et réseau social d’entreprise",
+    "Cybersécurité et RGPD"
+  ];
   return (
     <div className="consulting-container">
       <div className="consulting-header">
         <header>
-          <strong>WRSConsulting : </strong>
+          <strong>WRS Consulting : </strong>
           <span>Business expertise & IT strategy consulting</span>
         </header>
       </div>
@@ -38,13 +48,9 @@ function ConsultingIT() {
         </div>
         <div className="consulting-list-section">
           <ul>
-            <li>Technologies web et mobile</li>
-            <li>Architectures et implémentations Big Data,</li>
-            <li>Informatique décisionnelle</li>
-            <li>Dématérialisation et la gestion électronique des documents,</li>
-            <li>Digitalisation Cloud et Saas</li>
-            <li>ERP</li>
-            <li>Portail, collaboratif et réseau social d’entreprise</li>
+            {offers.map((element) => (
+              <li>{element}</li>
+            ))}
           </ul>
         </div>
       </div>

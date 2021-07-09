@@ -6,7 +6,7 @@ import "./style/index.css";
 
 
 // import Navbar from "./components/Navbar";
-import Navbar from "./components/Navbar_new";
+import Navbar from "./components/Navbar";
 import FooterContainer from "./components/FooterContainer";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -18,7 +18,8 @@ import GestionLogiciel from "./GestionProjet";
 import ConsultingIT from "./ConsultingIT";
 import Realisations from "./Realisations";
 import Contact from "./Contact";
-import Career from "./Career";
+import EntrepriseContact from "./EntrepriseContact";
+import Candidature from "./Candidature";
 import ArrowTop from "./components/ArrowTop";
 
 class Index extends React.Component {
@@ -36,7 +37,8 @@ class Index extends React.Component {
           <Route path="/consulting-en-strategie-it" component={ConsultingIT} />
           <Route path="/realisations" component={Realisations}/>
           <Route path="/contact" component={Contact}/>
-          <Route path="/carriere" component={Career}/>
+          <Route path="/entreprise" component={EntrepriseContact}/>
+          <Route path="/candidature" component={Candidature}/>
         </Switch>
         <FooterContainer />
         <ArrowTop/>

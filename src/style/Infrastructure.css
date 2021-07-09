@@ -103,6 +103,14 @@
 
 /* Desktop */
 @media screen and (min-width: 1010px) {
+    .infrastructure-header{
+        border-bottom: 2px solid var(--border-color);
+        transition: border 0.5s ease;
+    }
+    .infrastructure-header:hover{
+        cursor: default;
+        border-bottom-color: var(--logo-color-light);
+    }
     .infrastructure-intro {
         height: 25vh;
         margin-bottom: 50px;

@@ -5,6 +5,7 @@ import AxaLogo from "./images/AXA-1.png";
 import AllianzLogo from "./images/allianz-1.png";
 import CreditLogo from "./images/ca-1.png";
 import SanofiLogo from "./images/sanofi-1.png";
+import OrangeImg from "./images/orange-3.png";
 import AssuranceImg from "./images/network-1.jpg";
 import anime from "animejs/lib/anime.es";
 function Realisations() {
@@ -54,6 +55,11 @@ function Realisations() {
       "Gestion Infrastructures et Reseaux",
     ],
   };
+  const OrangeData = {
+    src: OrangeImg,
+    header: "Orange",
+    details: ["A", "B", "C"],
+  };
   const animateTile = (tile, animationStart) => {
     anime({
       targets: tile.querySelector(".realisations-tile-img"),
@@ -97,6 +103,7 @@ function Realisations() {
         <RealisationsTile data={CreditData} />
         <RealisationsTile data={SanofiData} />
         <RealisationsTile data={AssuranceData} />
+        <RealisationsTile data={OrangeData} />
       </div>
     </div>
   );

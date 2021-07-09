@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../style/components/Navbar.css";
 import logo from "../images/wrs-80x80.png";
-import googleSocial from "../images/social-icons/google_social.svg";
 import facebookSocial from "../images/social-icons/facebook_social.svg";
 import linkedinSocial from "../images/social-icons/linkedin_social.svg";
 import twitterSocial from "../images/social-icons/twitter_social.svg";
@@ -107,9 +106,6 @@ function Navbar(props) {
           <a href="#" title="facebook">
             <img src={facebookSocial} alt="facebook" />
           </a>
-          <a href="#" title="google">
-            <img src={googleSocial} alt="google" />
-          </a>
           <a href="#" title="twitter">
             <img src={twitterSocial} alt="twitter" />
           </a>
@@ -141,7 +137,7 @@ function Navbar(props) {
                 </Link>
               </li>
               <li>
-                <Link to="/developpement-logiciel">DÉVELOPPEMENT LOGICIEL</Link>
+                <Link to="/developpement-logiciel">DÉVELOPPEMENT</Link>
               </li>
               <li>
                 <Link to="/gestion-de-projet">GESTION DE PROJET</Link>
@@ -150,6 +146,10 @@ function Navbar(props) {
                 <Link to="/consulting-en-strategie-it">
                   CONSULTING EN STRATÉGIE IT
                 </Link>
+              </li>
+
+              <li>
+                <Link to="/audit">AUDIT</Link>
               </li>
             </ul>
             <span className="item-dropdown-arrow">&#10095;</span>
@@ -165,13 +165,16 @@ function Navbar(props) {
             <Link to="/contact">CONTACT</Link>
           </li> */}
           <li className="item-dropdown">
-            <a href="contact">CONTACT</a>
+            <Link to="/contact">
+              <span>CONTACT</span>
+            </Link>
+            {/* <a href="/contact">CONTACT</a> */}
             <ul className="item-dropdown-content">
               <li>
-                <Link to="/contact">Contactez-nous</Link>
+                <Link to="/entreprise">Contactez-nous</Link>
               </li>
               <li>
-                <Link to="/carriere">Postulez</Link>
+                <Link to="/">Postulez</Link>
               </li>
             </ul>
             <span className="item-dropdown-arrow">&#10095;</span>

@@ -7,8 +7,9 @@ function Developpement() {
       <div className="developpement-container">
         <div className="developpement-header">
           <header>
-            <strong>WRSConsulting:</strong> <span>Developpement Logiciel</span>
+            <strong>WRSConsulting:</strong> <span>Developpement </span>
           </header>
+          <p>Developpement Web, applications Mobile et logiciel</p>
         </div>
         <div className="developpement-intro">
           <div

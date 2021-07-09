@@ -6,7 +6,7 @@ function GestionProjet() {
       <div className="gestion-container">
         <div className="gestion-header">
           <header>
-            <strong>WRSConsulting: </strong> <span>Gestion de projet</span>
+            <strong>WRS Consulting: </strong> <span>Gestion de projet</span>
           </header>
         </div>
         <div className="gestion-intro">

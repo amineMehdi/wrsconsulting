@@ -36,7 +36,7 @@ const images = [
     link: "consulting-en-strategie-it",
   },
 ];
-const delay = 2500;
+const delay = 3500;
 function SlideShow() {
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef(null);

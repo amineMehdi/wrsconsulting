@@ -8,9 +8,13 @@
     text-align: center;
     margin-bottom: 50px;
     position: relative;
+}
+.developpement-header header{
     font-size: 43px;
 }
-
+.developpement-header p{
+    font-size: 21px;
+}
 .developpement-header header span {
     color: var(--logo-color-light);
 }

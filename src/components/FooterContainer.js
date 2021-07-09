@@ -2,7 +2,6 @@ import React from "react";
 import "../style/components/FooterContainer.css";
 import logo from "../images/wrs-80x80.png";
 import { Link } from "react-router-dom";
-import googleSocial from "../images/social-icons/google_social.svg";
 import facebookSocial from "../images/social-icons/facebook_social.svg";
 import linkedinSocial from "../images/social-icons/linkedin_social.svg";
 import twitterSocial from "../images/social-icons/twitter_social.svg";
@@ -81,9 +80,6 @@ function FooterContainer() {
           <div className="footer-social-icons">
             <a href="/" title="Facebook">
               <img src={facebookSocial} alt="facebook" />
-            </a>
-            <a href="/" title="Google">
-              <img src={googleSocial} alt="google" />
             </a>
             <a href="/" title="Twitter">
               <img src={twitterSocial} alt="twitter" />
