@@ -10,11 +10,11 @@ function ContactContainer() {
         <header>Avez-vous une Question ? Contactez-nous</header>
       </div>
       <div className="btn home-contact-btn">
-        <button>
-          <Link to="/contact">
+        <Link to="/contact">
+          <button>
             <span>Contact</span>
-          </Link>
-        </button>
+          </button>
+        </Link>
       </div>
     </div>
   );

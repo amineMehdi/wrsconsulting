@@ -22,7 +22,7 @@ function FooterContainer() {
           <ul className="footer-services-list">
             <li>
               <Link to="/infrastructure-reseaux">
-                <div>Infrastructures & Réseaux</div>
+                Infrastructures & Réseaux
               </Link>
             </li>
             <li>

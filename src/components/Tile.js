@@ -48,11 +48,11 @@ function Tile(props) {
         onClick={(event) => handleArrow(event.target)}
       ></div>
       <div className="btn tile-learn-more">
-        <button>
-          <Link to={`/${props.link}`}>
+        <Link to={`/${props.link}`}>
+          <button>
             <span>En savoir plus</span>
-          </Link>
-        </button>
+          </button>
+        </Link>
       </div>
     </div>
   );

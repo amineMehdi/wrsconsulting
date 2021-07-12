@@ -102,11 +102,11 @@ function SlideShow() {
               <p>{image.details}</p>
             </div>
             <div className="btn learn-more">
-              <button>
-                <Link to={`/${image.link}`}>
+              <Link to={`/${image.link}`}>
+                <button>
                   <span>En savoir plus</span>
-                </Link>
-              </button>
+                </button>
+              </Link>
             </div>
           </div>
         ))}

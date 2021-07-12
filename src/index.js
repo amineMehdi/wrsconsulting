@@ -37,7 +37,7 @@ class Index extends React.Component {
           <Route path="/consulting-en-strategie-it" component={ConsultingIT} />
           <Route path="/realisations" component={Realisations}/>
           <Route path="/contact" component={Contact}/>
-          <Route path="/entreprise" component={EntrepriseContact}/>
+          <Route path="/entreprise" exact component={EntrepriseContact}/>
           <Route path="/candidature" component={Candidature}/>
         </Switch>
         <FooterContainer />

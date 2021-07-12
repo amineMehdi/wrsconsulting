@@ -1,16 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./style/Home.css";
-// import Navbar from "./components/Navbar";
+
 import SlideShow from "./components/SlideShow";
-import SlideImage from "./components/SlideImage";
 import Tile from "./components/Tile";
 import TilesContainer from "./components/TilesContainer";
-import ContactContainer from "./components/ContactContainer";
-
-import img1 from "./images/img-1.jpg";
-import img2 from "./images/img-2.jpg";
-import img3 from "./images/img-3.jpg";
-import img4 from "./images/img-4.jpg";
 
 import developpementIcon from "./images/expertise-icons/developpement_logiciel_icon.svg";
 import editionIcon from "./images/expertise-icons/edition_logiciel_icon.svg";
@@ -21,7 +15,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home-container">
-        <SlideShow/>
+        <SlideShow />
         <TilesContainer>
           <Tile
             logo={reseauIcon}
@@ -48,7 +42,13 @@ class Home extends React.Component {
             link="consulting-en-strategie-it"
           />
         </TilesContainer>
-        <ContactContainer />
+        <div className="btn home-contact-container">
+          <Link to="/contact">
+            <button>
+              <span>Contactez-Nous</span>
+            </button>
+          </Link>
+        </div>
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 function SlideImage(props) {
   return (
     <div className="slide">
@@ -10,9 +10,9 @@ function SlideImage(props) {
       <div className="slide-section">{props.section}</div>
       <p className="slide-details">{props.details}</p>
       <div className="learn-more">
-        <button>
-          <Link to={`/${props.link}`}>En savoir plus</Link>
-        </button>
+        <Link to={`/${props.link}`}>
+          <button>En savoir plus</button>
+        </Link>
       </div>
     </div>
   );

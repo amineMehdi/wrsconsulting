@@ -1,6 +1,14 @@
 .home-container{
     position: relative;
 }
+.home-contact-container{
+    text-align: center;
+    /* background-color: var(--logo-orange); */
+    margin-bottom: 5vh;
+}
+.home-contact-container button {
+    background-color: var(--logo-orange);
+}
 @media screen and (min-width: 1010px) {
 
     .home-container {
