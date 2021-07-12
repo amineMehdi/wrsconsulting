@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/wrsconsulting/static/css/main.4b6535e4.chunk.css",
-    "main.js": "/wrsconsulting/static/js/main.60ca4a52.chunk.js",
-    "main.js.map": "/wrsconsulting/static/js/main.60ca4a52.chunk.js.map",
+    "main.css": "/wrsconsulting/static/css/main.49ccb58c.chunk.css",
+    "main.js": "/wrsconsulting/static/js/main.d72850e4.chunk.js",
+    "main.js.map": "/wrsconsulting/static/js/main.d72850e4.chunk.js.map",
     "runtime-main.js": "/wrsconsulting/static/js/runtime-main.b40941d8.js",
     "runtime-main.js.map": "/wrsconsulting/static/js/runtime-main.b40941d8.js.map",
-    "static/js/2.57b8e6eb.chunk.js": "/wrsconsulting/static/js/2.57b8e6eb.chunk.js",
-    "static/js/2.57b8e6eb.chunk.js.map": "/wrsconsulting/static/js/2.57b8e6eb.chunk.js.map",
+    "static/js/2.ef78efe3.chunk.js": "/wrsconsulting/static/js/2.ef78efe3.chunk.js",
+    "static/js/2.ef78efe3.chunk.js.map": "/wrsconsulting/static/js/2.ef78efe3.chunk.js.map",
     "index.html": "/wrsconsulting/index.html",
-    "static/css/main.4b6535e4.chunk.css.map": "/wrsconsulting/static/css/main.4b6535e4.chunk.css.map",
-    "static/js/2.57b8e6eb.chunk.js.LICENSE.txt": "/wrsconsulting/static/js/2.57b8e6eb.chunk.js.LICENSE.txt",
+    "static/css/main.49ccb58c.chunk.css.map": "/wrsconsulting/static/css/main.49ccb58c.chunk.css.map",
+    "static/js/2.ef78efe3.chunk.js.LICENSE.txt": "/wrsconsulting/static/js/2.ef78efe3.chunk.js.LICENSE.txt",
     "static/media/AXA-1.b886d37f.png": "/wrsconsulting/static/media/AXA-1.b886d37f.png",
     "static/media/allianz-1.b38b6bbe.png": "/wrsconsulting/static/media/allianz-1.b38b6bbe.png",
     "static/media/ca-1.94de224b.png": "/wrsconsulting/static/media/ca-1.94de224b.png",
     "static/media/consulting-1.5dc148a3.jpg": "/wrsconsulting/static/media/consulting-1.5dc148a3.jpg",
+    "static/media/contact-1.4f4be91d.jpg": "/wrsconsulting/static/media/contact-1.4f4be91d.jpg",
     "static/media/developpement-1.e24bf3cb.jpg": "/wrsconsulting/static/media/developpement-1.e24bf3cb.jpg",
     "static/media/developpement_logiciel_icon.ba80f6c0.svg": "/wrsconsulting/static/media/developpement_logiciel_icon.ba80f6c0.svg",
     "static/media/edition_logiciel_icon.b21df7f2.svg": "/wrsconsulting/static/media/edition_logiciel_icon.b21df7f2.svg",
     "static/media/facebook_social.32e7def9.svg": "/wrsconsulting/static/media/facebook_social.32e7def9.svg",
     "static/media/gestion-1.9f7a8e09.jpg": "/wrsconsulting/static/media/gestion-1.9f7a8e09.jpg",
-    "static/media/google_social.e0c128ec.svg": "/wrsconsulting/static/media/google_social.e0c128ec.svg",
     "static/media/img-1.7490343c.jpg": "/wrsconsulting/static/media/img-1.7490343c.jpg",
     "static/media/img-2.0d6db3b7.jpg": "/wrsconsulting/static/media/img-2.0d6db3b7.jpg",
     "static/media/img-3.055330cf.jpg": "/wrsconsulting/static/media/img-3.055330cf.jpg",
@@ -35,8 +35,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b40941d8.js",
-    "static/js/2.57b8e6eb.chunk.js",
-    "static/css/main.4b6535e4.chunk.css",
-    "static/js/main.60ca4a52.chunk.js"
+    "static/js/2.ef78efe3.chunk.js",
+    "static/css/main.49ccb58c.chunk.css",
+    "static/js/main.d72850e4.chunk.js"
   ]
 }
