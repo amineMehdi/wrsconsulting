@@ -47,8 +47,8 @@
     border-radius: var(--section-radius);
     text-align: center;
     line-height: 1.5;
-    /* background-color: #7C8C89; */
     backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.418); 
     color: rgb(19, 13, 13);
     box-shadow: 0px 0px 11px 0px #363636;
 }
@@ -141,7 +141,7 @@
     .slide-details {
         font-size: 25px;
         padding: 10px 50px;
-        bottom: 28%;
+        bottom: 25%;
     }
 }
 

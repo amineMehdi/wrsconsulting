@@ -1,41 +1,134 @@
-.contact-container {
-    width: 80vw;
-    margin: 0 auto;
+.contact-container{
     margin-top: 180px;
+    overflow: hidden;
 }
-
 .contact-header {
     text-align: center;
     background-color: var(--logo-color-light);
     padding: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 100px;
+    color: white;
 }
 
 .contact-header header {
     font-size: 45px;
-    color: white;
 }
 
 .contact-header p {
     font-size: 21px;
     line-height: 2;
-    color: white;
-
 }
 
-.contact-choice-container{
+.contact-tiles-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5vh;
-    height: 50vh;
     background-repeat: no-repeat;
     background-position: center;
-    /* background-attachment: fixed; */
     object-fit: cover;
-    /* backdrop-filter: ; */
+    width: 100%;
+    height: fit-content;
+}
+
+.contact-tiles-img {
+    position: absolute;
+    left: 0;
+    top: 46%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    outline: none;
+    overflow: hidden;
+}
+
+.contact-tiles-img img {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    filter: blur(7px);
+}   
+
+.contact-tile {
+    width: 25vw;
+    background-color: var(--logo-color-light);
+    transition: transform 0.3s ease;
 }
 
 
+.contact-tile-header {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    height: 150px;
+}
 
+.contact-tile-header header {
+    font-size: 32px;
+    line-height: 1.5;
+}
 
+.contact-tile-header p {
+    font-size: 18px;
+}
 
+.contact-tile img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    background-position: center;
+}
+
+.contact-tile-btn {
+    text-align: center;
+    padding: 15px;
+}
+
+.contact-tile-btn button:hover {
+    background-color: var(--logo-orange);
+    color: white;
+}
+
+/* Desktop */
+@media screen and (min-width: 1010px) {
+    .contact-container {
+        width: 80vw;
+        margin: 0 auto;
+        margin-top: 180px;
+        /* height: 110vh; */
+    }
+    .contact-tile:not(:last-child) {
+        margin-right: 20px;
+    }
+    .contact-tiles-container{
+        margin-bottom: 50px;
+    }
+    .contact-tile:hover{
+        box-shadow: 0px 0px 11px 0px #363636;
+        transform: scale(1.03);
+
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 1010px) {
+    .contact-container {
+        width: 100%;
+        position: relative;
+    }
+
+    .contact-header {
+        width: 90vw;
+    }
+    .contact-tiles-container{
+        flex-direction: column;
+    }
+    .contact-tile{
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .contact-tiles-img{
+        top: 17%;
+    }
+}
