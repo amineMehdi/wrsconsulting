@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/wrsconsulting/static/css/main.bb0732f6.chunk.css",
-    "main.js": "/wrsconsulting/static/js/main.fe77198f.chunk.js",
-    "main.js.map": "/wrsconsulting/static/js/main.fe77198f.chunk.js.map",
+    "main.css": "/wrsconsulting/static/css/main.bcbd9cb6.chunk.css",
+    "main.js": "/wrsconsulting/static/js/main.6a1a72c3.chunk.js",
+    "main.js.map": "/wrsconsulting/static/js/main.6a1a72c3.chunk.js.map",
     "runtime-main.js": "/wrsconsulting/static/js/runtime-main.b40941d8.js",
     "runtime-main.js.map": "/wrsconsulting/static/js/runtime-main.b40941d8.js.map",
     "static/js/2.ef78efe3.chunk.js": "/wrsconsulting/static/js/2.ef78efe3.chunk.js",
     "static/js/2.ef78efe3.chunk.js.map": "/wrsconsulting/static/js/2.ef78efe3.chunk.js.map",
     "index.html": "/wrsconsulting/index.html",
-    "static/css/main.bb0732f6.chunk.css.map": "/wrsconsulting/static/css/main.bb0732f6.chunk.css.map",
+    "static/css/main.bcbd9cb6.chunk.css.map": "/wrsconsulting/static/css/main.bcbd9cb6.chunk.css.map",
     "static/js/2.ef78efe3.chunk.js.LICENSE.txt": "/wrsconsulting/static/js/2.ef78efe3.chunk.js.LICENSE.txt",
     "static/media/AXA-1.b886d37f.png": "/wrsconsulting/static/media/AXA-1.b886d37f.png",
     "static/media/allianz-1.b38b6bbe.png": "/wrsconsulting/static/media/allianz-1.b38b6bbe.png",
@@ -37,7 +37,7 @@
   "entrypoints": [
     "static/js/runtime-main.b40941d8.js",
     "static/js/2.ef78efe3.chunk.js",
-    "static/css/main.bb0732f6.chunk.css",
-    "static/js/main.fe77198f.chunk.js"
+    "static/css/main.bcbd9cb6.chunk.css",
+    "static/js/main.6a1a72c3.chunk.js"
   ]
 }
