@@ -11,11 +11,27 @@ function EntrepriseContact() {
     handleSubmit,
     formState: { errors },
     reset,
+    setError,
+    clearErrors,
   } = useForm();
 
   const contactSubmit = (formData) => {
+    if (formData.nom === "") {
+      if (formData.prenom === "") {
+        if (formData.entreprise === "") {
+          setError("entreprise", {
+            message:
+              "Veuillez saisir le nom d'entreprise ou votre nom et prénom",
+          });
+          setError("nom", {
+            message:
+              "Veuillez saisir votre nom et prenom ou le nom d'entreprise",
+          });
+        }
+      }
+    }
     console.log(formData);
-    reset();
+    // reset();
   };
   return (
     <div className="contact-form-informations-wrapper">
@@ -24,32 +40,53 @@ function EntrepriseContact() {
         <form onSubmit={handleSubmit(contactSubmit)}>
           <div className="form-group">
             <label>
-              Votre Nom <span style={{ color: `red` }}>*</span> :
+              Nom d'entreprise <span style={{ color: `red` }}>*</span> :
             </label>
             <input
               type="text"
-              name="nom"
-              placeholder="Nom"
-              {...register("nom", { required: "Veuillez saisir votre nom" })}
+              name="entreprise"
+              placeholder="Nom d'entreprise"
+              {...register("entreprise")}
             />
-            {errors.nom && <p className="input-error">{errors.nom.message}</p>}
-          </div>
-
-          <div className="form-group">
-            <label>
-              Votre Prenom <span style={{ color: `red` }}>*</span> :
-            </label>
-            <input
-              type="text"
-              name="prenom"
-              placeholder="Prenom"
-              {...register("prenom", {
-                required: "Veuillez saisir votre prenom",
-              })}
-            />
-            {errors.prenom && (
-              <p className="input-error">{errors.prenom.message}</p>
+            {errors.entreprise && (
+              <p className="input-error">{errors.entreprise.message}</p>
             )}
+          </div>
+          <div className="or-container">
+            <p>Ou</p>
+          </div>
+          <div className="form-group-wrapper">
+            <div className="form-group">
+              <label>
+                Votre Nom <span style={{ color: `red` }}>*</span> :
+              </label>
+              <input
+                type="text"
+                name="nom"
+                placeholder="Nom"
+                {...register("nom")}
+                // , { required: "Veuillez saisir votre nom" }
+              />
+              {errors.nom && (
+                <p className="input-error">{errors.nom.message}</p>
+              )}
+            </div>
+
+            <div className="form-group">
+              <label>
+                Votre Prenom <span style={{ color: `red` }}>*</span> :
+              </label>
+              <input
+                type="text"
+                name="prenom"
+                placeholder="Prenom"
+                {...register("prenom")}
+                // , {required: "Veuillez saisir votre prenom"}
+              />
+              {errors.prenom && (
+                <p className="input-error">{errors.prenom.message}</p>
+              )}
+            </div>
           </div>
 
           <div className="form-group">

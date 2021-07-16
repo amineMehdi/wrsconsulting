@@ -3,11 +3,16 @@ import "./style/Contact.css";
 import { Link } from "react-router-dom";
 import ContactBg from "./images/contact-1.jpg";
 import placeholderImg from "./images/400.png";
+import resume from "./images/resume.png";
+import map from "./images/map.png";
+import contact from "./images/contact.png";
 function Contact() {
   const contactTilesImgRef = useRef(null);
   const contactTilesContainerRef = useRef(null);
-  useEffect(() =>{
-    contactTilesImgRef.current.style.height = `${contactTilesContainerRef.current.clientHeight + 50}px`;
+  useEffect(() => {
+    contactTilesImgRef.current.style.height = `${
+      contactTilesContainerRef.current.clientHeight + 50
+    }px`;
   });
   return (
     <div className="contact-container">
@@ -15,22 +20,26 @@ function Contact() {
         <header>Contact</header>
         <p>
           Merci pour l'intérêt que vous portez à WRS CONSULTING et à nos
-          services. Pour qu'on puisse répondre à votre demande, veuillez choisir le type de contact.
+          services. Pour qu'on puisse répondre à votre demande, veuillez choisir
+          le type de contact.
         </p>
       </div>
       <div ref={contactTilesContainerRef} className="contact-tiles-container">
         {/* style={{ backgroundImage: `url(${ContactBg})` }} */}
-        <div ref={contactTilesImgRef} className="contact-tiles-img">
+        <div ref={contactTilesImgRef} className="contact-tiles-bg">
           <img src={ContactBg} />
         </div>
         <div className="contact-tile">
           <div className="contact-tile-header">
             <header>Joignez WRS Consulting</header>
             <p>
-              Avez-vous un projet ? une question ? N'hesitez pas à nous contacter
+              Avez-vous un projet ? une question ? N'hesitez pas à nous
+              contacter
             </p>
           </div>
-          <img src={placeholderImg} />
+          <div className="contact-tile-img">
+            <img src={contact} />
+          </div>
           <div className="contact-tile-btn btn">
             <Link to="/entreprise">
               <button>Contact</button>
@@ -43,9 +52,18 @@ function Contact() {
             <header>Nous Rencontrer</header>
             <p>4 bis rue cadet de vaux 95130 Franconville</p>
           </div>
-          <img src={placeholderImg}/>
+          <div className="contact-tile-img">
+            <img src={map} />
+          </div>
           <div className="contact-tile-btn btn">
-            <button>Nous visiter</button>
+            <button>
+              <a
+                href="https://www.google.com/maps?q=48.991853677927324,+2.234105298316715"
+                target="_blank"
+              >
+                Nous visiter
+              </a>
+            </button>
           </div>
         </div>
 
@@ -57,7 +75,9 @@ function Contact() {
               candidature.
             </p>
           </div>
-          <img src={placeholderImg}/>
+          <div className="contact-tile-img">
+            <img src={resume} />
+          </div>
           <div className="contact-tile-btn btn">
             <Link to="/candidature">
               <button>Candidature</button>

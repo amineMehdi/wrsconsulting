@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import "./style/Contact.css";
 import "./style/Candidature.css";
 import { useForm } from "react-hook-form";
 
@@ -15,12 +14,12 @@ function Candidature() {
     clearErrors,
     reset,
   } = useForm({ mode: "onChange" });
-  const jobSubmit = (formData) => {
+  const jobSubmit = (formData,e) => {
     console.log(formData);
-    // reset();
+    e.target.reset();
   };
   return (
-    <div className="contact-container">
+    <div className="candidature-container">
       <div className="job-form-container">
         <div className="job-header">
           <header>Candidature spontannée</header>
