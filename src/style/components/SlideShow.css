@@ -34,11 +34,15 @@
 
 .slide>header {
     top: 30%;
-    background-color: #6e7c7a;
+    /* background-color: #6e7c7a; */
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.418); 
     border-radius: 10px;
     padding: 15px;
     font-size: 45px;
-    color: white;
+    /* color: black; */
+    color: rgb(19, 13, 13);
+
 }
 
 .slide-details {

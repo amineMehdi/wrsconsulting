@@ -174,7 +174,7 @@ function Navbar(props) {
                 <Link to="/entreprise">Contactez-nous</Link>
               </li>
               <li>
-                <Link to="/">Postulez</Link>
+                <Link to="/candidature">Postulez</Link>
               </li>
             </ul>
             <span className="item-dropdown-arrow">&#10095;</span>

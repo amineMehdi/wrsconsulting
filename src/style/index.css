@@ -12,6 +12,10 @@
   --text-section-color: #252a20;
   --dots-color: #41485a;
   --grey-color: #838383;
+  /* --bg-color: rgb(250, 243, 184); */
+  /* --bg-color : rgb(240,240,240); */
+  --bg-color : rgb(240, 240, 240);
+
 }
 
 body {
@@ -23,6 +27,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  background-color: var(--bg-color);
 }
 
 code {
@@ -76,6 +81,7 @@ a {
 .form-group input,
 .form-group textarea {
   margin-bottom: 1vh;
+  background-color: var(--bg  );
 }
 
 .form-group label {

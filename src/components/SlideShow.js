@@ -79,7 +79,7 @@ function SlideShow() {
     } else {
       setIndex(index + direction);
     }
-    console.log(index);
+    // console.log(index);
     // setIndex(index + direction === images.length - 1 ? 0 : index + direction);
     // arrowElement.addEventListener("mouseenter",()=>{
     //   arrowElement.querySelector("span").style.display ="block";

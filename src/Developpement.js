@@ -9,7 +9,7 @@ function Developpement() {
           <header>
             <strong>WRSConsulting:</strong> <span>Developpement </span>
           </header>
-          <p>Developpement Web, applications Mobile et logiciel</p>
+          <p>Developpement Web, applications mobile et logiciel</p>
         </div>
         <div className="developpement-intro">
           <div
