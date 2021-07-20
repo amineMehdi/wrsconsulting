@@ -13,6 +13,7 @@ function Contact() {
     contactTilesImgRef.current.style.height = `${
       contactTilesContainerRef.current.clientHeight + 50
     }px`;
+    console.log(process.env.REACT_APP_SERVICE_ID);
   });
   return (
     <div className="contact-container">

@@ -73,7 +73,7 @@
     }
 
     .realisations-tile:hover {
-        box-shadow: 0px 0px 11px 0px #000000;
+        box-shadow: 0px 0px 11px 0px var(--logo-blue);
         transform: scale(1.03);
     }
 
