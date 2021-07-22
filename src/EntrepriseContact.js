@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./style/EntrepriseContact.css";
 import { useForm } from "react-hook-form";
-
+import emailjs from "emailjs-com";
 import PhoneIcon from "@material-ui/icons/Phone";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import MailIcon from "@material-ui/icons/Mail";
@@ -13,26 +13,42 @@ function EntrepriseContact() {
     reset,
     setError,
     clearErrors,
+    getValues,
   } = useForm();
-
+  const [result, setResult] = useState(null);
+  const resultRef = useRef(null);
+  useEffect(() => {
+    // console.log(process.env.REACT_APP_PERSONAL_CONTACT_TEMPLATE_ID);
+    // console.log(typeof process.env.REACT_APP_PERSONAL_CONTACT_TEMPLATE_ID);
+    // console.log(typeof "service_g825y4p");
+  }, []);
   const contactSubmit = (formData) => {
-    if (formData.nom === "") {
-      if (formData.prenom === "") {
-        if (formData.entreprise === "") {
-          setError("entreprise", {
-            message:
-              "Veuillez saisir le nom d'entreprise ou votre nom et prénom",
-          });
-          setError("nom", {
-            message:
-              "Veuillez saisir votre nom et prenom ou le nom d'entreprise",
-          });
-        }
-      }
+    let templateID;
+    const [serviceID, userID] = [
+      process.env.REACT_APP_SERVICE_ID,
+      process.env.REACT_APP_USER_ID,
+    ];
+    if (formData.entreprise != "") {
+      templateID = process.env.REACT_APP_COMPANY_CONTACT_TEMPLATE_ID;
+    } else {
+      templateID = process.env.REACT_APP_PERSONAL_CONTACT_TEMPLATE_ID;
     }
-    console.log(formData);
-    // reset();
+    emailjs.send(serviceID, templateID, formData, userID).then(
+      (result) => {
+        console.log(result);
+        setResult(true);
+        reset();
+      },
+      (error) => {
+        console.log(error);
+        setResult(false);
+      }
+    );
+    showResult();
   };
+  const showResult = () =>{
+    resultRef.current.style.display = "block";
+  }
   return (
     <div className="contact-form-informations-wrapper">
       <div className="contact-form">
@@ -46,7 +62,17 @@ function EntrepriseContact() {
               type="text"
               name="entreprise"
               placeholder="Nom d'entreprise"
-              {...register("entreprise")}
+              {...register("entreprise", {
+                validate: (_) => {
+                  if (
+                    getValues("nom") ||
+                    getValues("prenom") ||
+                    getValues("entreprise")
+                  )
+                    return true;
+                  else return "Veuillez indiquer le nom d'entreprise";
+                },
+              })}
             />
             {errors.entreprise && (
               <p className="input-error">{errors.entreprise.message}</p>
@@ -64,8 +90,13 @@ function EntrepriseContact() {
                 type="text"
                 name="nom"
                 placeholder="Nom"
-                {...register("nom")}
-                // , { required: "Veuillez saisir votre nom" }
+                {...register("nom", {
+                  validate: (_) => {
+                    if (getValues("entreprise") || getValues("nom"))
+                      return true;
+                    else return "Veuillez saisir votre nom";
+                  },
+                })}
               />
               {errors.nom && (
                 <p className="input-error">{errors.nom.message}</p>
@@ -80,7 +111,13 @@ function EntrepriseContact() {
                 type="text"
                 name="prenom"
                 placeholder="Prenom"
-                {...register("prenom")}
+                {...register("prenom", {
+                  validate: (_) => {
+                    if (getValues("entreprise") || getValues("prenom"))
+                      return true;
+                    else return "Veuillez saisir votre prénom";
+                  },
+                })}
                 // , {required: "Veuillez saisir votre prenom"}
               />
               {errors.prenom && (
@@ -135,6 +172,13 @@ function EntrepriseContact() {
           <div className="contact-result"></div>
           <div>
             <span style={{ color: `red` }}> * : Champ obligatoire</span>
+          </div>
+          <div className="contact-result-container" ref={resultRef}>
+            <p>
+              {result
+                ? `Nous avons bien reçu votre demande, nous vous contacterons le plus tôt possible`
+                : `Votre demande n'a pas été enregistré, veuillez réessayer`}
+            </p>
           </div>
           <div className="btn btn-submit">
             <button type="submit">

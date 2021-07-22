@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import "./style/Contact.css";
 import { Link } from "react-router-dom";
 import ContactBg from "./images/contact-1.jpg";
-import placeholderImg from "./images/400.png";
 import resume from "./images/resume.png";
 import map from "./images/map.png";
 import contact from "./images/contact.png";
@@ -13,7 +12,6 @@ function Contact() {
     contactTilesImgRef.current.style.height = `${
       contactTilesContainerRef.current.clientHeight + 50
     }px`;
-    console.log(process.env.REACT_APP_SERVICE_ID);
   });
   return (
     <div className="contact-container">

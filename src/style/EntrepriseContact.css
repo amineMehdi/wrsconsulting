@@ -68,7 +68,12 @@
 .or-container::after {
     right: 0;
 }
-
+.contact-result-container{
+    text-align: center;
+    padding: 15px;
+    background-color: aqua;
+    border-radius: 15px;
+}
 .btn-submit {
     text-align: center;
     margin: 25px 0px;
