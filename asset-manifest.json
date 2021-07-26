@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/wrsconsulting/static/css/main.f79671b2.chunk.css",
-    "main.js": "/wrsconsulting/static/js/main.cb4cc11f.chunk.js",
-    "main.js.map": "/wrsconsulting/static/js/main.cb4cc11f.chunk.js.map",
-    "runtime-main.js": "/wrsconsulting/static/js/runtime-main.b40941d8.js",
-    "runtime-main.js.map": "/wrsconsulting/static/js/runtime-main.b40941d8.js.map",
-    "static/js/2.ef78efe3.chunk.js": "/wrsconsulting/static/js/2.ef78efe3.chunk.js",
-    "static/js/2.ef78efe3.chunk.js.map": "/wrsconsulting/static/js/2.ef78efe3.chunk.js.map",
+    "main.css": "/wrsconsulting/static/css/main.514b739d.chunk.css",
+    "main.js": "/wrsconsulting/static/js/main.e5b38afb.chunk.js",
+    "main.js.map": "/wrsconsulting/static/js/main.e5b38afb.chunk.js.map",
+    "runtime-main.js": "/wrsconsulting/static/js/runtime-main.1ac1b588.js",
+    "runtime-main.js.map": "/wrsconsulting/static/js/runtime-main.1ac1b588.js.map",
+    "static/js/2.4beff800.chunk.js": "/wrsconsulting/static/js/2.4beff800.chunk.js",
+    "static/js/2.4beff800.chunk.js.map": "/wrsconsulting/static/js/2.4beff800.chunk.js.map",
     "index.html": "/wrsconsulting/index.html",
-    "static/css/main.f79671b2.chunk.css.map": "/wrsconsulting/static/css/main.f79671b2.chunk.css.map",
-    "static/js/2.ef78efe3.chunk.js.LICENSE.txt": "/wrsconsulting/static/js/2.ef78efe3.chunk.js.LICENSE.txt",
+    "static/css/main.514b739d.chunk.css.map": "/wrsconsulting/static/css/main.514b739d.chunk.css.map",
+    "static/js/2.4beff800.chunk.js.LICENSE.txt": "/wrsconsulting/static/js/2.4beff800.chunk.js.LICENSE.txt",
     "static/media/AXA-1.b886d37f.png": "/wrsconsulting/static/media/AXA-1.b886d37f.png",
     "static/media/allianz-1.b38b6bbe.png": "/wrsconsulting/static/media/allianz-1.b38b6bbe.png",
     "static/media/ca-1.94de224b.png": "/wrsconsulting/static/media/ca-1.94de224b.png",
@@ -35,9 +35,9 @@
     "static/media/wrs-80x80.41ac646a.png": "/wrsconsulting/static/media/wrs-80x80.41ac646a.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.b40941d8.js",
-    "static/js/2.ef78efe3.chunk.js",
-    "static/css/main.f79671b2.chunk.css",
-    "static/js/main.cb4cc11f.chunk.js"
+    "static/js/runtime-main.1ac1b588.js",
+    "static/js/2.4beff800.chunk.js",
+    "static/css/main.514b739d.chunk.css",
+    "static/js/main.e5b38afb.chunk.js"
   ]
 }
