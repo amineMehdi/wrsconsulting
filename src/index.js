@@ -6,7 +6,7 @@ import "./style/index.css";
 
 
 // import Navbar from "./components/Navbar";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar_new";
 import FooterContainer from "./components/FooterContainer";
 import ScrollToTop from "./components/ScrollToTop";
 

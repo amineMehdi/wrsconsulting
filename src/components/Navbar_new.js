@@ -65,77 +65,77 @@ function Navbar() {
             <img src={logo} />
           </a>
         </div>
-        <ul className="items-list" ref={itemsListRef}>
-          <li className="active">
-            <Link to="/">
-              <span>ACCEUIL</span>
-            </Link>
-          </li>
+          <ul className="items-list" ref={itemsListRef}>
+            <li className="active">
+              <Link to="/">
+                <span>ACCEUIL</span>
+              </Link>
+            </li>
 
-          <li>
-            <Link to="/a-propos">
-              <span>A PROPOS</span>
-            </Link>
-          </li>
-          <li className="item-dropdown">
-            <Link to="/">
-              <span>EXPERTISE WRS</span>
-            </Link>
-            <ul className="item-dropdown-content">
-              <li>
-                <Link to="/infrastructure-reseaux">
-                  <span>INFRASTRUCTURES & RÉSEAUX</span>
-                </Link>
-              </li>
-              <li>
-                <Link to="/developpement-logiciel">
-                  <span>DÉVELOPPEMENT LOGICIEL</span>
-                </Link>
-              </li>
-              <li>
-                <Link to="/gestion-de-projet">
-                  <span>GESTION DE PROJET</span>
-                </Link>
-              </li>
-              <li>
-                <Link to="/consulting-en-strategie-it">
-                  <span>CONSULTING EN STRATÉGIE IT</span>
-                </Link>
-              </li>
-            </ul>
-            {/* <span className="item-dropdown-arrow">&#10095;</span>
+            <li>
+              <Link to="/a-propos">
+                <span>A PROPOS</span>
+              </Link>
+            </li>
+            <li className="item-dropdown">
+              <Link to="/">
+                <span>EXPERTISE WRS</span>
+              </Link>
+              <ul className="item-dropdown-content">
+                <li>
+                  <Link to="/infrastructure-reseaux">
+                    <span>INFRASTRUCTURES & RÉSEAUX</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/developpement-logiciel">
+                    <span>DÉVELOPPEMENT LOGICIEL</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/gestion-de-projet">
+                    <span>GESTION DE PROJET</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/consulting-en-strategie-it">
+                    <span>CONSULTING EN STRATÉGIE IT</span>
+                  </Link>
+                </li>
+              </ul>
+              {/* <span className="item-dropdown-arrow">&#10095;</span>
             <span className="item-dropdown-back-arrow">&#10096;</span> */}
-          </li>
-          <li>
-            <Link to="/realisations">
-              <span>REALISATIONS</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/nos-partenaires">
-              <span>NOS PARTENAIRES</span>
-            </Link>
-          </li>
-          <li className="item-dropdown">
-            <Link to="/contact">
-              <span>CONTACT</span>
-            </Link>
-            <ul className="item-dropdown-content">
-              <li>
-                <Link to="/contact">
-                  <span>CONTACTEZ-NOUS</span>
-                </Link>
-              </li>
-              <li>
-                <Link to="/carriere">
-                  <span>CANDIDATURE</span>
-                </Link>
-              </li>
-            </ul>
-            {/* <span className="item-dropdown-arrow">&#10095;</span>
+            </li>
+            <li>
+              <Link to="/realisations">
+                <span>REALISATIONS</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/nos-partenaires">
+                <span>NOS PARTENAIRES</span>
+              </Link>
+            </li>
+            <li className="item-dropdown">
+              <Link to="/contact">
+                <span>CONTACT</span>
+              </Link>
+              <ul className="item-dropdown-content">
+                <li>
+                  <Link to="/contact">
+                    <span>CONTACTEZ-NOUS</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/carriere">
+                    <span>CANDIDATURE</span>
+                  </Link>
+                </li>
+              </ul>
+              {/* <span className="item-dropdown-arrow">&#10095;</span>
             <span className="item-dropdown-back-arrow">&#10096;</span> */}
-          </li>
-        </ul>
+            </li>
+          </ul>
         <div className="items-menu">
           <span></span>
           <span></span>
