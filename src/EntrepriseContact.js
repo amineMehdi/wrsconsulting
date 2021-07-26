@@ -35,20 +35,30 @@ function EntrepriseContact() {
     }
     emailjs.send(serviceID, templateID, formData, userID).then(
       (result) => {
-        console.log(result);
+        // console.log(result);
         setResult(true);
+        showResult();
         reset();
       },
       (error) => {
-        console.log(error);
+        // console.log(error);
         setResult(false);
+        showResult();
       }
     );
-    showResult();
   };
-  const showResult = () =>{
+  const showResult = () => {
     resultRef.current.style.display = "block";
-  }
+    setTimeout(() => {
+      resultRef.current.style.opacity = "0";
+    }, 3000);
+    setTimeout(() => {
+      resultRef.current.style = "display : none; opacity : 1";
+    }, 3500);
+  };
+  const closeResult = () => {
+    resultRef.current.style.display = "none";
+  };
   return (
     <div className="contact-form-informations-wrapper">
       <div className="contact-form">
@@ -173,7 +183,15 @@ function EntrepriseContact() {
           <div>
             <span style={{ color: `red` }}> * : Champ obligatoire</span>
           </div>
-          <div className="contact-result-container" ref={resultRef}>
+          <div
+            className={`contact-result-container ${
+              result ? `success` : `error`
+            }`}
+            ref={resultRef}
+          >
+            <div className="contact-result-close">
+              <a onClick={closeResult}>&#10799;</a>
+            </div>
             <p>
               {result
                 ? `Nous avons bien reçu votre demande, nous vous contacterons le plus tôt possible`

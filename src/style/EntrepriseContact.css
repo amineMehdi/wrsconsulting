@@ -68,12 +68,52 @@
 .or-container::after {
     right: 0;
 }
-.contact-result-container{
+
+.contact-result-container {
     text-align: center;
     padding: 15px;
-    background-color: aqua;
+    position: relative;
     border-radius: 15px;
+    width: 30vw;
+    margin: 0 auto;
+    font-size: 18px;
+    display: none;
+    transition: opacity 0.3s ease-out;
+    margin-top: 35px;
 }
+
+.contact-result-container.success {
+    color: rgb(35, 87, 166);
+    background-color: rgb(207, 226, 255);
+}
+
+.contact-result-container.success a {
+    color: rgb(35, 87, 166);
+}
+
+.contact-result-container.error {
+    background-color: rgb(248, 215, 218);
+    color: rgb(132, 32, 41);
+}
+
+.contact-result-container.error a {
+    color: rgb(132, 32, 41);
+}
+
+.contact-result-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+}
+
+.contact-result-close a {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 18px;
+}
+
 .btn-submit {
     text-align: center;
     margin: 25px 0px;
@@ -117,5 +157,8 @@
     .or-container::before,
     .or-container::after {
         width: 40%;
+    }
+    .contact-result-container{
+        width: 95%;
     }
 }
