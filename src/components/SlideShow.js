@@ -97,7 +97,9 @@ function SlideShow() {
             key={index}
             style={{ backgroundImage: `url(${image.img})` }}
           >
-            <header>{image.header}</header>
+            <div className="slide-header">
+              <header>{image.header}</header>
+            </div>
             <div className="slide-details">
               <p>{image.details}</p>
             </div>

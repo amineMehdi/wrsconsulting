@@ -11,9 +11,11 @@ import twitterSocial from "../images/social-icons/twitter_social.svg";
 
 function Navbar() {
   const navbarContainerRef = useRef(null);
+  const contactNavbarRef = useRef(null);
   const navbarRef = useRef(null);
   const itemsListRef = useRef(null);
-  const contactNavbarRef = useRef(null);
+  const itemsMenuRef = useRef(null);
+
   useEffect(() => {
     navbarContainerRef.current.addEventListener("mouseenter", () => {
       navbarContainerRef.current.classList.add("active");
@@ -24,14 +26,39 @@ function Navbar() {
 
     itemsListRef.current.querySelectorAll(":scope > li").forEach((item) => {
       item.addEventListener("mouseenter", () => {
-        navbarContainerRef.current.classList.remove("active");
         item.classList.add("active");
       });
       item.addEventListener("mouseleave", () => {
-        navbarContainerRef.current.classList.add("active");
         item.classList.remove("active");
       });
     });
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 90) {
+        navbarContainerRef.current.style.transform = `translateY(-${contactNavbarRef.current.clientHeight}px)`;
+      } else if (window.scrollY < 60) {
+        navbarContainerRef.current.style.transform = "translateY(0px)";
+      }
+    });
+
+    itemsMenuRef.current.addEventListener("click", () => {
+      itemsMenuRef.current.classList.toggle("active");
+      itemsListRef.current.style.display =
+        itemsMenuRef.current.classList.contains("active") ? "block" : "none";
+    });
+
+    if (window.innerWidth < 1010) {
+      itemsListRef.current
+        .querySelectorAll(":scope .item-dropdown")
+        .forEach((itemDropdown) => {
+          itemDropdown.addEventListener("click", () => {
+            // itemsListRef.current.style.transform = `translateX(-100%)`;
+            itemDropdown.querySelector(
+              ":scope > .item-dropdown-content"
+            ).style.display = "block";
+          });
+        });
+    }
   }, []);
   return (
     <div className="navbar-contact-wrapper" ref={navbarContainerRef}>
@@ -65,78 +92,81 @@ function Navbar() {
             <img src={logo} />
           </a>
         </div>
-          <ul className="items-list" ref={itemsListRef}>
-            <li className="active">
-              <Link to="/">
-                <span>ACCEUIL</span>
-              </Link>
-            </li>
+        <ul className="items-list" ref={itemsListRef}>
+          <li className="">
+            <Link to="/">
+              <span>ACCEUIL</span>
+            </Link>
+          </li>
 
-            <li>
-              <Link to="/a-propos">
-                <span>A PROPOS</span>
-              </Link>
-            </li>
-            <li className="item-dropdown">
+          <li>
+            <Link to="/a-propos">
+              <span>A PROPOS</span>
+            </Link>
+          </li>
+          <li className="item-dropdown">
+            <div className="item-dropdown-header">
               <Link to="/">
                 <span>EXPERTISE WRS</span>
               </Link>
-              <ul className="item-dropdown-content">
-                <li>
-                  <Link to="/infrastructure-reseaux">
-                    <span>INFRASTRUCTURES & RÉSEAUX</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/developpement-logiciel">
-                    <span>DÉVELOPPEMENT LOGICIEL</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/gestion-de-projet">
-                    <span>GESTION DE PROJET</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/consulting-en-strategie-it">
-                    <span>CONSULTING EN STRATÉGIE IT</span>
-                  </Link>
-                </li>
-              </ul>
-              {/* <span className="item-dropdown-arrow">&#10095;</span>
+              <p>&#62;</p>
+            </div>
+            <ul className="item-dropdown-content">
+              <li>
+                <Link to="/infrastructure-reseaux">
+                  <span>INFRASTRUCTURES & RÉSEAUX</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/developpement-logiciel">
+                  <span>DÉVELOPPEMENT LOGICIEL</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/gestion-de-projet">
+                  <span>GESTION DE PROJET</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/consulting-en-strategie-it">
+                  <span>CONSULTING EN STRATÉGIE IT</span>
+                </Link>
+              </li>
+            </ul>
+            {/* <span className="item-dropdown-arrow">&#10095;</span>
             <span className="item-dropdown-back-arrow">&#10096;</span> */}
-            </li>
-            <li>
-              <Link to="/realisations">
-                <span>REALISATIONS</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/nos-partenaires">
-                <span>NOS PARTENAIRES</span>
-              </Link>
-            </li>
-            <li className="item-dropdown">
-              <Link to="/contact">
-                <span>CONTACT</span>
-              </Link>
-              <ul className="item-dropdown-content">
-                <li>
-                  <Link to="/contact">
-                    <span>CONTACTEZ-NOUS</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/carriere">
-                    <span>CANDIDATURE</span>
-                  </Link>
-                </li>
-              </ul>
-              {/* <span className="item-dropdown-arrow">&#10095;</span>
+          </li>
+          <li>
+            <Link to="/realisations">
+              <span>REALISATIONS</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/nos-partenaires">
+              <span>NOS PARTENAIRES</span>
+            </Link>
+          </li>
+          <li className="item-dropdown">
+            <Link to="/contact">
+              <span>CONTACT</span>
+            </Link>
+            <ul className="item-dropdown-content">
+              <li>
+                <Link to="/contact">
+                  <span>CONTACTEZ-NOUS</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/carriere">
+                  <span>CANDIDATURE</span>
+                </Link>
+              </li>
+            </ul>
+            {/* <span className="item-dropdown-arrow">&#10095;</span>
             <span className="item-dropdown-back-arrow">&#10096;</span> */}
-            </li>
-          </ul>
-        <div className="items-menu">
+          </li>
+        </ul>
+        <div className="items-menu" ref={itemsMenuRef}>
           <span></span>
           <span></span>
           <span></span>
