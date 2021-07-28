@@ -14,6 +14,7 @@ function Navbar() {
   const contactNavbarRef = useRef(null);
   const navbarRef = useRef(null);
   const itemsListRef = useRef(null);
+  const itemDropdownReturnRef = useRef(null);
   const itemsMenuRef = useRef(null);
 
   useEffect(() => {
@@ -52,12 +53,21 @@ function Navbar() {
         .querySelectorAll(":scope .item-dropdown")
         .forEach((itemDropdown) => {
           itemDropdown.addEventListener("click", () => {
-            // itemsListRef.current.style.transform = `translateX(-100%)`;
-            itemDropdown.querySelector(
-              ":scope > .item-dropdown-content"
-            ).style.display = "block";
+            itemsListRef.current.classList.add("close");
+            itemDropdown
+              .querySelector(":scope > .item-dropdown-content")
+              .classList.add("open");
+            // console.log(itemDropdown);
+            // style = "transform : translateX(100%); display : inline-block";
           });
         });
+
+      itemDropdownReturnRef.current.addEventListener("click", () => {
+        // itemsListRef.current.style.transform = `translateX(100%)`;
+        itemsListRef.current.classList.remove("close");
+        console.log(itemsListRef.current.classList);
+        console.log(itemsListRef.current);
+      });
     }
   }, []);
   return (
@@ -93,25 +103,25 @@ function Navbar() {
           </a>
         </div>
         <ul className="items-list" ref={itemsListRef}>
-          <li className="">
+          <li>
             <Link to="/">
               <span>ACCEUIL</span>
             </Link>
           </li>
-
           <li>
             <Link to="/a-propos">
               <span>A PROPOS</span>
             </Link>
           </li>
+
           <li className="item-dropdown">
-            <div className="item-dropdown-header">
-              <Link to="/">
-                <span>EXPERTISE WRS</span>
-              </Link>
-              <p>&#62;</p>
-            </div>
+            <Link to="/">
+              <span>EXPERTISE WRS</span>
+            </Link>
             <ul className="item-dropdown-content">
+              <div className="item-dropdown-return" ref={itemDropdownReturnRef}>
+                <p>&#60; Retour </p>
+              </div>
               <li>
                 <Link to="/infrastructure-reseaux">
                   <span>INFRASTRUCTURES & RÉSEAUX</span>
