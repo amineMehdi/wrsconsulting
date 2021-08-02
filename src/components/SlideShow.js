@@ -65,7 +65,10 @@ function SlideShow() {
         arrowSpan.style.display = "none";
       });
     });
-  });
+
+    // const navbarContainer = document.querySelector(".navbar-contact-wrapper").offsetHeight;
+    // console.log(navbarContainer);
+  }, []);
   const resetTimeout = () => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
