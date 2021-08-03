@@ -11,6 +11,7 @@ import twitterSocial from "../images/social-icons/twitter_social.svg";
 
 function Navbar() {
   const navbarContainerRef = useRef(null);
+  const [mobile, setMobile] = useState(false);
   const [menuIconClick, setMenuIconClick] = useState(false);
   const [expertiseDropdown, setExpertiseDropdown] = useState(false);
   const [contactDropdown, setContactDropdown] = useState(false);
@@ -18,6 +19,9 @@ function Navbar() {
   const closeMobileMenu = () => setMenuIconClick(false);
 
   useEffect(() => {
+    if (window.innerWidth < 1010) {
+      setMobile(true);
+    }
     document.addEventListener("scroll", () => {
       const contactNavbarHeight = navbarContainerRef.current.querySelector(
         ":scope > .contact-navbar-container"
@@ -89,13 +93,22 @@ function Navbar() {
 
           <li
             className="nav-item"
-            onMouseEnter={() => setExpertiseDropdown(true)}
-            onMouseLeave={() => setExpertiseDropdown(false)}
+            onMouseEnter={() => window.innerWidth > 1010 ? setExpertiseDropdown(true) : ""}
+            onMouseLeave={() => window.innerWidth > 1010 ? setExpertiseDropdown(false) : ""}
           >
-            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+            <Link
+              to="/"
+              className="nav-links"
+              onClick={() => {
+                if (mobile) {
+                  setExpertiseDropdown(true);
+                }
+              }}
+            >
               EXPERTISE
             </Link>
-            {expertiseDropdown && <Dropdown items={MenuItems.expertise} />}
+            {mobile ? <i className="mobile-arrow fas fa-caret-right" /> : ""}
+            {expertiseDropdown && <Dropdown items={MenuItems.expertise} closeMobileMenu={closeMobileMenu}/>}
           </li>
 
           <li className="nav-item">
@@ -123,10 +136,19 @@ function Navbar() {
             onMouseEnter={() => setContactDropdown(true)}
             onMouseLeave={() => setContactDropdown(false)}
           >
-            <Link to="/contact" className="nav-links" onClick={closeMobileMenu}>
+            <Link
+              to={`/${mobile ? "" : "contact"}`}
+              className="nav-links"
+              onClick={() => {
+                if (mobile) {
+                  setContactDropdown(true);
+                }
+              }}
+            >
               CONTACT
             </Link>
-            {contactDropdown && <Dropdown items={MenuItems.contact} />}
+            {mobile ? <i className="mobile-arrow fas fa-caret-right" /> : ""}
+            {contactDropdown && <Dropdown items={MenuItems.contact} closeMobileMenu={closeMobileMenu}/>}
           </li>
         </ul>
       </nav>

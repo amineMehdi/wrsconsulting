@@ -26,7 +26,7 @@ function Contact() {
       <div ref={contactTilesContainerRef} className="contact-tiles-container">
         {/* style={{ backgroundImage: `url(${ContactBg})` }} */}
         <div ref={contactTilesImgRef} className="contact-tiles-bg">
-          <img src={ContactBg} />
+          <img src={ContactBg} alt="contact"/>
         </div>
         <div className="contact-tile">
           <div className="contact-tile-header">

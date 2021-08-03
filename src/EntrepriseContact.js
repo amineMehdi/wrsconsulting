@@ -11,8 +11,6 @@ function EntrepriseContact() {
     handleSubmit,
     formState: { errors },
     reset,
-    setError,
-    clearErrors,
     getValues,
   } = useForm();
   const [result, setResult] = useState(null);
@@ -28,7 +26,7 @@ function EntrepriseContact() {
       process.env.REACT_APP_SERVICE_ID,
       process.env.REACT_APP_USER_ID,
     ];
-    if (formData.entreprise != "") {
+    if (formData.entreprise !== "") {
       templateID = process.env.REACT_APP_COMPANY_CONTACT_TEMPLATE_ID;
     } else {
       templateID = process.env.REACT_APP_PERSONAL_CONTACT_TEMPLATE_ID;

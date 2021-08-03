@@ -11,8 +11,7 @@ function Candidature() {
     formState: { errors },
     setValue,
     setError,
-    clearErrors,
-    reset,
+    clearErrors
   } = useForm({ mode: "onChange" });
   const jobSubmit = (formData,e) => {
     console.log(formData);

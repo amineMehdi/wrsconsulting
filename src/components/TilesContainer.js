@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "../style/components/TilesContainer.css";
 import anime from "animejs/lib/anime.es";
 
