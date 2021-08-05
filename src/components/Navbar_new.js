@@ -4,6 +4,8 @@ import logo from "../images/wrs-80x80.png";
 import { Link } from "react-router-dom";
 import Dropdown from "./Dropdown";
 import { MenuItems } from "./MenuItems";
+import NavItem from "./NavItem";
+import NavItemDropdown from "./NavItemDropdown";
 
 import facebookSocial from "../images/social-icons/facebook_social.svg";
 import linkedinSocial from "../images/social-icons/linkedin_social.svg";
@@ -21,6 +23,9 @@ function Navbar() {
   useEffect(() => {
     if (window.innerWidth < 1010) {
       setMobile(true);
+      setExpertiseDropdown(true);
+      setContactDropdown(true);
+      console.log("mobile");
     }
     document.addEventListener("scroll", () => {
       const contactNavbarHeight = navbarContainerRef.current.querySelector(
@@ -69,13 +74,37 @@ function Navbar() {
         </div>
         <div
           className="menu-icon"
-          onClick={() => setMenuIconClick(!menuIconClick)}
+          onClick={() => {
+            setMenuIconClick(!menuIconClick);
+            // console.log(menuIconClick);
+          }}
         >
           <i className={`fas ${menuIconClick ? "fa-times" : "fa-bars"}`} />
         </div>
 
         <ul className={`nav-menu ${menuIconClick ? "active" : ""}`}>
-          <li className="nav-item">
+          <NavItem 
+            title = "ACCEUIL"
+            path = ""
+          />
+          <NavItem 
+            title = "A PROPOS"
+            path = "a-propos"
+          />
+          <NavItemDropdown
+            title = "EXPERTISE"
+            path = ""
+            dropdownItems = {MenuItems.expertise}
+            closeMobileMenu = {closeMobileMenu}
+            dropdownMenu = {expertiseDropdown}
+            setDropdownMenu = {setExpertiseDropdown}
+            menuIconClick = {menuIconClick}
+            mobile = {mobile}
+          />
+          <NavItem 
+            
+          />
+          {/* <li className="nav-item">
             <Link to="/" className="nav-links" onClick={closeMobileMenu}>
               ACCEUIL
             </Link>
@@ -93,22 +122,27 @@ function Navbar() {
 
           <li
             className="nav-item"
-            onMouseEnter={() => window.innerWidth > 1010 ? setExpertiseDropdown(true) : ""}
-            onMouseLeave={() => window.innerWidth > 1010 ? setExpertiseDropdown(false) : ""}
+            onMouseEnter={() => (mobile ? "" : setExpertiseDropdown(true))}
+            onMouseLeave={() => (mobile ? "" : setExpertiseDropdown(false))}
+            onClick={() => {
+              if (mobile) {
+                setExpertiseDropdown(!expertiseDropdown);
+              }
+            }}
           >
-            <Link
-              to="/"
-              className="nav-links"
-              onClick={() => {
-                if (mobile) {
-                  setExpertiseDropdown(true);
-                }
-              }}
-            >
+            <Link to="/" className="nav-links">
               EXPERTISE
             </Link>
             {mobile ? <i className="mobile-arrow fas fa-caret-right" /> : ""}
-            {expertiseDropdown && <Dropdown items={MenuItems.expertise} closeMobileMenu={closeMobileMenu}/>}
+            {(mobile || expertiseDropdown) && (
+              <Dropdown
+                items={MenuItems.expertise}
+                closeMobileMenu={closeMobileMenu}
+                dropDownActive={expertiseDropdown}
+                setDropDownActive={setExpertiseDropdown}
+                menuIcon={menuIconClick}
+              />
+            )}
           </li>
 
           <li className="nav-item">
@@ -133,23 +167,29 @@ function Navbar() {
 
           <li
             className="nav-item"
-            onMouseEnter={() => setContactDropdown(true)}
-            onMouseLeave={() => setContactDropdown(false)}
+            onMouseEnter={() => (mobile ? "" : setContactDropdown(true))}
+            onMouseLeave={() => (mobile ? "" : setContactDropdown(false))}
+            onClick={() => {
+              if (mobile) {
+                setContactDropdown(!contactDropdown);
+                console.log(contactDropdown);
+              }
+            }}
           >
-            <Link
-              to={`/${mobile ? "" : "contact"}`}
-              className="nav-links"
-              onClick={() => {
-                if (mobile) {
-                  setContactDropdown(true);
-                }
-              }}
-            >
+            <Link to="/" className="nav-links">
               CONTACT
             </Link>
             {mobile ? <i className="mobile-arrow fas fa-caret-right" /> : ""}
-            {contactDropdown && <Dropdown items={MenuItems.contact} closeMobileMenu={closeMobileMenu}/>}
-          </li>
+            {(mobile || contactDropdown) && (
+              <Dropdown
+                items={MenuItems.contact}
+                closeMobileMenu={closeMobileMenu}
+                dropDownActive={contactDropdown}
+                setDropDownActive={setContactDropdown}
+                menuIcon={menuIconClick}
+              />
+            )}
+          </li> */}
         </ul>
       </nav>
     </div>
