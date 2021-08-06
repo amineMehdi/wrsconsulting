@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Dropdown from "./Dropdown";
 import { MenuItems } from "./MenuItems";
 import NavItem from "./NavItem";
-import NavItemDropdown from "./NavItemDropdown";
 
 import facebookSocial from "../images/social-icons/facebook_social.svg";
 import linkedinSocial from "../images/social-icons/linkedin_social.svg";
@@ -83,42 +82,18 @@ function Navbar() {
         </div>
 
         <ul className={`nav-menu ${menuIconClick ? "active" : ""}`}>
-          <NavItem 
-            title = "ACCEUIL"
-            path = ""
-          />
-          <NavItem 
-            title = "A PROPOS"
-            path = "a-propos"
-          />
-          <NavItemDropdown
-            title = "EXPERTISE"
-            path = ""
-            dropdownItems = {MenuItems.expertise}
-            closeMobileMenu = {closeMobileMenu}
-            dropdownMenu = {expertiseDropdown}
-            setDropdownMenu = {setExpertiseDropdown}
-            menuIconClick = {menuIconClick}
-            mobile = {mobile}
-          />
-          <NavItem 
-            
-          />
-          {/* <li className="nav-item">
-            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
-              ACCEUIL
-            </Link>
-          </li>
-
-          <li className="nav-item">
-            <Link
-              to="/a-propos"
-              className="nav-links"
-              onClick={closeMobileMenu}
-            >
-              A PROPOS
-            </Link>
-          </li>
+          <NavItem title="ACCEUIL" path="" closeMobileMenu={closeMobileMenu}/>
+          <NavItem title="A PROPOS" path="a-propos" closeMobileMenu={closeMobileMenu}/>
+          {/* <NavItemDropdown
+            title="EXPERTISE"
+            path=""
+            dropdownItems={MenuItems.expertise}
+            closeMobileMenu={closeMobileMenu}
+            dropdownMenu={expertiseDropdown}
+            setDropdownMenu={setExpertiseDropdown}
+            menuIconClick={menuIconClick}
+            mobile={mobile}
+          /> */}
 
           <li
             className="nav-item"
@@ -144,27 +119,9 @@ function Navbar() {
               />
             )}
           </li>
+          <NavItem title="REALISATIONS" path="realisations" closeMobileMenu={closeMobileMenu}/>
 
-          <li className="nav-item">
-            <Link
-              to="/realisations"
-              className="nav-links"
-              onClick={closeMobileMenu}
-            >
-              REALISATIONS
-            </Link>
-          </li>
-
-          <li className="nav-item">
-            <Link
-              to="/partenaires"
-              className="nav-links"
-              onClick={closeMobileMenu}
-            >
-              PARTENAIRES
-            </Link>
-          </li>
-
+          <NavItem title="PARTENAIRES" path="partenaires" closeMobileMenu={closeMobileMenu}/>
           <li
             className="nav-item"
             onMouseEnter={() => (mobile ? "" : setContactDropdown(true))}
@@ -189,7 +146,7 @@ function Navbar() {
                 menuIcon={menuIconClick}
               />
             )}
-          </li> */}
+          </li>
         </ul>
       </nav>
     </div>

@@ -1,24 +1,24 @@
 export const MenuItems = {
   expertise: [
     {
-      title: "Reseaux & Infrastructure",
-      path: "/infrastructure",
+      title: "RESEAUX & INFRASTRUCTURE",
+      path: "/infrastructure-reseaux",
     },
     {
-      title: "Développement",
-      path: "/developpement",
+      title: "DEVELOPPEMENT",
+      path: "/developpement-logiciel",
     },
     {
-      title: "Gestion de projet",
-      path: "/gestion",
+      title: "GESTION DE PROJET",
+      path: "/gestion-de-projet",
     },
     {
-      title: "Reseaux & Infrastructure",
-      path: "/infrastructure",
+      title: "CONSULTING EN STRATÉGIE IT",
+      path: "/consulting-en-strategie-it",
     },
     {
-      title: "Reseaux & Infrastructure",
-      path: "/infrastructure",
+      title: "AUDIT",
+      path: "/audit",
     },
   ],
   contact: [

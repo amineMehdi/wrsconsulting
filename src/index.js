@@ -4,7 +4,6 @@ import ReactDOM from "react-dom";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import "./style/index.css";
 
-
 // import Navbar from "./components/Navbar";
 import Navbar from "./components/Navbar_new";
 import FooterContainer from "./components/FooterContainer";
@@ -20,13 +19,14 @@ import Realisations from "./Realisations";
 import Contact from "./Contact";
 import EntrepriseContact from "./EntrepriseContact";
 import Candidature from "./Candidature";
+import Audit from "./Audit";
 import ArrowTop from "./components/ArrowTop";
 
 class Index extends React.Component {
   render() {
     return (
       <Router basename={process.env.PUBLIC_URL}>
-        <ScrollToTop/>
+        <ScrollToTop />
         <Navbar />
         <Switch>
           <Route path="/" exact component={Home} />
@@ -35,13 +35,14 @@ class Index extends React.Component {
           <Route path="/developpement-logiciel" component={Developpement} />
           <Route path="/gestion-de-projet" component={GestionLogiciel} />
           <Route path="/consulting-en-strategie-it" component={ConsultingIT} />
-          <Route path="/realisations" component={Realisations}/>
-          <Route path="/contact" component={Contact}/>
-          <Route path="/entreprise" exact component={EntrepriseContact}/>
-          <Route path="/candidature" component={Candidature}/>
+          <Route path="/audit" component={Audit} />
+          <Route path="/realisations" component={Realisations} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/entreprise" exact component={EntrepriseContact} />
+          <Route path="/candidature" component={Candidature} />
         </Switch>
         <FooterContainer />
-        <ArrowTop/>
+        <ArrowTop />
       </Router>
     );
   }

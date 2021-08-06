@@ -57,7 +57,7 @@ function SlideShow() {
     const prevArrow = document.querySelector(".prev");
     const nextArrow = document.querySelector(".next");
     [prevArrow, nextArrow].forEach((arrow) => {
-      const arrowSpan = arrow.querySelector("span");
+      const arrowSpan = arrow.querySelector("div");
       arrow.addEventListener("mouseenter", () => {
         arrowSpan.style.display = "block";
       });
@@ -130,10 +130,14 @@ function SlideShow() {
       </div>
       <div className="slide-controllers">
         <div className="prev" onClick={() => toggleArrows(-1)}>
-          <span>&lt;</span>
+          <div>
+            <i className="arrow fas fa-caret-left" />
+          </div>
         </div>
         <div className="next" onClick={() => toggleArrows(1)}>
-          <span>&gt;</span>
+          <div>
+            <i className="arrow fas fa-caret-right" />
+          </div>
         </div>
       </div>
     </div>

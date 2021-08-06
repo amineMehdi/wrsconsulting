@@ -22,7 +22,7 @@ function ArrowTop() {
       className="arrow-top-container"
       onClick={() => scrollTop()}
     >
-      <span>&gt;</span>
+      <span><i className="fas fa-caret-up"/></span>
     </div>
   );
 }
