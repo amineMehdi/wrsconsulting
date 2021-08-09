@@ -10,7 +10,7 @@ function ConsultingIT() {
     "Digitalisation Cloud et Saas",
     "ERP",
     "Portail, collaboratif et réseau social d’entreprise",
-    "Cybersécurité et RGPD"
+    "Cybersécurité et RGPD",
   ];
   return (
     <div className="consulting-container">
@@ -48,8 +48,8 @@ function ConsultingIT() {
         </div>
         <div className="consulting-list-section">
           <ul>
-            {offers.map((element) => (
-              <li>{element}</li>
+            {offers.map((element, index) => (
+              <li key={index}>{element}</li>
             ))}
           </ul>
         </div>
